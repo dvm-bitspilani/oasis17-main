@@ -1,0 +1,48 @@
+<html>
+
+<body>
+
+    <img class="polygon-wrap" src="D.png" />
+
+    <script>
+        var nodecount = 0;
+        var nodescss = '-webkit-clip-path: polygon( ';
+        document.body.onclick = function (e) {
+            var pwrap = document.querySelector('.polygon-wrap');
+
+            var mouseX = e.pageX;
+            var mouseY = e.pageY;
+
+            var shapesoffsetX = pwrap.offsetLeft;
+            var shapesoffsetY = pwrap.offsetTop;
+
+            var polygonswidth = pwrap.clientWidth;
+            var polygonsheight = pwrap.clientHeight;
+
+            var shapesmouseX = mouseX - shapesoffsetX;
+            var shapesmouseY = mouseY - shapesoffsetY;
+
+            var mousepercentX = shapesmouseX / polygonswidth;
+            var mousepercentY = shapesmouseY / polygonsheight;
+
+            var finalmouseX = (mousepercentX) * 100;
+            var finalmouseY = (mousepercentY) * 100;
+            var normalisedX = parseFloat(finalmouseX).toFixed(3);
+            var normalisedY = parseFloat(finalmouseY).toFixed(3);
+
+            nodecount = nodecount + 1;
+
+            if (nodecount < 3) {
+                nodescss = nodescss + normalisedX + '% ' + normalisedY + '% ,';
+            } else
+            if (nodecount == 3) {
+                nodescss = nodescss + normalisedX + '% ' + normalisedY + '% );';
+                alert(nodescss);
+                nodescss = '-webkit-clip-path: polygon( ';
+                nodecount = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
