@@ -152,7 +152,7 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body class="ltr">
-        <div><h1 id="dir">LTR</h1><h1 id="click">Click Here</h1></div>
+        <div><h1 id="dir">LTR (Click to Change)</h1></div>
         <div id="box">
             <div id = "a1"></div>
             <div id = "a2"></div>
@@ -170,7 +170,7 @@
             <div id = "a14"></div>
         </div>
         <script>
-            click.onclick = function() {
+            box.onclick = function() {
                 if(box.className == "D") {
                     box.className = "";
                 }
@@ -181,11 +181,11 @@
             dir.onclick = function() {
                 if(document.body.className == "ltr") {
                     document.body.className = "rtl";
-                    dir.innerHTML = "RTL";
+                    dir.innerHTML = "RTL (Click to change)";
                 }
                 else {
                     document.body.className = "ltr";
-                    dir.innerHTML = "LTR";
+                    dir.innerHTML = "LTR (Click to change)";
                 }
             }
         </script>
