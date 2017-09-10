@@ -6,7 +6,7 @@
 
     <script>
         var nodecount = 0;
-        var nodescss = '-webkit-clip-path: polygon( ';
+        var nodescss = '-clip-path: polygon( ';
         document.body.onclick = function (e) {
             var pwrap = document.querySelector('.polygon-wrap');
 
@@ -38,7 +38,7 @@
             if (nodecount == 3) {
                 nodescss = nodescss + normalisedX + '% ' + normalisedY + '% );';
                 alert(nodescss);
-                nodescss = '-webkit-clip-path: polygon( ';
+                nodescss = '-clip-path: polygon( ';
                 nodecount = 0;
             }
         }
