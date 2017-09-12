@@ -1,2 +1,3 @@
 *.ai
 .sass-cache/*
+pull.sh
