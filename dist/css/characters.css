@@ -8,8 +8,8 @@
   clip-path: polygon(37.75% 57.75%, 39.375% 72.125%, 30.5% 58.375%); }
 #box.Johnny #a3 {
   background: #eab78c;
-  -webkit-clip-path: polygon(34.75% 71.625%, 39.625% 74.375%, 40.5% 83%);
-  clip-path: polygon(34.75% 71.625%, 39.625% 74.375%, 40.5% 83%); }
+  -webkit-clip-path: polygon(34.75% 71.625%, 39.625% 74.375%, 40.6% 83%);
+  clip-path: polygon(34.75% 71.625%, 39.625% 74.375%, 40.6% 83%); }
 #box.Johnny #a4 {
   background: #ffd112;
   -webkit-clip-path: polygon(29.75% 10.625%, 36.5% 10.5%, 37.75% 57.75%);
@@ -64,16 +64,16 @@
   clip-path: polygon(37.75% 57.625%, 65.75% 57.75%, 42.125% 96.875%); }
 #box.Johnny #a17 {
   background: #ffcb99;
-  -webkit-clip-path: polygon(65.75% 57.75%, 61.95% 97.125%, 42% 97%);
-  clip-path: polygon(65.75% 57.75%, 61.95% 97.125%, 42% 97%); }
+  -webkit-clip-path: polygon(65.65% 57.75%, 61.95% 97.125%, 42% 97%);
+  clip-path: polygon(65.65% 57.75%, 61.95% 97.125%, 42% 97%); }
 #box.Johnny #a18 {
   background: #ffcc00;
-  -webkit-clip-path: polygon(65.75% 57.875%, 71.5% 57.625%, 64.5% 71.625%);
-  clip-path: polygon(65.75% 57.875%, 71.5% 57.625%, 64.5% 71.625%); }
+  -webkit-clip-path: polygon(65.55% 57.875%, 70.4% 57.625%, 64.3% 71.625%);
+  clip-path: polygon(65.55% 57.875%, 70.4% 57.625%, 64.3% 71.625%); }
 #box.Johnny #a19 {
   background: #eab783;
-  -webkit-clip-path: polygon(64.125% 74.875%, 68.5% 73%, 63.375% 82.625%);
-  clip-path: polygon(64.125% 74.875%, 68.5% 73%, 63.375% 82.625%); }
+  -webkit-clip-path: polygon(64.025% 74.875%, 68.4% 73%, 63.275% 82.625%);
+  clip-path: polygon(64.025% 74.875%, 68.4% 73%, 63.275% 82.625%); }
 #box.Johnny #a20 {
   background: #1a1a1a;
   -webkit-clip-path: polygon(38.5% 72.75%, 51.125% 73.375%, 44.625% 81.625%);
@@ -97,16 +97,16 @@
 
 #box.Deadpool #a1 {
   background: #bf254d;
-  -webkit-clip-path: polygon(25% 25.875%, 47.25% 91.75%, 26% 70%);
-  clip-path: polygon(25% 25.875%, 47.25% 91.75%, 26% 70%); }
+  -webkit-clip-path: polygon(25.05% 25.675%, 47.35% 91.75%, 26% 70%);
+  clip-path: polygon(25.05% 25.675%, 47.35% 91.75%, 26% 70%); }
 #box.Deadpool #a2 {
   background: #bf254d;
-  -webkit-clip-path: polygon(36.125% 7.875%, 61.375% 7.875%, 25% 25.875%);
-  clip-path: polygon(36.125% 7.875%, 61.375% 7.875%, 25% 25.875%); }
+  -webkit-clip-path: polygon(36.125% 7.875%, 61.475% 7.875%, 25.05% 25.875%);
+  clip-path: polygon(36.125% 7.875%, 61.475% 7.875%, 25.05% 25.875%); }
 #box.Deadpool #a3 {
   background: #b41b37;
-  -webkit-clip-path: polygon(61.375% 7.875%, 47.25% 91.75%, 25% 25.875%);
-  clip-path: polygon(61.375% 7.875%, 47.25% 91.75%, 25% 25.875%); }
+  -webkit-clip-path: polygon(61.475% 7.825%, 47.3% 91.75%, 25% 25.875%);
+  clip-path: polygon(61.475% 7.825%, 47.3% 91.75%, 25% 25.875%); }
 #box.Deadpool #a4 {
   background: #b41b37;
   -webkit-clip-path: polygon(61.375% 7.875%, 75% 59.75%, 47.25% 91.75%);
@@ -117,8 +117,8 @@
   clip-path: polygon(61.375% 7.875%, 75% 31.25%, 75% 59.75%); }
 #box.Deadpool #a6 {
   background: #540b1e;
-  -webkit-clip-path: polygon(61.375% 7.875%, 70.625% 14.5%, 75% 31.25%);
-  clip-path: polygon(61.375% 7.875%, 70.625% 14.5%, 75% 31.25%); }
+  -webkit-clip-path: polygon(61.275% 7.875%, 70.625% 14.5%, 75% 31.3%);
+  clip-path: polygon(61.275% 7.875%, 70.625% 14.5%, 75% 31.3%); }
 #box.Deadpool #a7 {
   background: #540b1e;
   -webkit-clip-path: polygon(75% 59.75%, 60.75% 86.875%, 47.25% 91.75%);
@@ -157,8 +157,8 @@
   clip-path: polygon(38.5% 44.75%, 44.625% 48.375%, 34.375% 47.5%); }
 #box.Deadpool #a16 {
   background: #ffffff;
-  -webkit-clip-path: polygon(34.375% 47.5%, 44.625% 48.375%, 39.25% 50%);
-  clip-path: polygon(34.375% 47.5%, 44.625% 48.375%, 39.25% 50%); }
+  -webkit-clip-path: polygon(34.375% 47.4%, 44.625% 48.275%, 39.25% 49.9%);
+  clip-path: polygon(34.375% 47.4%, 44.625% 48.275%, 39.25% 49.9%); }
 #box.Deadpool #a17 {
   background: #000000;
   -webkit-clip-path: polygon(68.125% 24.125%, 51.5% 48.625%, 58% 28.625%);
@@ -189,8 +189,8 @@
   clip-path: polygon(60.625% 45.375%, 65.625% 47.5%, 55.625% 48.625%); }
 #box.Deadpool #a24 {
   background: #ffffff;
-  -webkit-clip-path: polygon(65.625% 47.5%, 59.5% 50.625%, 55.625% 48.625%);
-  clip-path: polygon(65.625% 47.5%, 59.5% 50.625%, 55.625% 48.625%); }
+  -webkit-clip-path: polygon(65.625% 47.4%, 59.5% 50.525%, 55.625% 48.525%);
+  clip-path: polygon(65.625% 47.4%, 59.5% 50.525%, 55.625% 48.525%); }
 
 #box.Batman #a1 {
   background: #393a3c;
@@ -385,5 +385,102 @@
   background: #622422;
   -webkit-clip-path: polygon(45.5% 76.125%, 69.25% 76.125%, 54.125% 78.375%);
   clip-path: polygon(45.5% 76.125%, 69.25% 76.125%, 54.125% 78.375%); }
+
+#box.Minion #a1 {
+  background: #f9da58;
+  -webkit-clip-path: polygon(36.25% 8.375%, 17% 28.75%, 16.375% 75.25%);
+  clip-path: polygon(36.25% 8.375%, 17% 28.75%, 16.375% 75.25%); }
+#box.Minion #a2 {
+  background: #ffe666;
+  -webkit-clip-path: polygon(36.25% 8.375%, 16.375% 75.25%, 82.75% 75.25%);
+  clip-path: polygon(36.25% 8.375%, 16.375% 75.25%, 82.75% 75.25%); }
+#box.Minion #a3 {
+  background: #6182a4;
+  -webkit-clip-path: polygon(16.375% 75.25%, 14.5% 91.75%, 82.75% 75.25%);
+  clip-path: polygon(16.375% 75.25%, 14.5% 91.75%, 82.75% 75.25%); }
+#box.Minion #a4 {
+  background: #ffe666;
+  -webkit-clip-path: polygon(36.25% 8.375%, 82.75% 75.25%, 63.875% 8.375%);
+  clip-path: polygon(36.25% 8.375%, 82.75% 75.25%, 63.875% 8.375%); }
+#box.Minion #a5 {
+  background: #f9da58;
+  -webkit-clip-path: polygon(63.875% 8.375%, 82.75% 75.25%, 81.5% 25.5%);
+  clip-path: polygon(63.875% 8.375%, 82.75% 75.25%, 81.5% 25.5%); }
+#box.Minion #a6 {
+  background: #ffe666;
+  -webkit-clip-path: polygon(50% 5.725%, 36.25% 8.475%, 63.875% 8.475%);
+  clip-path: polygon(50% 5.725%, 36.25% 8.475%, 63.875% 8.475%); }
+#box.Minion #a7 {
+  background: #597a98;
+  -webkit-clip-path: polygon(82.75% 75.15%, 14.5% 91.65%, 85.625% 90.775%);
+  clip-path: polygon(82.75% 75.15%, 14.5% 91.65%, 85.625% 90.775%); }
+#box.Minion #a8 {
+  background: #282320;
+  -webkit-clip-path: polygon(14.75% 34.4%, 15.25% 40.9%, 23.25% 41.775%);
+  clip-path: polygon(14.75% 34.4%, 15.25% 40.9%, 23.25% 41.775%); }
+#box.Minion #a9 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(14.75% 34.5%, 23.25% 41.875%, 22.625% 31.625%);
+  clip-path: polygon(14.75% 34.5%, 23.25% 41.875%, 22.625% 31.625%); }
+#box.Minion #a10 {
+  background: #aea7a5;
+  -webkit-clip-path: polygon(35.475% 21.75%, 20.725% 36.75%, 36.35% 53.5%);
+  clip-path: polygon(35.475% 21.75%, 20.725% 36.75%, 36.35% 53.5%); }
+#box.Minion #a11 {
+  background: #aea7a5;
+  -webkit-clip-path: polygon(35.375% 21.75%, 36.25% 53.5%, 50.125% 35.375%);
+  clip-path: polygon(35.375% 21.75%, 36.25% 53.5%, 50.125% 35.375%); }
+#box.Minion #a12 {
+  background: #282320;
+  -webkit-clip-path: polygon(37.25% 62.875%, 63.375% 62.75%, 51.25% 65.25%);
+  clip-path: polygon(37.25% 62.875%, 63.375% 62.75%, 51.25% 65.25%); }
+#box.Minion #a13 {
+  background: #aea7a5;
+  -webkit-clip-path: polygon(61.85% 23.375%, 48.85% 35.625%, 64.35% 52.25%);
+  clip-path: polygon(61.85% 23.375%, 48.85% 35.625%, 64.35% 52.25%); }
+#box.Minion #a14 {
+  background: #aea7a5;
+  -webkit-clip-path: polygon(61.75% 23.375%, 64.25% 52.25%, 77.625% 35.125%);
+  clip-path: polygon(61.75% 23.375%, 64.25% 52.25%, 77.625% 35.125%); }
+#box.Minion #a15 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(75% 30.5%, 74.875% 42.5%, 83.625% 33.5%);
+  clip-path: polygon(75% 30.5%, 74.875% 42.5%, 83.625% 33.5%); }
+#box.Minion #a16 {
+  background: #282320;
+  -webkit-clip-path: polygon(83.625% 33.4%, 74.875% 42.4%, 83.625% 39.775%);
+  clip-path: polygon(83.625% 33.4%, 74.875% 42.4%, 83.625% 39.775%); }
+#box.Minion #a17 {
+  background: #ffffff;
+  -webkit-clip-path: polygon(35.6% 25.625%, 24.35% 36.375%, 36.225% 49.125%);
+  clip-path: polygon(35.6% 25.625%, 24.35% 36.375%, 36.225% 49.125%); }
+#box.Minion #a18 {
+  background: #ffffff;
+  -webkit-clip-path: polygon(35.5% 25.625%, 36.125% 49.125%, 46.25% 35.125%);
+  clip-path: polygon(35.5% 25.625%, 36.125% 49.125%, 46.25% 35.125%); }
+#box.Minion #a19 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(39.625% 36.85%, 37.5% 38.6%, 41.5% 38.85%);
+  clip-path: polygon(39.625% 36.85%, 37.5% 38.6%, 41.5% 38.85%); }
+#box.Minion #a20 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(37.5% 38.5%, 41.5% 38.75%, 39.125% 40.125%);
+  clip-path: polygon(37.5% 38.5%, 41.5% 38.75%, 39.125% 40.125%); }
+#box.Minion #a21 {
+  background: #ffffff;
+  -webkit-clip-path: polygon(62.225% 27.375%, 53.475% 35.25%, 63.975% 47.25%);
+  clip-path: polygon(62.225% 27.375%, 53.475% 35.25%, 63.975% 47.25%); }
+#box.Minion #a22 {
+  background: #ffffff;
+  -webkit-clip-path: polygon(62.125% 27.375%, 63.875% 47.25%, 73% 35.375%);
+  clip-path: polygon(62.125% 27.375%, 63.875% 47.25%, 73% 35.375%); }
+#box.Minion #a23 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(60.5% 36.35%, 58.75% 38.6%, 62.75% 38.1%);
+  clip-path: polygon(60.5% 36.35%, 58.75% 38.6%, 62.75% 38.1%); }
+#box.Minion #a24 {
+  background: #352e2a;
+  -webkit-clip-path: polygon(58.75% 38.5%, 60.875% 40%, 62.75% 38%);
+  clip-path: polygon(58.75% 38.5%, 60.875% 40%, 62.75% 38%); }
 
 /*# sourceMappingURL=characters.css.map */
