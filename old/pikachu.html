@@ -1,0 +1,259 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <title>DVM</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column-reverse;
+                width: 100%;
+                height: 100%;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-size: 2rem;
+                /* transform: translateX(-25%); */
+            }
+            #box {
+                width: 70vh;
+                height: 70vh;
+                position: relative;
+                transition: all 0.1s ease-out;
+            }
+            #box div {
+                transition: all 0.3s linear;
+            }
+            #box div {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            #a1 {
+                background: #161925;
+                clip-path: polygon( 44.805% 10.317% ,50.487% 12.694% ,50.649% 22.995% );
+            }
+            .D #a1 {
+                background: #000;
+                clip-path: polygon( 2.625% 15.375% ,10.750% 17.250% ,14.000% 32.625% );
+            }
+            #a2 {
+                background: #ba1f33;
+                clip-path: polygon( 59.416% 15.388% ,73.377% 16.656% ,57.792% 23.154% );
+            }
+            .D #a2 {
+                background: #ffd924;
+                clip-path: polygon( 10.750% 17.250% ,29.250% 44.625% ,14.000% 32.625% );
+            }
+            #a3 {
+                background: #1446a0;
+                clip-path: polygon( 81.494% 25.214% ,95.130% 27.116% ,72.727% 31.870% );
+            }
+            .D #a3 {
+                background: #e5bf23;
+                clip-path: polygon( 10.750% 17.250% ,35.125% 39.250% ,29.375% 44.625% );
+            }
+            #a4 {
+                background: #161925;
+                clip-path: polygon( 82.955% 43.914% ,91.883% 37.734% ,93.994% 42.171% );
+            }
+            .D #a4 {
+                background: #e5bf23;
+                clip-path: polygon( 29.375% 44.875% ,32.125% 78.125% ,25.750% 65.000% );
+
+            }
+            #a5 {
+                background: #f5d547;
+                clip-path: polygon( 85.877% 48.336% ,97.240% 46.751% ,97.240% 58.637% );
+            }
+            .D #a5 {
+                background: #ce2532;
+                clip-path: polygon( 25.875% 64.875% ,31.375% 64.875% ,31.000% 75.500% );
+
+            }
+            #a6 {
+                background: #ba1f33;
+                clip-path: polygon( 82.955% 56.878% ,100.000% 62.583% ,100.000% 68.605% );
+            }
+            .D #a6 {
+                background: #ed1c24;
+                clip-path: polygon( 31.375% 65.000% ,35.125% 70.875% ,30.875% 75.625% );
+
+            }
+            #a7 {
+                background: #1446a0;
+                clip-path: polygon( 77.760% 65.594% ,86.851% 74.786% ,79.870% 80.333% );
+            }
+            .D #a7 {
+                background: #f2ca22;
+                clip-path: polygon( 29.250% 44.750% ,51.750% 85.125% ,32.000% 78.000% );
+
+            }
+            #a8 {
+                background: #f5d547;
+                clip-path: polygon( 55.844% 69.556% ,63.474% 84.770% ,57.792% 87.623% );
+            }
+            .D #a8 {
+                background: #ffd924;
+                clip-path: polygon( 29.250% 44.750% ,70.750% 77.875% ,51.750% 84.875% );
+
+            }
+            #a9 {
+                background: #ba1f33;
+                clip-path: polygon( 43.182% 67.655% ,33.604% 86.989% ,37.175% 89.683% ); 
+            }
+            .D #a9 {
+                background: #fcdb51;
+                clip-path: polygon( 35.125% 39.250% ,70.750% 77.875% ,29.375% 44.750% );
+
+            }
+            #a10 {
+                background: #1446a0;
+                clip-path: polygon( 25.162% 66.704% ,17.695% 79.065% ,16.396% 72.092% );
+            }
+            .D #a10 {
+                background: #ffd924;
+                clip-path: polygon( 45.500% 35.500% ,70.750% 77.875% ,35.125% 39.125% );
+
+            }
+            #a11 {
+                background: #161925;
+                clip-path: polygon( 5.682% 56.173% ,14.773% 60.927% ,7.305% 63.780% );
+            }
+            .D #a11 {
+                background: #f2ca22;
+                clip-path: polygon( 45.500% 35.500% ,64.125% 38.250% ,70.750% 77.750% );
+
+            }
+            #a12 {
+                background: #ba1f33;
+                clip-path: polygon( 0.325% 40.412% ,18.019% 45.008% ,5.844% 48.494% );
+            }
+            .D #a12 {
+                background: #e5bf23;
+                clip-path: polygon( 64.250% 38.250% ,71.125% 44.000% ,70.750% 77.750% );
+
+            }
+            #a13 {
+                background: #1446a0;
+                clip-path: polygon( 12.338% 29.493% ,20.130% 42.171% ,12.338% 38.051% );
+            }
+            .D #a13 {
+                background: #f2ca22;
+                clip-path: polygon( 71.250% 44.125% ,76.000% 68.625% ,70.750% 77.750% );
+
+            }
+            #a14 {
+                background: #e5bf23;
+                clip-path: polygon( 33.604% 17.765% ,29.708% 27.750% ,27.273% 21.569% );
+            }
+            .D #a14 {
+                background: #e5bf23;
+                clip-path: polygon( 67.000% 68.000% ,71.875% 75.750% ,66.625% 74.500% );
+
+            }
+            .D #a15 {
+                background: #ce2532;
+                clip-path: polygon( 67.000% 68.000% ,75.875% 68.625% ,71.875% 75.750% );
+
+            }
+            .D #a16 {
+                background: #ffd924;
+                clip-path: polygon( 64.125% 38.125% ,88.875% 20.500% ,71.875% 44.000% );
+
+            }
+            .D #a17 {
+                background: #e5bf23;
+                clip-path: polygon( 89.000% 20.500% ,86.125% 34.875% ,71.875% 44.000% );
+
+            }
+            .D #a18 {
+                background: #000;
+                clip-path: polygon( 89.000% 20.500% ,97.875% 18.750% ,86.125% 34.750% );
+
+            }
+            .D #a19 {
+                background: #000;
+                clip-path: polygon( 35.125% 53.750% ,39.125% 60.500% ,32.000% 59.750% );
+
+            }
+            .D #a20 {
+                background: #fff;
+                clip-path: polygon( 35.125% 55.125% ,37.750% 57.875% ,35.875% 57.500% );
+
+            }
+            .D #a21 {
+                background: #000;
+                clip-path: polygon( 49.500% 61.125% ,51.625% 61.125% ,50.750% 61.875% );
+
+            }
+            .D #a22 {
+                background: #ce2532;
+                clip-path: polygon( 44.375% 69.875% ,56.750% 70.375% ,50.750% 72.375% );
+            }
+            .D #a23 {
+                background: #000;
+                clip-path: polygon( 64.625% 53.375% ,67.500% 60.250% ,60.125% 58.875% );
+            }
+            .D #a24 {
+                background: #fff;
+                clip-path: polygon( 63.000% 55.375% ,63.500% 57.375% ,61.250% 57.625% );
+
+            }
+        </style>
+        <link rel="stylesheet" href="pikachu_files/style.css">
+    </head>
+    <body class="ltr">
+        <div><h1 id="dir">LTR (Click to Change)</h1></div>
+        <div id="box" class="D">
+            <div id="a1"></div>
+            <div id="a2"></div>
+            <div id="a3"></div>
+            <div id="a4"></div>
+            <div id="a5"></div>
+            <div id="a6"></div>
+            <div id="a7"></div>
+            <div id="a8"></div>
+            <div id="a9"></div>
+            <div id="a10"></div>
+            <div id="a11"></div>
+            <div id="a12"></div>
+            <div id="a13"></div>
+            <div id="a14"></div>
+            <div id="a15"></div>
+            <div id="a16"></div>
+            <div id="a17"></div>
+            <div id="a18"></div>
+            <div id="a19"></div>
+            <div id="a20"></div>
+            <div id="a21"></div>
+            <div id="a22"></div>
+            <div id="a23"></div>
+            <div id="a24"></div>
+        </div>
+        <script>
+            box.onclick = function() {
+                if(box.className == "D") {
+                    box.className = "";
+                }
+                else {
+                    box.className = "D";
+                }
+            }
+            dir.onclick = function() {
+                if(document.body.className == "ltr") {
+                    document.body.className = "rtl";
+                    dir.innerHTML = "RTL (Click to change)";
+                }
+                else {
+                    document.body.className = "ltr";
+                    dir.innerHTML = "LTR (Click to change)";
+                }
+            }
+        </script>
+    
+</body></html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/characters.css">
+    <link rel="stylesheet" href="css/transitions.css">
+  </head>
+  <body class="ltr">
+    <div><h1 id="dir">Tap / Use Arrow Keys to Navigate</h1></div>
+    <div id="box" class="Johnny">
+        <div id = "a1"></div>
+        <div id = "a2"></div>
+        <div id = "a3"></div>
+        <div id = "a4"></div>
+        <div id = "a5"></div>
+        <div id = "a6"></div>
+        <div id = "a7"></div>
+        <div id = "a8"></div>
+        <div id = "a9"></div>
+        <div id = "a10"></div>
+        <div id = "a11"></div>
+        <div id = "a12"></div>
+        <div id = "a13"></div>
+        <div id = "a14"></div>
+        <div id = "a15"></div>
+        <div id = "a16"></div>
+        <div id = "a17"></div>
+        <div id = "a18"></div>
+        <div id = "a19"></div>
+        <div id = "a20"></div>
+        <div id = "a21"></div>
+        <div id = "a22"></div>
+        <div id = "a23"></div>
+        <div id = "a24"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+  var characters = ["Johnny","Deadpool","Batman"];
+
+  function get(dir) {
+    var curr = box.className;
+    var icurr = characters.indexOf(curr);
+    if(icurr != -1) {
+      var raw = icurr + dir;
+      var loop = raw % characters.length;
+      return (loop<0)?(loop+characters.length):(loop);
+    }
+    else return "Johnny";
+  }
+
+  document.body.onkeydown = function(e) {
+    if(e.keyCode == 37){
+      document.body.className = "rtl";
+      box.className = characters[get(-1)];
+    }
+    else if(e.keyCode == 39){
+      document.body.className = "ltr";
+      box.className = characters[get(1)];
+    }
+  }
+
+  box.onclick = function() {
+    box.className = characters[get(1)];
+  }
+
+  </script>
+</html>
