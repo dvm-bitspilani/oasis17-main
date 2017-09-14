@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+            body
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column-reverse;
+                width: 100;
+                height: 100%;
+            }
+            *
+            {
+                padding: 0px;
+                margin: 0px;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-size: 2rem;
+                /* transform: translateX(-25%); */
+            }
+
+            
+            #box {
+                transform-origin: 50% 50%;
+                display: flex;
+                justify-content: space-around;
+                position: relative;
+                transition: all 0.1s ease-out;
+                overflow: hidden;
+            }
+            #box div {
+                transition: all 0.3s linear;
+                transform-origin: 50% 50%;
+                
+                  }
+            #box div {
+                background-image: url('blood.png');
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            .flex
+            {   background-color: #1b1b1c;
+                    width: 100vw;
+                height: 100vh;
+            
+            }
+            .D
+            {   
+               width: 70vh;
+                height: 70vh;
+                position: relative;
+                transition: all 0.1s ease-out;
+            }
+            .flex div
+            {   animation: x 90s linear infinite;   
+                
+            }
+             #a22
+            {   clip-path: polygon( 85.152% 3.671% ,89.242% 2.643% ,85.758% 5.580% );
+                background-color:white;
+            }
+             #a18
+            {
+                clip-path: polygon( 80.781% 13.765% ,81.953% 11.059% ,85.234% 11.059% );
+                background-color:rgba(0,0,0,0.4);
+            }
+            #a20
+            {
+                clip-path: polygon( 59.609% 5.647% ,61.094% 5.059% ,59.531% 10.118% );
+                background-color:white;
+            }
+            #a1
+            {
+                clip-path: polygon( 35.606% 9.398% ,33.712% 2.496% ,30.606% 3.818% );
+                background-color:rgba(0,0,0,0.2);
+            }
+            #a21
+            {
+                clip-path: polygon( 67.578% 13.412% ,68.125% 15.059% ,66.172% 16.824% );
+                background-color: white;
+            }
+            #a3
+            {
+               clip-path: polygon( 8.561% 14.097% ,7.803% 12.041% ,7.197% 14.097% );
+               background-color:white;
+            }
+            #a2
+            {
+                clip-path: polygon( 19.015% 16.446% ,17.424% 13.510% ,15.985% 14.831% );
+                background-color: white;
+            }
+            #a4
+            {
+               clip-path: polygon( 11.818% 33.627% ,9.167% 32.012% ,8.561% 33.480% );
+               background-color:white;
+            }
+            #a5
+            {
+               clip-path: polygon( 12.652% 68.429% ,10.833% 67.988% ,10.985% 70.778% );
+                background-color: rgba(255,0,0,0.4);;
+            }
+            #a6
+            {
+                clip-path: polygon( 11.288% 86.784% ,9.545% 87.518% ,10.000% 89.574% );
+                   background-color:rgba(255,0,0,0.4); ;
+            }
+            #a8
+            {clip-path: polygon( 77.727% 98.532% ,76.515% 99.706% ,75.303% 96.182% );
+                background-color: rgba(255,0,0,0.4);;
+            }
+            #a9
+            {
+                clip-path: polygon( 74.063% 96.941% ,72.188% 97.765% ,70.703% 93.529% );
+                background-color:white;
+            }
+            #a10
+            {
+                clip-path: polygon( 34.015% 99.853% ,37.424% 99.853% ,36.818% 96.035% );    
+                 background-color:rgba(255,0,0,0.4);;
+            }
+            #a11
+            {
+                clip-path: polygon( 56.364% 99.853% ,59.545% 94.714% ,55.379% 92.217% );
+                background-color: rgba(255,0,0,0.4);;
+            }
+            #a12
+            {clip-path: polygon( 18.203% 87.059% ,22.266% 85.765% ,21.406% 89.882% );
+                 background-color:rgba(255,0,0,0.4);;
+            }
+            #a13
+            {
+                clip-path: polygon( 87.813% 90.706% ,88.672% 87.059% ,85.156% 85.294% );
+                background-color:white;
+                
+            }
+            #a14
+            {
+                clip-path: polygon( 78.438% 92.706% ,77.500% 97.882% ,80.859% 98.000% );
+                background-color: rgba(255,0,0,0.4);;
+            }
+            #a15
+            {
+                clip-path: polygon( 95.547% 62.353% ,95.391% 60.824% ,93.984% 61.765% );
+                 background-color:rgba(0,0,0,0.2);
+            }
+            #a16
+            {
+                clip-path: polygon( 87.734% 38.118% ,87.969% 33.412% ,83.125% 39.059% );
+                background-color: rgba(255,0,0,0.4);;
+            }
+            #a19
+            {
+                clip-path: polygon( 44.297% 0.824% ,50.938% 0.000% ,46.094% 6.824% );
+                background-color:white;
+            }
+            #a23
+            {   
+               background-color:rgba(0,0,0,0.4);
+               clip-path: polygon( 69.922% 0.941% ,71.484% 0.471% ,70.859% 2.824% );
+            }
+            #a24
+            {
+                clip-path: polygon( 95.530% 69.091% ,92.197% 70.379% ,92.500% 64.167% );
+                background-color:rgba(0,0,0,0.2);
+            }
+            #a7
+            {   
+                clip-path: polygon( 5.000% 48.458% ,5.682% 45.374% ,7.045% 46.843% );
+                background-color: white;
+            }
+            #a17
+            {
+                clip-path: polygon( 84.219% 11.765% ,81.797% 10.471% ,81.250% 13.176% );
+                background-color:rgba(0,0,0,0.4);
+            }
+             /*@keyframes x
+            {
+                0%
+                {
+                    transform: rotate(0deg);
+                }
+                
+                100%
+                {
+                    transform: rotate(360deg);
+                }
+            }*/
+            .D #a1 {
+                background: #000;
+                clip-path: polygon( 2.625% 15.375% ,10.750% 17.250% ,14.000% 32.625% );
+            }
+          
+            .D #a2 {
+                background: #ffd924;
+                clip-path: polygon( 10.750% 17.250% ,29.350% 44.625% ,14.000% 32.625% );
+            }
+            .D #a3 {
+                background: #e5bf23;
+                clip-path: polygon( 10.750% 17.250% ,35.325% 39.450% ,29.375% 44.825% );
+            }
+            .D #a4 {
+                background: #e5bf23;
+                clip-path: polygon( 29.375% 44.875% ,32.125% 78.125% ,25.750% 65.000% );
+            }
+            .D #a5 {
+                background: #ce2532;
+                clip-path: polygon( 25.675% 64.875% ,31.375% 64.875% ,30.800% 75.500% );;
+                z-index: 1;
+            }
+            .D #a6 {
+                background: #ed1c24;
+                clip-path: polygon( 31.325% 65.000% ,35.125% 70.875% ,30.750% 75.625% );
+                z-index: 1;
+            }
+            .D #a7 {
+                background: #f2ca22;
+                clip-path: polygon( 29.400% 44.750% ,51.650% 84.725% ,32.000% 78.000% );
+            }
+            .D #a8 {
+                background: #ffd924;
+                clip-path: polygon( 29.350% 44.750% ,70.750% 77.875% ,51.750% 84.875% );
+            }
+            .D #a9 {
+                background: #fcdb51;
+                clip-path: polygon( 35.125% 39.250% ,70.750% 77.875% ,29.375% 44.750% );
+            }
+            .D #a10 {
+                background: #ffd924;
+                clip-path: polygon( 45.500% 35.500% ,70.750% 77.875% ,34.900% 39.125% );
+            }
+            .D #a11 {
+                background: #FFD924;
+                clip-path: polygon( 45.500% 35.500% ,64.250% 38.250% ,70.650% 77.750% );
+            }
+            .D #a12 {
+                background: #F2CA22;
+                clip-path: polygon( 64.250% 38.250% ,71.125% 44.000% ,70.750% 77.950% );
+            }
+            .D #a13 {
+                background: #E5BF23;
+                clip-path: polygon( 71.050% 43.925% ,76.000% 68.625% ,70.750% 77.750% );
+            }
+            .D #a14 {
+                background: #ED1C24;
+                clip-path: polygon( 67.000% 68.000% ,71.875% 75.750% ,66.625% 74.500% );
+            }
+            .D #a15 {
+                background: #ce2532;
+                clip-path: polygon( 67.000% 68.000% ,75.875% 68.625% ,71.875% 75.750% );
+            }
+            .D #a16 {
+                background: #E5BF23;
+                clip-path: polygon( 64.225% 38.325% ,88.875% 20.500% ,71.175% 44.200% );
+            }
+            .D #a17 {
+                background: #ffd924;
+                clip-path: polygon( 88.800% 20.500% ,86.125% 34.675% ,70.850% 44.600% );
+            }
+            .D #a18 {
+                background: #000;
+                clip-path: polygon( 88.800% 20.800% ,97.875% 18.750% ,86.025% 34.750% );
+            }
+            .D #a19 {
+                background: #000;
+                clip-path: polygon( 35.125% 53.750% ,39.125% 60.500% ,32.000% 59.750% );
+            }
+            .D #a20 {
+                background: #fff;
+                clip-path: polygon( 36.000% 55.125% ,37.750% 57.875% ,35.675% 57.600% );
+            }
+            .D #a21 {
+                background: #000;
+                clip-path: polygon( 49.500% 61.125% ,51.625% 61.125% ,50.750% 61.875% );
+            }
+            .D #a22 {
+                background: #ce2532;
+                clip-path: polygon( 44.375% 69.875% ,56.750% 70.375% ,50.750% 72.375% );
+            }
+            .D #a23 {
+                background: #000;
+                clip-path: polygon( 64.625% 53.375% ,67.500% 60.250% ,60.125% 58.875% );
+            }
+            .D #a24 {
+                background: #fff;
+                clip-path: polygon( 62.850% 55.375% ,63.500% 57.675% ,61.050% 57.625% );
+            }
+</style>
+    <title>flex</title>
+</head>
+<body>
+<div id="box" class="flex" onclick="change()"> 
+<div id="a1"></div>
+<div id="a2"></div>
+<div id="a3"></div>
+<div id="a4"></div>
+<div id="a5"></div>
+<div id="a6"></div>
+<div id="a7"></div>
+<div id="a8"></div>
+<div id="a9"></div>
+<div id="a10"></div>
+<div id="a11"></div>
+<div id="a12"></div>
+<div id="a13"></div>
+<div id="a14"></div>
+<div id="a15"></div>
+<div id="a16"></div>
+<div id="a17"></div>
+<div id="a18"></div>
+<div id="a19"></div>
+<div id="a21"></div>
+<div id="a22"></div>
+<div id="a23"></div>
+<div id="a24"></div>
+</div>
+<script type="text/javascript">
+    function change()
+    {   //D is the present class
+        $('.flex').toggleClass('D');
+        $('.D').toggleClass('.flex');
+    }
+</script>
+</body>
+</html>
