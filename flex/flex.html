@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+           
+            *
+            {
+                padding: 0px;
+                margin: 0px;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-size: 2rem;
+                /* transform: translateX(-25%); */
+            }
+
+            
+            #box {background: #1b1b1c;
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+                transition: all 0.1s ease-out;
+                overflow: hidden;
+            }
+            #box div {
+                transition: all 0.3s linear;
+                    animation: x 90s linear infinite;
+             
+            }
+            #box div {
+                background-image: url('blood.png');
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+             #a22
+            {   clip-path: polygon( 43.438% 0.353% ,46.484% 0.471% ,40.000% 7.412% );
+                background-color:white;
+            }
+             #a18
+            {
+                clip-path: polygon( 92.344% 34.588% ,93.203% 37.529% ,94.063% 34.235% );
+                background-color:rgba(0,0,0,0.4);
+            }
+            #a20
+            {
+                clip-path: polygon( 93.125% 44.353% ,93.047% 40.118% ,94.766% 42.706% );
+                background-color:white;
+            }
+            #a1
+            {
+                clip-path: polygon( 35.625% 9.176% ,33.750% 2.706% ,30.391% 3.647% );
+                background-color:rgba(0,0,0,0.4);
+            }
+            #a21
+            {
+                clip-path: polygon( 91.172% 54.235% ,91.328% 56.824% ,91.719% 53.882% );
+                background-color: white;
+            }
+            #a3
+            {
+                clip-path: polygon( 8.125% 51.765% ,8.125% 45.765% ,10.391% 48.588% );
+               background-color:white;
+            }
+            #a2
+            {
+                clip-path: polygon( 15.125% 24.765% ,17.125% 25.765% ,19.391% 28.588% );
+                background-color: white;
+            }
+            #a4
+            {
+                clip-path: polygon( 12.031% 34.000% ,8.828% 31.765% ,8.438% 34.118% );
+               background-color:white;
+            }
+            #a5
+            {
+               clip-path: polygon( 3.438% 18.235% ,3.828% 24.235% ,6.094% 19.529% );
+                background-color: red;
+            }
+            #a6
+            {
+                clip-path: polygon( 13.906% 78.471% ,16.797% 82.941% ,12.812% 85.176% );
+                   background-color:red;
+            }
+            #a8
+            {
+                clip-path: polygon( 36.719% 95.294% ,36.406% 91.412% ,38.125% 93.412% );
+                background-color: red;
+            }
+            #a9
+            {
+                clip-path: polygon( 22.813% 79.176% ,23.125% 82.000% ,24.219% 76.588% );
+                background-color:white;
+            }
+            #a10
+            {
+                clip-path: polygon( 71.641% 97.765% ,74.375% 96.706% ,70.938% 93.529% );
+                 background-color:red;
+            }
+            #a11
+            {
+                clip-path: polygon( 52.422% 98.706% ,53.828% 96.000% ,52.266% 95.529% );
+                background-color: red;
+            }
+            #a12
+            {
+                clip-path: polygon( 38.516% 82.941% ,39.297% 83.647% ,39.297% 81.294% );
+                 background-color:red;
+            }
+            #a13
+            {
+                clip-path: polygon( 13.125% 7.412% ,13.203% 10.588% ,15.078% 7.882% );
+                background-color:white;
+                
+            }
+            #a14
+            {
+                clip-path: polygon( 80.781% 13.647% ,81.719% 10.353% ,84.609% 11.176% );
+                background-color: red;
+            }
+            #a15
+            {
+                clip-path: polygon( 73.125% 25.882% ,75.859% 22.353% ,74.688% 19.765% );
+                 background-color:rgba(0,0,0,0.4);
+            }
+            #a16
+            {
+                clip-path: polygon( 60.078% 9.412% ,59.531% 5.294% ,60.547% 5.294% );
+                background-color: red;
+            }
+            #a19
+            {
+                clip-path: polygon( 80.000% 50.353% ,82.344% 48.235% ,83.203% 50.588% );
+                background-color:white;
+            }
+            #a23
+            {   
+               background-color:rgba(0,0,0,0.4);
+                clip-path: polygon( 78.828% 76.000% ,78.750% 73.882% ,80.078% 75.412% );  
+            }
+            #a24
+            {
+                clip-path: polygon( 89.063% 66.824% ,89.609% 68.235% ,90.156% 67.176% );
+                background-color:rgba(0,0,0,0.4);
+            }
+            #a7
+            {   
+                clip-path: polygon( 58.438% 91.529% ,60.625% 88.706% ,58.047% 84.588% ); 
+                background-color: white;
+            }
+            #a17
+            {
+                clip-path: polygon( 48.594% 13.765% ,47.188% 10.353% ,48.984% 9.529% );
+                background-color:rgba(0,0,0,0.4);
+            }
+           /*  @keyframes x
+            {
+                0%
+                {
+                    transform: rotate(0deg);
+                }
+                
+                100%
+                {
+                    transform: rotate(360deg);
+                }
+            }*/
+
+</style>
+    <title>flex</title>
+</head>
+<body>
+<div id="box"> 
+<div id="a1"></div>
+<div id="a2"></div>
+<div id="a3"></div>
+<div id="a4"></div>
+<div id="a5"></div>
+<div id="a6"></div>
+<div id="a7"></div>
+<div id="a8"></div>
+<div id="a9"></div>
+<div id="a10"></div>
+<div id="a11"></div>
+<div id="a12"></div>
+<div id="a13"></div>
+<div id="a14"></div>
+<div id="a15"></div>
+<div id="a16"></div>
+<div id="a17"></div>
+<div id="a18"></div>
+<div id="a19"></div>
+<div id="a20"></div>
+<div id="a21"></div>
+<div id="a22"></div>
+<div id="a23"></div>
+<div id="a24"></div>
+</div>
+</body>
+</html>
