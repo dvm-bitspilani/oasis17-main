@@ -66,9 +66,32 @@
     }
   }
 
-  box.onclick = function() {
-    box.className = characters[get(1)];
-  }
+  var startX = 0;
+  var delta;
+  var found = 0;
+
+  document.body.addEventListener('touchstart', function(e){
+    found = 0;
+    startX = parseInt(e.changedTouches[0].pageX);
+  });
+  document.body.addEventListener('touchmove', function(e){
+    if(found==1) return;
+    delta = parseInt(e.changedTouches[0].pageX) - startX;
+    if (delta > 20) {
+      found = 1;
+      document.body.className = "rtl";
+      box.className = characters[get(-1)];
+    }
+    else if(delta < 20) {
+      found = 1;
+      document.body.className = "ltr";
+      box.className = characters[get(1)];
+    }
+  });
+
+  // box.onclick = function() {
+  //   box.className = characters[get(1)];
+  // }
 
   </script>
 </html>
