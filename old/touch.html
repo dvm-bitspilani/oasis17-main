@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+      }
+      html, body {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="touch">
+
+    </div>
+    <script type="text/javascript">
+    function stringify(o) {
+      var str =  "";
+      for (var x in o) {
+        str += o+': '+o[x]+'<br>';
+      }
+      return str;
+    }
+    var startX = 0;
+    var dist = 0;
+      window.addEventListener('load', function(){
+        touch.innerHTML = "Okay<br>";
+        var ongoingTouches = [];
+        document.body.addEventListener('touchstart', function(e){
+          startX = parseInt(e.changedTouches[0].clientX);
+          touch.innerHTML += "startX: "+e.changedTouches[0].clientX;
+          touch.innerHTML += "<br>";
+        });
+        document.body.addEventListener('touchend', function(e){
+          touch.innerHTML += "end: "+dist;
+          touch.innerHTML += "<br>";
+        });
+        document.body.addEventListener('touchmove', function(e){
+          dist = parseInt(e.changedTouches[0].clientX) - startX;
+        });
+      });
+    </script>
+  </body>
+</html>
