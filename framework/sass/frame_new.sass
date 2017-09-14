@@ -2,6 +2,8 @@ body
 	margin: 0
 	padding: 0
 	font: 20px/22px arial, verdana
+	overflow: hidden
+	height: 100%
 
 #background, #nav_wrapper
 	width: 100vw
@@ -11,10 +13,10 @@ body
 
 #background
 	background: #ccc
-
 	.tag-line
-		float: right
-		padding: 30px
+		position: absolute
+		right: 30px
+		top: 30px
 		width: 50vw
 		font-size: 5em
 		line-height: 1em
@@ -31,11 +33,18 @@ body
 	-webkit-flex-direction: column
 	-ms-flex-direction: column
 	flex-direction: column
+	justify-content: space-between
 
 	header, footer
 		height: 10vh
 
 	header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-left: 20px
+		padding-right: 20px
+		height: 100px
 		.logo
 			box-sizing: border-box
 			width: 90px
@@ -43,45 +52,42 @@ body
 			max-width: 40vw
 			max-height: 40vw
 			border: 1px solid #fff
-			margin: 20px 0 0 24px
 			background: url(../../dist/img/Oasis-Logo.png) no-repeat center
 			background-size: contain
-
+		.arrows
+			display: none
+			flex-direction: row
+			div
+				margin: 0 7px
 	section
-		height: 80vh
-
+		height: calc(90vh - 100px)
+		display: flex
+		flex-direction: column
 		.container
 			display: flex
-			-webkit-flex-direction: row
-			-ms-flex-direction: row
 			flex-direction: row
-			-webkit-justify-content: space-between
 			justify-content: space-around
 			height: 70vh
 			width: 100vw
-			-webkit-align-items: center
 			align-items: center
 			margin: 0
-
+			flex: 1
 			.change
 				width: 50px
 				height: 50px
 				border: 1px solid #fff
 				border-radius: 50%
-
 			#polygon_wrapper
 				border: 1px solid #eee
-				width: 70vh
-				height: 70vh
-				max-width: calc(100vw - 100px)
-				max-height: calc(100vw - 100px)
-
+				width: 65vh
+				height: 65vh
 		.event-name
 			font-size: 7em
 			color: #fff
 			font-family: Bonnbeta
-			position: absolute
-			left: 30px
+			height: 1em
+			line-height: 1em
+			margin-left: 30px
 
 	footer
 		background: #fff
@@ -108,11 +114,65 @@ body
 	border: 1px solid #fff
 	border-radius: 50%
 
+@media all and (max-aspect-ratio: 1/1)
 	#nav_wrapper
-		.change
-			display: none
-
-	@media all and (max-aspect-ratio: 1/1)
-		#nav_wrapper
+		header
+			.arrows
+				display: flex
+			.logo
+				width: 80px
+				height: 80px
+		section
 			.change
-				display: block
+				display: none
+			.container #polygon_wrapper
+				height: 60vh
+				width: 60vh
+			.event-name
+				width: 100%
+				display: flex
+				justify-content: center
+				margin-left: 0
+		footer
+			nav li:nth-child(2), div
+				display: none
+			nav
+				width: 100%
+				justify-content: center
+				font-size: 2em
+	#background .tag-line
+		top: 90px
+		flex-direction: row
+		justify-content: center
+		left: 0
+		width: 100%
+		span
+			margin: 10px
+
+@media all and (max-aspect-ratio: 2/3)
+	#background .tag-line
+		display: none
+	#nav_wrapper
+		section .container #polygon_wrapper
+			width: 100vw
+			height: 100vw
+
+@media all and (max-width: 500px)
+	#background .tag-line
+		display: none
+	#nav_wrapper
+		footer nav
+			font-size: 1.5em
+		footer
+			position: fixed
+			bottom: 0
+			left: 0
+			right: 0
+		section
+			margin-bottom: 10vh
+			.event-name
+				font-size: 4em
+			.container
+				#polygon_wrapper
+					width: 80vw
+					height: 80vw
