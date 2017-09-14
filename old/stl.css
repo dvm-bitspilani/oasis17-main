@@ -1,0 +1,66 @@
+ #box div:nth-child(1) {
+  transition: clip-path 0.34s 0.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.34s 0.02s; }
+ #box div:nth-child(2) {
+  transition: clip-path 0.38s 0.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.38s 0.04s; }
+ #box div:nth-child(3) {
+  transition: clip-path 0.42s 0.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.42s 0.06s; }
+ #box div:nth-child(4) {
+  transition: clip-path 0.46s 0.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.46s 0.08s; }
+ #box div:nth-child(5) {
+  transition: clip-path 0.5s 0.3s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.5s 0.1s; }
+ #box div:nth-child(6) {
+  transition: clip-path 0.54s 0.32s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.54s 0.12s; }
+ #box div:nth-child(7) {
+  transition: clip-path 0.58s 0.34s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.58s 0.14s; }
+ #box div:nth-child(8) {animation:shine 2.2s linear 2s ;
+  transition: clip-path 0.62s 0.36s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.62s 0.16s; }
+ #box div:nth-child(9) {
+  transition: clip-path 0.66s 0.38s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.66s 0.18s; }
+ #box div:nth-child(10) {
+  transition: clip-path 0.7s 0.4s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.7s 0.2s; }
+ #box div:nth-child(11) {
+  transition: clip-path 0.74s 0.42s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.74s 0.22s; }
+ #box div:nth-child(12) {
+  transition: clip-path 0.78s 0.44s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.78s 0.24s; }
+ #box div:nth-child(13) {
+  transition: clip-path 0.82s 0.46s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.82s 0.26s; }
+ #box div:nth-child(14) {
+  transition: clip-path 0.86s 0.48s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.86s 0.28s; }
+
+ #box div:nth-child(15) {
+  transition: clip-path 0.86s 0.55s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.86s 0.28s; }
+ #box div:nth-child(16) {
+  transition: clip-path 0.82s 0.525s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.82s 0.26s; }
+ #box div:nth-child(17) {
+  transition: clip-path 0.78s 0.5s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.78s 0.24s; }
+ #box div:nth-child(18) {
+  transition: clip-path 0.74s 0.475s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.74s 0.22s; }
+ #box div:nth-child(19) {
+  transition: clip-path 0.7s 0.45s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.7s 0.2s; }
+ #box div:nth-child(20) {
+  transition: clip-path 0.66s 0.425s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.66s 0.18s; }
+ #box div:nth-child(21) {
+  transition: clip-path 0.62s 0.4s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.62s 0.16s; }
+ #box div:nth-child(22) {
+  transition: clip-path 0.58s 0.375s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.58s 0.14s; }
+ #box div:nth-child(23) {
+  transition: clip-path 0.54s 0.35s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.54s 0.12s; }
+ #box div:nth-child(24) {
+  transition: clip-path 0.5s 0.325s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.5s 0.1s; }
+@keyframes shine{
+  0%{
+background-color: black;
+  }
+   40%{
+background-color: rgba(255,255,255,.9);
+  }
+  60%{
+background-color: rgba(255,255,255,.8);
+  }
+   80%{
+background-color: background-color: rgba(255,255,255,.9);
+  }
+  100%{
+background-color: black;
+  }
+}
