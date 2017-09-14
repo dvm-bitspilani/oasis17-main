@@ -3,7 +3,10 @@
 <head>
 <script type="text/javascript" src="jquery.js"></script>
 <style type="text/css">
-           
+            body
+            {
+                overflow: hidden;
+            }
             *
             {
                 padding: 0px;
@@ -19,15 +22,16 @@
             #box {background: #1b1b1c;
                 width: 100vw;
                 height: 100vh;
+                transform-origin: 50% 50%;
                 position: relative;
                 transition: all 0.1s ease-out;
                 overflow: hidden;
             }
             #box div {
                 transition: all 0.3s linear;
-                    animation: x 90s linear infinite;
-             
-            }
+                transform-origin: 50% 50%;
+                /*animation: x 90s linear infinite;   */
+                  }
             #box div {
                 background-image: url('blood.png');
                 width: 100%;
@@ -35,126 +39,124 @@
                 position: absolute;
             }
              #a22
-            {   clip-path: polygon( 43.438% 0.353% ,46.484% 0.471% ,40.000% 7.412% );
+            {   clip-path: polygon( 85.152% 3.671% ,89.242% 2.643% ,85.758% 5.580% );
                 background-color:white;
             }
              #a18
             {
-                clip-path: polygon( 92.344% 34.588% ,93.203% 37.529% ,94.063% 34.235% );
+                clip-path: polygon( 80.781% 13.765% ,81.953% 11.059% ,85.234% 11.059% );
                 background-color:rgba(0,0,0,0.4);
             }
             #a20
             {
-                clip-path: polygon( 93.125% 44.353% ,93.047% 40.118% ,94.766% 42.706% );
+                clip-path: polygon( 59.609% 5.647% ,61.094% 5.059% ,59.531% 10.118% );
                 background-color:white;
             }
             #a1
             {
-                clip-path: polygon( 35.625% 9.176% ,33.750% 2.706% ,30.391% 3.647% );
-                background-color:rgba(0,0,0,0.4);
+                clip-path: polygon( 35.606% 9.398% ,33.712% 2.496% ,30.606% 3.818% );
+                background-color:rgba(0,0,0,0.2);
             }
             #a21
             {
-                clip-path: polygon( 91.172% 54.235% ,91.328% 56.824% ,91.719% 53.882% );
+                clip-path: polygon( 67.578% 13.412% ,68.125% 15.059% ,66.172% 16.824% );
                 background-color: white;
             }
             #a3
             {
-                clip-path: polygon( 8.125% 51.765% ,8.125% 45.765% ,10.391% 48.588% );
+               clip-path: polygon( 8.561% 14.097% ,7.803% 12.041% ,7.197% 14.097% );
                background-color:white;
             }
             #a2
             {
-                clip-path: polygon( 15.125% 24.765% ,17.125% 25.765% ,19.391% 28.588% );
+                clip-path: polygon( 19.015% 16.446% ,17.424% 13.510% ,15.985% 14.831% );
                 background-color: white;
             }
             #a4
             {
-                clip-path: polygon( 12.031% 34.000% ,8.828% 31.765% ,8.438% 34.118% );
+               clip-path: polygon( 11.818% 33.627% ,9.167% 32.012% ,8.561% 33.480% );
                background-color:white;
             }
             #a5
             {
-               clip-path: polygon( 3.438% 18.235% ,3.828% 24.235% ,6.094% 19.529% );
-                background-color: red;
+               clip-path: polygon( 12.652% 68.429% ,10.833% 67.988% ,10.985% 70.778% );
+                background-color: rgba(255,0,0,0.4);;
             }
             #a6
             {
-                clip-path: polygon( 13.906% 78.471% ,16.797% 82.941% ,12.812% 85.176% );
-                   background-color:red;
+                clip-path: polygon( 11.288% 86.784% ,9.545% 87.518% ,10.000% 89.574% );
+                   background-color:rgba(255,0,0,0.4); ;
             }
             #a8
-            {
-                clip-path: polygon( 36.719% 95.294% ,36.406% 91.412% ,38.125% 93.412% );
-                background-color: red;
+            {clip-path: polygon( 77.727% 98.532% ,76.515% 99.706% ,75.303% 96.182% );
+                background-color: rgba(255,0,0,0.4);;
             }
             #a9
             {
-                clip-path: polygon( 22.813% 79.176% ,23.125% 82.000% ,24.219% 76.588% );
+                clip-path: polygon( 74.063% 96.941% ,72.188% 97.765% ,70.703% 93.529% );
                 background-color:white;
             }
             #a10
             {
-                clip-path: polygon( 71.641% 97.765% ,74.375% 96.706% ,70.938% 93.529% );
-                 background-color:red;
+                clip-path: polygon( 34.015% 99.853% ,37.424% 99.853% ,36.818% 96.035% );    
+                 background-color:rgba(255,0,0,0.4);;
             }
             #a11
             {
-                clip-path: polygon( 52.422% 98.706% ,53.828% 96.000% ,52.266% 95.529% );
-                background-color: red;
+                clip-path: polygon( 56.364% 99.853% ,59.545% 94.714% ,55.379% 92.217% );
+                background-color: rgba(255,0,0,0.4);;
             }
             #a12
-            {
-                clip-path: polygon( 38.516% 82.941% ,39.297% 83.647% ,39.297% 81.294% );
-                 background-color:red;
+            {clip-path: polygon( 18.203% 87.059% ,22.266% 85.765% ,21.406% 89.882% );
+                 background-color:rgba(255,0,0,0.4);;
             }
             #a13
             {
-                clip-path: polygon( 13.125% 7.412% ,13.203% 10.588% ,15.078% 7.882% );
+                clip-path: polygon( 87.813% 90.706% ,88.672% 87.059% ,85.156% 85.294% );
                 background-color:white;
                 
             }
             #a14
             {
-                clip-path: polygon( 80.781% 13.647% ,81.719% 10.353% ,84.609% 11.176% );
-                background-color: red;
+                clip-path: polygon( 78.438% 92.706% ,77.500% 97.882% ,80.859% 98.000% );
+                background-color: rgba(255,0,0,0.4);;
             }
             #a15
             {
-                clip-path: polygon( 73.125% 25.882% ,75.859% 22.353% ,74.688% 19.765% );
-                 background-color:rgba(0,0,0,0.4);
+                clip-path: polygon( 95.547% 62.353% ,95.391% 60.824% ,93.984% 61.765% );
+                 background-color:rgba(0,0,0,0.2);
             }
             #a16
             {
-                clip-path: polygon( 60.078% 9.412% ,59.531% 5.294% ,60.547% 5.294% );
-                background-color: red;
+                clip-path: polygon( 87.734% 38.118% ,87.969% 33.412% ,83.125% 39.059% );
+                background-color: rgba(255,0,0,0.4);;
             }
             #a19
             {
-                clip-path: polygon( 80.000% 50.353% ,82.344% 48.235% ,83.203% 50.588% );
+                clip-path: polygon( 44.297% 0.824% ,50.938% 0.000% ,46.094% 6.824% );
                 background-color:white;
             }
             #a23
             {   
                background-color:rgba(0,0,0,0.4);
-                clip-path: polygon( 78.828% 76.000% ,78.750% 73.882% ,80.078% 75.412% );  
+               clip-path: polygon( 69.922% 0.941% ,71.484% 0.471% ,70.859% 2.824% );
             }
             #a24
             {
-                clip-path: polygon( 89.063% 66.824% ,89.609% 68.235% ,90.156% 67.176% );
-                background-color:rgba(0,0,0,0.4);
+                clip-path: polygon( 95.530% 69.091% ,92.197% 70.379% ,92.500% 64.167% );
+                background-color:rgba(0,0,0,0.2);
             }
             #a7
             {   
-                clip-path: polygon( 58.438% 91.529% ,60.625% 88.706% ,58.047% 84.588% ); 
+                clip-path: polygon( 5.000% 48.458% ,5.682% 45.374% ,7.045% 46.843% );
                 background-color: white;
             }
             #a17
             {
-                clip-path: polygon( 48.594% 13.765% ,47.188% 10.353% ,48.984% 9.529% );
+                clip-path: polygon( 84.219% 11.765% ,81.797% 10.471% ,81.250% 13.176% );
                 background-color:rgba(0,0,0,0.4);
             }
-           /*  @keyframes x
+             @keyframes x
             {
                 0%
                 {
@@ -165,7 +167,7 @@
                 {
                     transform: rotate(360deg);
                 }
-            }*/
+            }
 
 </style>
     <title>flex</title>
