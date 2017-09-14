@@ -2,6 +2,7 @@
 <html>
 <head>
 <script type="text/javascript" src="jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="evt.css"/>
 <style type="text/css">
             body
             {
@@ -44,15 +45,16 @@
                 position: absolute;
             }
             .flex
-            {   background-color: #1b1b1c;
-                    width: 100vw;
+            {   background: #1b1b1c;
+                width: 100vw;
                 height: 100vh;
             
             }
             .D
             {   
-               width: 70vh;
+                width: 70vh;
                 height: 70vh;
+                background-color: white;
                 position: relative;
                 transition: all 0.1s ease-out;
             }
@@ -293,7 +295,7 @@
     <title>flex</title>
 </head>
 <body>
-<div id="box" class="flex" onclick="change()"> 
+<div id="box" class="flex"> 
 <div id="a1"></div>
 <div id="a2"></div>
 <div id="a3"></div>
@@ -318,12 +320,79 @@
 <div id="a23"></div>
 <div id="a24"></div>
 </div>
+<div class="lightbox">
+    <div class='crosscont'> 
+      <div class="cross">
+    <a class="crosslink" href="#">  <p class="crossbar" id="anticlk"></p>
+        <p class="crossbar" id="clk"></p></a>     
+      </div>
+  </div>
+  <div class="evtcont">
+    <ul class="evtlist">
+        <li id="a" class="evt">
+            <h4 class="num"> event 1</h4>
+            <h1 class=" name dust">EVENT NAME</h2>
+            <p>this oasis on 31</p>
+        </li>
+        <li id="b" class="evt">
+            <h4 class=" num"> event 1</h4>
+            <h1 class=" name dust">EVENT NAME</h1>
+            <p>brief</p>
+        </li>
+
+        <li id="c" class="evt">
+            <h4 class="num"> event 2</h4>
+            <h1 class=" name dust">EVENT NAME</h1>
+            <p>brief</p>
+        </li>
+        <li id="d" class="evt">
+            <h4 class=" num"> event 3</h4>
+            <h1 class=" name dust">EVENT NAME</h1>
+            <p>brief</p>
+        </li>
+        <li id="e" class="evt">
+            <h4 class=" num"> event 1</h4>
+            <h1 class=" name dust">EVENT NAME</h1>
+            <p>brief</p>
+        </li>
+        <li id="f" class="evt">
+            <h4 class=" num"> event 1</h4>
+            <h1 class=" name dust">EVENT NAME</h1>
+            <p>brief</p>
+        </li>
+      <li id="f" class="evt">
+        <h4 class=" num"> event 1</h4>
+        <h1 class=" name dust">EVENT NAME</h1>
+        <p>brief</p>
+      </li>
+      <li id="f" class="evt">
+        <h4 class=" num"> event 1</h4>
+        <h1 class=" name dust">EVENT NAME</h1>
+      <p>brief</p>
+      </  l   i>
+      <li id="f" class="evt">
+        <h4 class=" num"> event 1</h4>
+         <h1 class=" name dust">EVENT NAME</h1>
+      <p>brief</p>
+      </li>
+  
+ 
+</div>
+</div>
 <script type="text/javascript">
-    function change()
+    $('#box').click(function()
     {   //D is the present class
-        $('.flex').toggleClass('D');
-        $('.D').toggleClass('.flex');
-    }
+        $('#box').addClass('flex');
+         $('#box').removeClass('D');
+        $('.lightbox').fadeIn();
+        
+    });
+    $('.crosscont').click(function()
+    {
+        $('#box').addClass('D');
+        $('#box').removeClass('flex');
+        $('.lightbox').fadeOut();
+    })
 </script>
 </body>
 </html>
