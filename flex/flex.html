@@ -5,7 +5,12 @@
 <style type="text/css">
             body
             {
-                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column-reverse;
+                width: 100;
+                height: 100%;
             }
             *
             {
@@ -19,10 +24,10 @@
             }
 
             
-            #box {background: #1b1b1c;
-                width: 100vw;
-                height: 100vh;
+            #box {
                 transform-origin: 50% 50%;
+                display: flex;
+                justify-content: space-around;
                 position: relative;
                 transition: all 0.1s ease-out;
                 overflow: hidden;
@@ -30,13 +35,30 @@
             #box div {
                 transition: all 0.3s linear;
                 transform-origin: 50% 50%;
-                /*animation: x 90s linear infinite;   */
+                
                   }
             #box div {
                 background-image: url('blood.png');
                 width: 100%;
                 height: 100%;
                 position: absolute;
+            }
+            .flex
+            {   background-color: #1b1b1c;
+                    width: 100vw;
+                height: 100vh;
+            
+            }
+            .D
+            {   
+               width: 70vh;
+                height: 70vh;
+                position: relative;
+                transition: all 0.1s ease-out;
+            }
+            .flex div
+            {   animation: x 90s linear infinite;   
+                
             }
              #a22
             {   clip-path: polygon( 85.152% 3.671% ,89.242% 2.643% ,85.758% 5.580% );
@@ -156,7 +178,7 @@
                 clip-path: polygon( 84.219% 11.765% ,81.797% 10.471% ,81.250% 13.176% );
                 background-color:rgba(0,0,0,0.4);
             }
-             @keyframes x
+             /*@keyframes x
             {
                 0%
                 {
@@ -167,13 +189,111 @@
                 {
                     transform: rotate(360deg);
                 }
+            }*/
+            .D #a1 {
+                background: #000;
+                clip-path: polygon( 2.625% 15.375% ,10.750% 17.250% ,14.000% 32.625% );
             }
-
+          
+            .D #a2 {
+                background: #ffd924;
+                clip-path: polygon( 10.750% 17.250% ,29.350% 44.625% ,14.000% 32.625% );
+            }
+            .D #a3 {
+                background: #e5bf23;
+                clip-path: polygon( 10.750% 17.250% ,35.325% 39.450% ,29.375% 44.825% );
+            }
+            .D #a4 {
+                background: #e5bf23;
+                clip-path: polygon( 29.375% 44.875% ,32.125% 78.125% ,25.750% 65.000% );
+            }
+            .D #a5 {
+                background: #ce2532;
+                clip-path: polygon( 25.675% 64.875% ,31.375% 64.875% ,30.800% 75.500% );;
+                z-index: 1;
+            }
+            .D #a6 {
+                background: #ed1c24;
+                clip-path: polygon( 31.325% 65.000% ,35.125% 70.875% ,30.750% 75.625% );
+                z-index: 1;
+            }
+            .D #a7 {
+                background: #f2ca22;
+                clip-path: polygon( 29.400% 44.750% ,51.650% 84.725% ,32.000% 78.000% );
+            }
+            .D #a8 {
+                background: #ffd924;
+                clip-path: polygon( 29.350% 44.750% ,70.750% 77.875% ,51.750% 84.875% );
+            }
+            .D #a9 {
+                background: #fcdb51;
+                clip-path: polygon( 35.125% 39.250% ,70.750% 77.875% ,29.375% 44.750% );
+            }
+            .D #a10 {
+                background: #ffd924;
+                clip-path: polygon( 45.500% 35.500% ,70.750% 77.875% ,34.900% 39.125% );
+            }
+            .D #a11 {
+                background: #FFD924;
+                clip-path: polygon( 45.500% 35.500% ,64.250% 38.250% ,70.650% 77.750% );
+            }
+            .D #a12 {
+                background: #F2CA22;
+                clip-path: polygon( 64.250% 38.250% ,71.125% 44.000% ,70.750% 77.950% );
+            }
+            .D #a13 {
+                background: #E5BF23;
+                clip-path: polygon( 71.050% 43.925% ,76.000% 68.625% ,70.750% 77.750% );
+            }
+            .D #a14 {
+                background: #ED1C24;
+                clip-path: polygon( 67.000% 68.000% ,71.875% 75.750% ,66.625% 74.500% );
+            }
+            .D #a15 {
+                background: #ce2532;
+                clip-path: polygon( 67.000% 68.000% ,75.875% 68.625% ,71.875% 75.750% );
+            }
+            .D #a16 {
+                background: #E5BF23;
+                clip-path: polygon( 64.225% 38.325% ,88.875% 20.500% ,71.175% 44.200% );
+            }
+            .D #a17 {
+                background: #ffd924;
+                clip-path: polygon( 88.800% 20.500% ,86.125% 34.675% ,70.850% 44.600% );
+            }
+            .D #a18 {
+                background: #000;
+                clip-path: polygon( 88.800% 20.800% ,97.875% 18.750% ,86.025% 34.750% );
+            }
+            .D #a19 {
+                background: #000;
+                clip-path: polygon( 35.125% 53.750% ,39.125% 60.500% ,32.000% 59.750% );
+            }
+            .D #a20 {
+                background: #fff;
+                clip-path: polygon( 36.000% 55.125% ,37.750% 57.875% ,35.675% 57.600% );
+            }
+            .D #a21 {
+                background: #000;
+                clip-path: polygon( 49.500% 61.125% ,51.625% 61.125% ,50.750% 61.875% );
+            }
+            .D #a22 {
+                background: #ce2532;
+                clip-path: polygon( 44.375% 69.875% ,56.750% 70.375% ,50.750% 72.375% );
+            }
+            .D #a23 {
+                background: #000;
+                clip-path: polygon( 64.625% 53.375% ,67.500% 60.250% ,60.125% 58.875% );
+            }
+            .D #a24 {
+                background: #fff;
+                clip-path: polygon( 62.850% 55.375% ,63.500% 57.675% ,61.050% 57.625% );
+            }
 </style>
     <title>flex</title>
 </head>
 <body>
-<div id="box"> 
+<div id="box" class="flex" onclick="change()"> 
 <div id="a1"></div>
 <div id="a2"></div>
 <div id="a3"></div>
@@ -193,11 +313,17 @@
 <div id="a17"></div>
 <div id="a18"></div>
 <div id="a19"></div>
-<div id="a20"></div>
 <div id="a21"></div>
 <div id="a22"></div>
 <div id="a23"></div>
 <div id="a24"></div>
 </div>
+<script type="text/javascript">
+    function change()
+    {   //D is the present class
+        $('.flex').toggleClass('D');
+        $('.D').toggleClass('.flex');
+    }
+</script>
 </body>
 </html>
