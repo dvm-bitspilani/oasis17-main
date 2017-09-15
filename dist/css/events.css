@@ -57,7 +57,7 @@ body {
       height: 90px;
       max-width: 40vw;
       max-height: 40vw;
-      background: url(../../dist/img/Oasis-Logo.png) no-repeat center;
+      background: url(../img/Oasis-Logo.png) no-repeat center;
       background-size: contain; }
     #nav_wrapper header .arrows {
       display: none;
@@ -218,3 +218,10 @@ body {
     align-items: flex-start; } }
 
 /*# sourceMappingURL=events.css.map */
+/*event css*/
+@font-face {
+  font-family: 'bonn';
+  src: url("font/BONN/bonnr.ttf") format('truetype');  
+}
+
+
