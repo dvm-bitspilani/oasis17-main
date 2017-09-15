@@ -73,3 +73,17 @@ document.body.addEventListener('touchmove', function(e){
 });
 
 changeChar(0);
+
+
+function cc(string){
+  return document.getElementsByClassName(string);
+}
+
+
+for(var i of cc('change')){
+  if(Array.from(i.classList).indexOf("prev") == -1){
+    i.addEventListener('click', ()=>{changeChar(1)})
+  }else{
+    i.addEventListener('click', ()=>{changeChar(-1)})
+  }
+}
