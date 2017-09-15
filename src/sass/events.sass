@@ -10,6 +10,13 @@ body
 .change.prev:hover
 	transform: rotate(180deg) scale(1.2) !important
 
+#up-arrow
+	display: none
+	background: url(../img/arrow2.png) center no-repeat
+	width: 30px
+	height: 30px
+	background-size: contain
+
 #box
 	position: relative
 	div
@@ -177,9 +184,11 @@ body
 				width: 100%
 				justify-content: center
 				li
-					font-size: 1.5em
+					font-size: 0.9em
 					font-family: "RobotoC"
 					color: #373839
+			#up-arrow
+				display: block
 	#background .tag-line
 		top: 130px
 		justify-content: center
