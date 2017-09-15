@@ -22,10 +22,10 @@
 		<section>
 			<div class="container">
 				<div class="change prev"></div>
-				<div id="polygon_wrapper"></div>
+				<div id="box"></div>
 				<div class="change next"></div>
 			</div>
-			<div class="event-name">ORATORY</div>
+			<div class="event-name"><span>ORATORY</span></div>
 		</section>
 		<footer>
 			<nav>
@@ -35,5 +35,14 @@
 			<div>RANDOM TEXT</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+	function handleResize(){
+		background.style.height = window.innerHeight+"px";
+		nav_wrapper.style.height = window.innerHeight+"px";
+	}
+		window.addEventListener("load",handleResize);
+		window.addEventListener("orientationchange",handleResize);
+		window.addEventListener("resize",handleResize)
+	</script>
 </body>
 </html>
