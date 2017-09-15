@@ -1,5 +1,5 @@
 <html>
-    <head><link rel="stylesheet" type="text/css" href="stl.css">
+    <head>
         <title>DVM</title>
         <style>
             * {
@@ -18,10 +18,14 @@
             #box{position: absolute;
                 width: 100%;
                 height: 100%;
+            transition:height .02s linear;
+                transition:width .02s linear;
+                background-color: transparent;
 
                             }
             
-            #box div { transition:all .01s linear;
+            #box div { 
+                transition:all .5s linear;
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -32,16 +36,14 @@
                                 width: 100vh;
                 height: 70vh;
                 position: absolute;
-                   transition: height.0001s .15s ;
-                 transition: width .0001s .15s ;
+                   
                
             }
             .A{width: 100%;
-                height: 100%
-                position: absolute;
+                height: 100%;
+               
                 /*transition: height .02s 10s ;*/
-                   transition: height.0001s .15s ;
-                 transition: width .0001s .15s ;
+                  
             }
            #a1{-webkit-clip-path: polygon( 47.578% 11.294% ,49.688% 9.765% ,49.141% 15.412% );
     background-color: black;
@@ -214,7 +216,7 @@
                 clip-path: polygon( 45.500% 76.125% ,69.250% 76.125% ,54.125% 78.375% );
             }
         </style>
-        <link rel="stylesheet" href="style.css" />
+     
     </head>
     <body class="ltr">
        
@@ -243,9 +245,9 @@
             <div id = "a22"></div>
             <div id = "a23"></div>
             <div id = "a24"></div>
-        </div>
+        </div> </body>
         <script>
-        
+       
                     // function trs(){
                     //   var t =  document.getElementById("a10");
                     //   t.style.opacity = 0.5;
@@ -254,7 +256,7 @@
             box.onclick = function() {
                 if(box.className == "D") {
                     box.className = "A";
-                   // setInterval(function(){ alert("Hello"); }, 3000);
+                   setInterval(function(){getElementById("a10").style.opacity}, 3000);
                     
                     
                 }
