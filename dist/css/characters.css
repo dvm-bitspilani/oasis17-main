@@ -585,7 +585,8 @@
 #box.Dexter #a1 {
   background: #EA7524;
   -webkit-clip-path: polygon(16.625% 25.625%, 13.125% 17%, 53.25% 17%);
-  clip-path: polygon(16.625% 25.625%, 13.125% 17%, 53.25% 17%); }
+  clip-path: polygon(16.625% 25.625%, 13.125% 17%, 53.25% 17%);
+  z-index: 1; }
 #box.Dexter #a2 {
   background: #EA7524;
   -webkit-clip-path: polygon(24.5% 5.6%, 83.875% 16.975%, 13.125% 17.1%);
@@ -597,16 +598,18 @@
 #box.Dexter #a4 {
   background: #EA7524;
   -webkit-clip-path: polygon(41% 17%, 68.375% 17%, 37% 26.75%);
-  clip-path: polygon(41% 17%, 68.375% 17%, 37% 26.75%); }
+  clip-path: polygon(41% 17%, 68.375% 17%, 37% 26.75%);
+  z-index: 1; }
 #box.Dexter #a5 {
   background: #EA7524;
   -webkit-clip-path: polygon(55.75% 17%, 83.875% 16.875%, 53.625% 24.125%);
-  clip-path: polygon(55.75% 17%, 83.875% 16.875%, 53.625% 24.125%); }
+  clip-path: polygon(55.75% 17%, 83.875% 16.875%, 53.625% 24.125%);
+  z-index: 1; }
 #box.Dexter #a6 {
   background: #FBD8D1;
   -webkit-clip-path: polygon(83.875% 16.875%, 24% 20.25%, 24% 47.75%);
   clip-path: polygon(83.875% 16.875%, 24% 20.25%, 24% 47.75%);
-  z-index: -1; }
+  z-index: 0; }
 #box.Dexter #a7 {
   background: #FBD8D1;
   -webkit-clip-path: polygon(83.875% 16.875%, 29.225% 57.25%, 24% 47.75%);
