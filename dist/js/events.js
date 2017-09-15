@@ -71,5 +71,12 @@ document.body.addEventListener('touchmove', function(e){
     changeChar(1);
   }
 });
+document.body.addEventListener('click',function(e){
+  var className = e.target.className;
+  if(className == "change next")
+    changeChar(1);
+  else if(className == "change prev")
+    changeChar(-1);
+});
 
 changeChar(0);
