@@ -14,6 +14,18 @@ body{
 	 /* FF3.6+ */
 
 }
+#evtcont:before{
+	content: "";
+    position: fixed;
+    width: 100%;
+    height: 120%;
+    z-index: 1;
+    background-image: url("smash.png");
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+   transform-origin:50% 25%;
+   animation: bgrotate 100s linear infinite;
+}
 .lightbox{
 	padding: 0;
 	margin: 0;
@@ -21,8 +33,7 @@ body{
 	position: absolute;
 	height: 100%;
 	width: 100%;
-
-
+	z-index: 999;overflow-y:scroll;
 }
 .crosscont{position: fixed;
 	display: flex;
@@ -36,7 +47,7 @@ justify-content:center;
 	height: 20vh;
 	width: 100%;
 	padding-right: 0;
-	z-index: 1;
+	z-index: 2;
 /*	display: flex;
 	flex-direction:row;
 	justify-content:space-between;*/
@@ -103,7 +114,7 @@ left: 0;
     top:19vh;
 	margin-top: auto;
 	
-	height: auto;background: radial-gradient( 50% 50% at center,rgba(0,0,0,.75) 0%, #1b1b1b 80%);
+	height: auto;background: radial-gradient( 50% 50% at center,rgba(0,0,0,.80) 0%, #1b1b1b 90%);
 	/*background-color: #373737;*/
 }
 .evtlist{padding-left: 0;
@@ -113,14 +124,42 @@ left: 0;
 	text-align: center;
 	list-style: none;
 	list-style-position: -10px;
+	
+	
 
+
+
+}
+.lightbox::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color:white;
+	margin-top: 19vh;
+
+	
+}
+
+.lightbox::-webkit-scrollbar
+{
+	width: 12px;
+	opacity: 0;
+	border-radius: 10px;
+    background-color:rgba(255,255,255,.03);
+}
+
+.lightbox::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
 }
  .evt{
 padding: 0;
 margin: 0;
 border-bottom: .5px  solid rgba(255,255,255,.5);
  }
- .evt .num{ font-size: 2rem;
+ .evt .num{ font-size: 2em;
 font-family: 'Gloria Hallelujah', cursive;
 padding: 0;margin-top: 1vh;
 margin-bottom: 0
@@ -222,3 +261,78 @@ margin-bottom: 2vh;
  	}
 
  }
+ @keyframes bgrotate{	
+ 	0%{
+ 		transform:rotate(0deg);
+ 	}
+ 	50%{
+ 		transform:rotate(180deg);
+
+ 	}
+ 	100%{
+ 		transform:rotate(360deg);			
+ 	}
+
+ }
+   .A #a1{-webkit-clip-path: polygon( 47.578% 11.294% ,49.688% 9.765% ,49.141% 15.412% );
+    background-color: black;
+    background-image: url("blood.png");
+}
+.A #a2{-webkit-clip-path: polygon( 60.156% 6.706% ,61.797% 4.588% ,60.391% 11.294% );
+    background-color: black;background-image: url("blood.png");
+
+}
+.A #a3{-webkit-clip-path: polygon( 59.609% 25.647% ,59.922% 22.941% ,60.859% 24.000% );
+.A     background-color: grey;background-image: url("blood.png");
+
+}
+.A #a4{
+-webkit-clip-path: polygon( 30.859% 4.588% ,34.297% 3.176% ,34.766% 11.059% ); background-color: black;
+background-image: url("blood.png");
+}
+.A #a5{-webkit-clip-path: polygon( 73.516% 26.471% ,75.469% 20.353% ,76.250% 23.294% ); background-color: grey;
+background-image: url("blood.png");
+}
+.A #a6{-webkit-clip-path: polygon( 81.406% 14.471% ,82.422% 11.529% ,85.000% 11.765% );
+ background-color: black;background-image: url("blood.png");
+}
+.A #a7{-webkit-clip-path: polygon( 27.187% 92.000% ,30.156% 88.000% ,29.141% 94.000% );
+    background-color: grey;
+}
+
+.A #a8{-webkit-clip-path: polygon( 83.281% 40.000% ,88.359% 39.059% ,88.438% 34.706% );
+    background-color: black;
+}
+  
+}.A #a10{-webkit-clip-path: polygon( 7.109% 33.176% ,8.594% 35.176% ,6.563% 35.765% );background-color: black;
+   
+}.A #a11{-webkit-clip-path: polygon( 93.516% 57.294% ,91.875% 61.529% ,96.484% 65.059% );background-color:black;
+  
+}.A #a12{-webkit-clip-path: polygon( 84.297% 67.294% ,84.297% 70.706% ,81.563% 67.176% );background-color:black;
+}.A #a13{-webkit-clip-path: polygon( 73.047% 78.353% ,74.297% 81.294% ,75.078% 79.882% );background-color: black;
+    
+}.A #a14{-webkit-clip-path: polygon( 84.141% 88.118% ,84.766% 92.941% ,85.625% 91.412% );background-color: grey;
+    
+}.A #a15{-webkit-clip-path: polygon( 74.531% 97.882% ,71.797% 99.176% ,71.094% 94.706% );background-color: black;
+    
+}.A #a16{-webkit-clip-path: polygon( 8.672% 45.412% ,7.813% 47.882% ,10.000% 46.471% );background-color: grey;
+    
+}.A #a17{-webkit-clip-path: polygon( 48.281% 78.941% ,48.594% 74.941% ,46.406% 78.824% );background-color: black;
+    
+}.A #a18{-webkit-clip-path: polygon( 14.297% 14.471% ,15.469% 12.235% ,16.250% 15.529% );background-color: black;
+    
+}.A #a19{-webkit-clip-path: polygon( 52.188% 92.706% ,52.266% 97.412% ,54.063% 97.529% );background-color: black;
+    
+}.A #a20{-webkit-clip-path: polygon( 29.844% 24.941% ,29.063% 28.235% ,32.813% 30.118% );background-color: black;
+    
+}.A #a21{-webkit-clip-path: polygon( 28.672% 71.412% ,31.406% 70.235% ,29.609% 72.706% );background-color: black;
+    
+}.A #a22{-webkit-clip-path: polygon( 10.391% 90.235% ,10.078% 87.765% ,11.953% 82.235% );background-color: grey;
+    
+}.A #a23{-webkit-clip-path: polygon( 9.375% 72.118% ,10.000% 69.529% ,11.719% 71.294% );background-color: black;
+    
+}.A #a24{-webkit-clip-path: polygon( 10.156% 69.412% ,9.688% 72.471% ,11.172% 70.118% );background-color: grey;}
+#box.A{
+	width: 100vw;
+	height: 100vh;
+}
