@@ -5,7 +5,7 @@ charprops = {
     eventname: "DANCE"
   },
   "Deadpool": {
-    background: "#FFE29F",
+    background: "#37E0F3",
     tagline: ["HELLO","FRANCIS"],
     eventname: "ORATORY"
   },

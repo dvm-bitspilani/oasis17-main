@@ -1,18 +1,17 @@
 // Styling
 
 function handleResize(){
-  background.style.height = window.innerHeight+"px";
-  nav_wrapper.style.height = window.innerHeight+"px";
+  document.body.style.height = window.innerHeight+"px";
 }
 window.addEventListener("load",handleResize);
 window.addEventListener("orientationchange",handleResize);
 window.addEventListener("resize",handleResize)
 
 // Handling Character Transitions
-var box = document.querySelector('#box')
-var background = document.querySelector('#background')
-var tagline = document.querySelector('.tag-line')
-var eventname = document.querySelector('.event-name')
+var box = document.querySelector('#Box')
+var background = document.querySelector('section')
+var tagline = document.querySelector('#TagLine')
+var eventname = document.querySelector('#EventName')
 var characters = [
   "Johnny","Deadpool","Batman",
   "Rick","Minion","Pikachu",
@@ -80,17 +79,3 @@ document.body.addEventListener('click',function(e){
 });
 
 changeChar(0);
-
-
-function cc(string){
-  return document.getElementsByClassName(string);
-}
-
-
-for(var i of cc('change')){
-  if(Array.from(i.classList).indexOf("prev") == -1){
-    i.addEventListener('click', ()=>{changeChar(1)})
-  }else{
-    i.addEventListener('click', ()=>{changeChar(-1)})
-  }
-}

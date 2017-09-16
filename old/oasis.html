@@ -1,0 +1,65 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <title>DVM</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column-reverse;
+                width: 100%;
+                height: 100%;
+            }
+            h1 {
+                font-family: sans-serif;
+                font-size: 2rem;
+                /* transform: translateX(-25%); */
+            }
+            #box {
+                width: 70vh;
+                height: 70vh;
+                position: relative;
+                transition: all 0.1s ease-out;
+            }
+            #box div {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+                transition: all 0.3s linear;
+            }
+        </style>
+        <link rel="stylesheet" href="../dist/css/oasistransitions.css">
+        <link rel="stylesheet" href="../dist/css/oasis.css">
+    </head>
+    <body class="ltr">
+        <div><h1 id="dir">LTR (Click to Change)</h1></div>
+        <div id="box" class="logo">
+        </div>
+        <script>
+        for(var i = 1; i <= 59; i++)
+          box.innerHTML += `<div id="a${i}"></div>`;
+            box.onclick = function() {
+                if(box.className == "logo") {
+                    box.className = "text";
+                }
+                else {
+                    box.className = "logo";
+                }
+            }
+            dir.onclick = function() {
+                if(document.body.className == "ltr") {
+                    document.body.className = "rtl";
+                    dir.innerHTML = "RTL (Click to change)";
+                }
+                else {
+                    document.body.className = "ltr";
+                    dir.innerHTML = "LTR (Click to change)";
+                }
+            }
+        </script>
+
+</body></html>
