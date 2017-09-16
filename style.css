@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto'
+}
+body{
+  overflow-x: hidden;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #dfdfdf;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10rem;
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow-y: auto;
+}
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.field {
+  transform: scale(0.8);
+  margin-bottom: 3rem;
+  opacity: 0.5;
+  transition: 0.5s ease all;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+}
+
+.field label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  /*font-weight: bold;*/
+  font-size: 150%;
+  color: #594157;
+  margin-bottom: 10px;
+}
+
+.field input {
+  display: inline;
+  border: none;
+
+  box-shadow: none;
+  background: none;
+  outline: none;
+}
+.field .input{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.field input[type="text"]{
+  width:100%;
+  /*margin-right: 10px;*/
+  /*font-size: 150%;*/
+  font-size: 150%;
+  color: #594157;
+  /*font-weight: bold;*/
+  border-bottom: 0.5px solid #726DA8;
+}
+.field input[type="text"]:focus{
+  border-bottom: none;
+}
+/*.field input[type="button"]{
+  width:auto;
+  font-size: 300%;
+  border: 8px solid #594157;
+  background-color: #726DA8; 
+}*/
+.field .radio-input{
+  display: flex;
+  font-size:150%;
+  color: #594157;
+  align-items: center; 
+}
+.field .radio-input p{
+  margin-right: 30px;
+}
+#submit-button{
+  border:none;
+  outline: none;
+  background: none;
+  background-color: #7D8CC4;
+  font-size:220%;
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #594157;
+  margin-top:50px; 
+  cursor: pointer;  
+}
+.field.active {
+  opacity: 1;
+  transform: scale(1);
+}
