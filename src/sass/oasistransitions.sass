@@ -1,6 +1,6 @@
 $fluidpolygons: .7,.3,0,1
 body.ltr #box
-  @for $i from 1 through 59
+  @for $i from 1 through 33
 
     $s: ($i*0.04+0.3s)
     $t: ($i*0.02s+0.2s)
@@ -10,11 +10,11 @@ body.ltr #box
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
 
 body.rtl #box
-  @for $i from 1 through 59
+  @for $i from 1 through 33
 
-    $s: ((60-$i)*0.04+0.3s)
-    $t: ((60-$i)*0.025s+0.2s)
-    $ct: ((60-$i)*0.02s)
+    $s: ((34-$i)*0.04+0.3s)
+    $t: ((34-$i)*0.025s+0.2s)
+    $ct: ((34-$i)*0.02s)
 
     div:nth-child(#{$i})
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct

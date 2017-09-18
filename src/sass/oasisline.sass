@@ -1,0 +1,26 @@
+@keyframes lineani
+  0%
+    stroke-dashoffset: 2000px
+    stroke-width: 0.3
+  100%
+    stroke-dashoffset: 0px
+    stroke-width: 0.7
+
+svg *
+  stroke-dasharray: 2000px
+  stroke-dashoffset: 2000px
+  animation: 5s lineani cubic-bezier(.7,.3,0,1) both
+
+@for $i from 1 through 6
+  $t: (2s + 0.75*$i)
+  $d: ($i*0.2s)
+  polygon:nth-of-type(#{$i})
+    animation-delay: $d
+    animation-duration: $t
+
+@for $i from 7 through 24
+  $t: (10s + 0.75*$i)
+  $d: ($i*0.2s)
+  polygon:nth-of-type(#{$i})
+    animation-delay: $d
+    animation-duration: $t
