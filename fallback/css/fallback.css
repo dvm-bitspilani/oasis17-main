@@ -1,0 +1,57 @@
+#Johnny,#Deadpool,#Batman,
+#Rick,#Minion,#Pikachu,
+#Dexter,#V,#Harry{
+	/*display:none;*/
+	width: 100%;
+	height: 100%;
+	background-size:cover;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s linear;
+}
+
+#Johnny{
+	background: url('../img/Johnny.png') 0 0 no-repeat;
+	background-size:cover;
+}
+
+#Deadpool{
+	background: url('../img/Deadpool.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Batman{
+	background: url('../img/Batman.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Rick{
+	background: url('../img/Rick.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Minion{
+	background: url('../img/Minion.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Pikachu{
+	background: url('../img/Pikachu.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Dexter{
+	background: url('../img/Dexter.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#V{
+	background: url('../img/V.png') 0 0 no-repeat;
+	background-size:cover;
+}
+#Harry{
+	background: url('../img/Harry.png') 0 0 no-repeat;
+	background-size:cover;
+}
+
+.Johnny #Johnny,.Deadpool #Deadpool,.Batman #Batman,
+.Rick #Rick,.Minion #Minion,.Pikachu #Pikachu,
+.Dexter #Dexter,.V #V,.Harry #Harry{
+	display:block;
+	opacity: 1;
+}

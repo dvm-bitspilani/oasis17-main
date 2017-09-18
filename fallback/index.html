@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events | Oasis'17</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/events.css">
+    <!-- <link rel="stylesheet" href="css/characters.css"> -->
+    <!-- <link rel="stylesheet" href="css/transitions.css"> -->
+    <link rel="stylesheet" href="css/fallback.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body class="ltr">
+    <header>
+      <div class="logo"></div>
+      <div id="Arrows">
+        <div class="change prev"></div>
+        <div class="change next"></div>
+      </div>
+    </header>
+    <section>
+      <div id="Main">
+        <div id="Polys">
+          <div class="change prev"></div>
+          <div id="Box" class="Johnny">
+                <div id="Johnny"></div>
+                <div id="Deadpool"></div>
+                <div id="Batman"></div>
+                <div id="Rick"></div>
+                <div id="Minion"></div>
+                <div id="Pikachu"></div>
+                <div id="Dexter"></div>
+                <div id="V"></div>
+                <div id="Harry"></div>
+          </div>
+          <div class="change next"></div>
+        </div>
+        <div id="EventName">
+          <span>Random Name</span>
+        </div>
+        <div id="TagLine">
+          <span>VENDETTA MADARCHOD</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li id="ViewEvent">EVENTS</li>
+          <li>LINK #2</li>
+        </ul>
+        <div>RANDOM TEXT</div>
+      </nav>
+    </section>
+    <div class="parent lightbox">
+        <div class="backrotate">
+        </div>
+        <div class='crosscont'>
+            <div class="cross">
+                <a class="crosslink" href="#">
+                    <p class="crossbar" id="anticlk"></p>
+                    <p class="crossbar" id="clk"></p>
+                </a>
+            </div>
+        </div>
+        <div class="evtcont">
+            <ul class="evtname">
+                <li id="a" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="b" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="c" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="d" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="e" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p id="">brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="info_wrapper">
+        <div class="backrotate">
+        </div>
+        <div class="info">
+            <div class='crosscont'>
+                <div class="cross" id="cross_info">
+                    <a class="crosslink" href="#">
+                        <p class="crossbar" id="anticlk"></p>
+                        <p class="crossbar" id="clk"></p>
+                    </a>
+                </div>
+            </div>
+            <div class="evtcont_info">
+                <ul class="evtname">
+                    <li id="f" class="evt">
+                        <h1 class=" name dust">EVENT NAME</h1>
+                        <p>brief</p>
+                        <p id="bottom"></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <p>There is no Internet connection
+                    <br> Try:
+                    <br> Checking the network cables, modem and router
+                    <br> Reconnecting to Wi-Fi
+                    <br> DNS_PROBE_FINISHED_NO_INTERNET
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $('#ViewEvent').click(function() {
+            $('.lightbox').slideToggle();
+        });
+        $('.cross').click(function() {
+            $('.lightbox').slideToggle();
+        });
+        $('#cross_info').click(function() {
+            $('.lightbox').fadeIn();
+            $('.info_wrapper').fadeOut();
+        });
+        $('.evt').click(function() {
+            $('.lightbox').fadeOut();
+            $('.info_wrapper').fadeIn();
+        });
+    </script>
+    <script src="js/characters.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/fallback.js"></script>
+  </body>
+</html>
