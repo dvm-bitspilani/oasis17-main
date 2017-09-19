@@ -161,23 +161,38 @@
       var data = [
         {
           type: "static",
-          url: "css/events.css"
+          url: "css/events.css",
+          ext: "css"
         },
         {
           type: "static",
-          url: "css/characters.css"
+          url: "css/characters.css",
+          ext: "css"
         },
         {
           type: "static",
-          url: "css/transitions.css"
+          url: "css/transitions.css",
+          ext: "css"
         },
         {
           type: "static",
-          url: "css/lightbox.css"
+          url: "css/lightbox.css",
+          ext: "css"
         },
         {
           type: "static",
-          url: "css/fonts.css"
+          url: "css/fonts.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/characters.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/events.js",
+          ext: "js"
         }
       ];
       for (var i in data) {
@@ -185,9 +200,18 @@
       }
     };
     exampleSocket.onmessage = function(event) {
-      var stylesheet = document.createElement("style");
-      document.head.appendChild(stylesheet);
-      stylesheet.innerHTML = event.data;
+      var res = JSON.parse(event.data);
+      console.log(res);
+      if(res.ext == "css") {
+        var stylesheet = document.createElement("style");
+        document.head.appendChild(stylesheet);
+        stylesheet.innerHTML = res.data;
+      }
+      else if(res.ext == "js") {
+        var script = document.createElement("script");
+        document.body.appendChild(script);
+        script.innerHTML = res.data;
+      }
     }
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -207,7 +231,7 @@
             $('.info_wrapper').fadeIn();
         });
     </script>
-    <script src="../js/characters.js"></script>
-    <script src="../js/events.js"></script>
+    <!-- <script src="../js/characters.js"></script> -->
+    <!-- <script src="../js/events.js"></script> -->
   </body>
 </html>
