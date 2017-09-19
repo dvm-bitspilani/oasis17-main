@@ -36,7 +36,7 @@ charprops = {
   },
   "V": {
     background: "#C471F5",
-    tagline: ["VENDETTA","MADARCHOD"],
+    tagline: ["VENDETTA","BAD BOY"],
     eventname: "QUIZZING"
   },
   "Harry": {

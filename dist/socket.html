@@ -5,15 +5,16 @@
     <title>Events | Oasis'17</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/fonts.css">
+    <base href="dist/">
+    <!-- <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/characters.css">
     <link rel="stylesheet" href="css/transitions.css">
-    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/lightbox.css"> -->
   </head>
   <body class="ltr">
-      <div class="logo"></div>
     <header>
+      <div class="logo"></div>
       <div id="Arrows">
         <div class="change prev"></div>
         <div class="change next"></div>
@@ -55,7 +56,7 @@
           <span>Random Name</span>
         </div>
         <div id="TagLine">
-          <span></span>
+          <span>VENDETTA MADARCHOD</span>
         </div>
       </div>
       <nav>
@@ -63,7 +64,7 @@
           <li id="ViewEvent">EVENTS</li>
           <li>LINK #2</li>
         </ul>
-        <div></div>
+        <div>RANDOM TEXT</div>
       </nav>
     </section>
     <div class="parent lightbox">
@@ -126,7 +127,7 @@
         <div class="backrotate">
         </div>
         <div class="info">
-            <div class='cross_cont'>
+            <div class='crosscont'>
                 <div class="cross" id="cross_info">
                     <a class="crosslink" href="#">
                         <p class="crossbar" id="anticlk"></p>
@@ -153,24 +154,84 @@
             </div>
         </div>
     </div>
+    <script>
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    exampleSocket.onopen = function (event) {
+      console.log("WS Opened Successfully");
+      var data = [
+        {
+          type: "static",
+          url: "css/events.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/characters.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/transitions.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/lightbox.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/fonts.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/characters.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/events.js",
+          ext: "js"
+        }
+      ];
+      for (var i in data) {
+        exampleSocket.send(JSON.stringify(data[i]));
+      }
+    };
+    exampleSocket.onmessage = function(event) {
+      var res = JSON.parse(event.data);
+      console.log(res);
+      if(res.ext == "css") {
+        var stylesheet = document.createElement("style");
+        document.head.appendChild(stylesheet);
+        stylesheet.innerHTML = res.data;
+      }
+      else if(res.ext == "js") {
+        var script = document.createElement("script");
+        document.body.appendChild(script);
+        script.innerHTML = res.data;
+      }
+    }
+    </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
-         $('#ViewEvent').click(function() {
+        $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
         });
         $('.cross').click(function() {
             $('.lightbox').slideToggle();
         });
         $('#cross_info').click(function() {
-            $('.lightbox').fadeIn(800);
-            $('.info_wrapper').fadeOut(1000);
+            $('.lightbox').fadeIn();
+            $('.info_wrapper').fadeOut();
         });
         $('.evt').click(function() {
-            $('.lightbox').fadeOut(2000);
-            $('.info_wrapper').fadeIn(500);
+            $('.lightbox').fadeOut();
+            $('.info_wrapper').fadeIn();
         });
     </script>
-    <script src="./js/characters.js"></script>
-    <script src="./js/events.js"></script>
+    <!-- <script src="../js/characters.js"></script> -->
+    <!-- <script src="../js/events.js"></script> -->
   </body>
 </html>

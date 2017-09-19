@@ -3,7 +3,7 @@
   margin: 0
   box-sizing: border-box
 
-html, body
+body
   width: 100vw
   height: 100vh
   position: relative
@@ -60,7 +60,7 @@ section#loader
 
       @for $i from 7 through 24
         $t: (10s + 0.75*$i)
-        $d: ($i*0.2s)
+        $d: (5s + $i*0.2)
         polygon:nth-of-type(#{$i})
           animation-delay: $d
           animation-duration: $t
@@ -75,3 +75,8 @@ body #box
 
     div:nth-child(#{$i})
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
+
+@media all and (orientation: portrait)
+  section#loader #frame
+    width: 95vw
+    height: 95vw
