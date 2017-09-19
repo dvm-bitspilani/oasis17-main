@@ -141,19 +141,24 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
+        
         $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
+            $('#Box').fadeOut();
         });
         $('.cross').click(function() {
             $('.lightbox').slideToggle();
+            $('#Box').fadeIn();
         });
         $('#cross_info').click(function() {
             $('.lightbox').fadeIn();
             $('.info_wrapper').fadeOut();
+            $('#Box').hide();
         });
         $('.evt').click(function() {
             $('.lightbox').fadeOut();
             $('.info_wrapper').fadeIn();
+            $('#Box').hide();
         });
     </script>
     <script src="js/characters.js"></script>
