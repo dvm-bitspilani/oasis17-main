@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/events.css">
-    <link rel="stylesheet" href="css/characters.css">
-    <link rel="stylesheet" href="css/transitions.css">
+    <!-- <link rel="stylesheet" href="css/characters.css"> -->
+    <!-- <link rel="stylesheet" href="css/transitions.css"> -->
+    <link rel="stylesheet" href="css/fallback.css">
     <link rel="stylesheet" href="css/lightbox.css">
   </head>
   <body class="ltr">
@@ -24,30 +25,15 @@
         <div id="Polys">
           <div class="change prev"></div>
           <div id="Box" class="Johnny">
-            <div id="a1"></div>
-            <div id="a2"></div>
-            <div id="a3"></div>
-            <div id="a4"></div>
-            <div id="a5"></div>
-            <div id="a6"></div>
-            <div id="a7"></div>
-            <div id="a8"></div>
-            <div id="a9"></div>
-            <div id="a10"></div>
-            <div id="a11"></div>
-            <div id="a12"></div>
-            <div id="a13"></div>
-            <div id="a14"></div>
-            <div id="a15"></div>
-            <div id="a16"></div>
-            <div id="a17"></div>
-            <div id="a18"></div>
-            <div id="a19"></div>
-            <div id="a20"></div>
-            <div id="a21"></div>
-            <div id="a22"></div>
-            <div id="a23"></div>
-            <div id="a24"></div>
+                <div id="Johnny"></div>
+                <div id="Deadpool"></div>
+                <div id="Batman"></div>
+                <div id="Rick"></div>
+                <div id="Minion"></div>
+                <div id="Pikachu"></div>
+                <div id="Dexter"></div>
+                <div id="V"></div>
+                <div id="Harry"></div>
           </div>
           <div class="change next"></div>
         </div>
@@ -155,22 +141,28 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
+        
         $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
+            $('#Box').fadeOut();
         });
         $('.cross').click(function() {
             $('.lightbox').slideToggle();
+            $('#Box').fadeIn();
         });
         $('#cross_info').click(function() {
             $('.lightbox').fadeIn();
             $('.info_wrapper').fadeOut();
+            $('#Box').hide();
         });
         $('.evt').click(function() {
             $('.lightbox').fadeOut();
             $('.info_wrapper').fadeIn();
+            $('#Box').hide();
         });
     </script>
-    <script src="./js/characters.js"></script>
-    <script src="./js/events.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/fallback.js"></script>
   </body>
 </html>
