@@ -70,6 +70,7 @@
     text-transform: uppercase; }
   .container .content {
     font-size: 1em;
+    letter-spacing: 0.05em;
     text-align: center;
     color: #fafafa;
     font-weight: 200;
