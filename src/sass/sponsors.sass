@@ -1,0 +1,84 @@
+@font-face 
+	font-family: 'AzoB'
+	src: url("../fonts/Azo Sans/Bold.otf") format('opentype')
+*
+	padding : 0px
+	margin : 0px
+.sponsors_wrapper
+	background-color : #262626
+	height : 100vh
+	width : 100vw
+	background-image : url('../img/flex.png')
+	font-family : 'AzoB'
+.sponsors_container::-webkit-scrollbar
+
+	width : 0px
+.sponsors_container
+	background-color : #262626
+	height : 80vh
+	width : 100vw
+	overflow : hidden
+	display : flex
+	flex-direction : row
+	flex-wrap : wrap
+	justify-content : center
+	overflow : auto
+
+	.item
+		width : 400px
+		height : 400px
+		margin : 1%
+
+		#box
+			background-color  : white
+			height : 85%
+			width : 100%
+			margin-bottom : 5% 
+			display : flex
+			justify-content : center
+			img
+				margin : auto	
+				background-color : black
+				height : 95%
+				width : 95%
+
+				
+		#name
+			color : white
+			font-weight : bold
+			margin : auto
+			display : flex
+			justify-content : center 
+			p
+				background : blue
+				text-transform : uppercase
+				font-size : 1.2em
+				text-align : center
+				padding : 7px
+.back
+	position : fixed
+	background : red
+	margin : 4vh 0 0 4vh	
+	width : 80px
+	height : 6vh
+	img 
+		width : 60px
+		height : 30px
+.backcont
+	font-size : 2em
+	display : flex
+	justify-content : flex-end
+	font-family: 'AzoB'
+	padding : 4vh 
+
+	p
+		color : white
+		padding : 0px 5px
+		padding-top : 7px
+		background-color : #fc0c84
+		margin : 0
+@media all and (max-width: 500px)
+	.sponsors_container .item
+		width : 400px
+		height : 400px
+		margin : 2%
