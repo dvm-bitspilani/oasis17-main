@@ -2,6 +2,12 @@
     font-family: 'bonn';
     src: url("../fonts/BONN/bonnr.ttf") format('truetype');
 }
+.crosscont_1
+{
+    position: relative;
+    margin-top: 5vh;
+    z-index: 10;
+}
 
 * {
     font-family: "Bonnbeta";
@@ -349,14 +355,10 @@ a.crosslink:hover #clk {
 {
     padding-top: 5vh;   
 }
-.cross_cont
-{
-    position: relative;
-    margin-top: 9vh;
-    z-index: 100;
-}
+
 #Arrows
 {
     display: flex;
     position: absolute;
     right: 0px;
+}
