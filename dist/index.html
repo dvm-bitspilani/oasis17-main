@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/lightbox.css">
   </head>
   <body class="ltr">
-    <header>
       <div class="logo"></div>
+    <header>
       <div id="Arrows">
         <div class="change prev"></div>
         <div class="change next"></div>
@@ -126,7 +126,7 @@
         <div class="backrotate">
         </div>
         <div class="info">
-            <div class='crosscont'>
+            <div class='cross_cont'>
                 <div class="cross" id="cross_info">
                     <a class="crosslink" href="#">
                         <p class="crossbar" id="anticlk"></p>
@@ -155,19 +155,19 @@
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
-        $('#ViewEvent').click(function() {
+         $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
         });
         $('.cross').click(function() {
             $('.lightbox').slideToggle();
         });
         $('#cross_info').click(function() {
-            $('.lightbox').fadeIn();
-            $('.info_wrapper').fadeOut();
+            $('.lightbox').fadeIn(800);
+            $('.info_wrapper').fadeOut(1000);
         });
         $('.evt').click(function() {
-            $('.lightbox').fadeOut();
-            $('.info_wrapper').fadeIn();
+            $('.lightbox').fadeOut(2000);
+            $('.info_wrapper').fadeIn(500);
         });
     </script>
     <script src="./js/characters.js"></script>

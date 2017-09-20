@@ -30,11 +30,12 @@ header {
   justify-content: space-between;
   padding: 0 20px;
   z-index: 1; }
-  header .logo {
+  .logo {position: absolute;
     height: 100px;
     width: 100px;
     background: url(../img/Oasis-Logo.png);
-    background-size: contain; }
+    background-size: contain;
+    z-index: 121; }
   header #Arrows {
     display: flex;
     display: none;
