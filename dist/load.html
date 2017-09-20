@@ -100,9 +100,34 @@
         </ul>
       </footer>
     </section>
-    <section id="ham" class="inactive">
-    
+    <section id="ham_menu" class="inactive">
+      <aside class="head">
+        <span class="arrow"></span>
+        <span>OASIS'17</span>
+      </aside>
+      <aside class="nav">
+        <div>
+          <span>ABOUT</span>
+          <span>PROF SHOW</span>
+          <span>SPONSORS</span>
+          <span>CONTACT</span>
+        </div>
+        <div>
+          <span>SCHEDULE</span>
+          <span>WORKSHOPS</span>
+          <span>BUS SERVICE</span>
+          <span>OASIS PRESS</span>
+          <span>JOY OF GIVING WEEK</span>
+          <span>STORE</span>
+        </div>
+        <div>
+          <span>AFTER MOVIE 2016</span>
+        </div>
+      </aside>
     </section>
+    <div id="ham_wrapper">
+
+    </div>
     <script type="text/javascript">
       function handleResize(){
         document.body.style.height = window.innerHeight+"px";
@@ -128,7 +153,24 @@
             },2000);
           },500);
         },3000);
-      })
+      });
+
+      ham.addEventListener('click',function(){
+        if(ham_menu.className=="inactive"){
+          ham_menu.className = "active";
+          ham_wrapper.style.display = "block";
+        }
+        else {
+          ham_menu.className = "inactive";
+          ham_wrapper.style.display = "none";
+        }
+      });
+
+      document.body.addEventListener("click",function(e){
+        if(ham_menu.className == "active")
+          if(e.target.getAttribute("id")=="ham_wrapper")
+            ham.click();
+      });
     </script>
   </body>
 </html>

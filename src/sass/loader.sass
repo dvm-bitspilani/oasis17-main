@@ -30,7 +30,8 @@ section#loader
   align-items: center
   justify-content: center
   position: relative
-  transition: height 0.1s ease-out
+  transition: height 1s ease-out
+  z-index: 0
 
   #frame
     width: 70vh
@@ -76,7 +77,7 @@ section#loader
         background-size: contain
       #Events
         position: absolute
-        top: 84%
+        top: 87%
         left: 50%
         font-size: 1.5em
         background: #FFE14A
@@ -104,7 +105,7 @@ section#loader
       @for $i from 7 through 24
         $t: (10s + 0.75*$i)
         $d: (5s + $i*0.2)
-        polygon:nth-of-type(#{$i})
+        polygon:nth-of-type(#$i)
           animation-delay: $d
           animation-duration: $t
 
@@ -133,6 +134,7 @@ section#loader
         width: 50%
         color: #fff
         justify-content: space-around
+        padding-left: 20px
         li
           height: 75px
           display: flex
@@ -140,6 +142,8 @@ section#loader
           justify-content: center
           text-transform: uppercase
           font-size: 1rem
+        li:hover
+          cursor: pointer
       #Register
         margin-right: 30px
         margin-top: 30px
@@ -148,6 +152,10 @@ section#loader
         font-family: "Azo Sans Bold"
         padding: 6px 10px 0 10px
         color: #fff
+        transition: 0.7s all cubic-bezier(1,0,0,1)
+      #Register:hover
+        background: #FFE14A
+        color: #262626
   footer
     display: flex
     flex-direction: column-reverse
@@ -172,6 +180,8 @@ section#loader
           white-space: nowrap
           font-size: 0.8em
           align-self: center
+        li:hover
+          cursor: pointer
       #Aftermovie
         padding-right: 20px
         height: 100%
@@ -200,6 +210,66 @@ footer > ul
   li.github
     background-image: url(../img/github.svg)
 
+section#ham_menu
+  display: flex
+  position: absolute
+  flex-direction: column
+  left: 0
+  top: 0
+  width: 300px
+  max-width: 100%
+  height: 100%
+  background: #fff url(../img/grid.png)
+  transform: translateX(0)
+  transition: 0.5s transform cubic-bezier(1,0,0,1)
+  z-index: 3
+  background-size: cover
+  box-shadow: 0 0 100px #333333
+  font-family: "Azo Sans Regular"
+  aside.head
+    height: 80px
+    display: flex
+    justify-content: space-between
+    padding: 0 1.5em 0 25px
+    margin: 10px 5px
+    span
+      height: 1.5em
+      font-size: 1.5em
+      align-self: center
+      min-width: 1.5em
+      padding-top: 6px
+    span.arrow
+      background: url(../img/arrow_back.png) no-repeat center
+      background-size: contain
+      height: 1em
+      transition: 0.2s transform cubic-bezier(1,0,0,1)
+      transform-origin: center
+    span.arrow:hover
+      transform: rotate(360deg)
+      cursor: pointer
+  aside.nav
+    display: flex
+    flex-direction: column
+    margin: 10px 5px
+    div
+      margin: 15px 0
+      display: flex
+      flex-direction: column
+      span
+        padding: 8px 30px
+
+section#ham_menu.inactive
+  transform: translateX(-100%)
+
+#ham_wrapper
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background: transparent
+  z-index: 2
+  display: none
 
 #loader.loaded
   height: calc(100% - 70px)
@@ -216,9 +286,15 @@ body #box
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
 
 #Landing header nav #ham
-  width: 63px
+  width: 83px
   height: 63px
-  background: url(../img/)
+  background: url(../img/hamburger.svg) center no-repeat
+  display: none
+  padding-left: 40px
+  transition: 0.2s transform cubic-bezier(1,0,0,1)
+#Landing header nav #ham:hover
+  // transform: scale(1.2)
+  cursor: pointer
 
 @media all and (orientation: portrait)
   section#loader #frame
@@ -260,6 +336,8 @@ body #box
     top: 95%
   section#loader #frame #box #Events, #Landing header nav #Register
     font-size: 1.2em
+  #Landing header nav #ham
+    display: block
 
 @media all and (max-width: 550px)
   section#loader #frame #box #Events
@@ -272,3 +350,25 @@ body #box
     width: 25px
     height: 25px
     top: 35%
+
+@keyframes flow
+  0%
+    background-color: rgba(0,0,0,0)
+  30%
+    background-color: rgba(255,0,0,.47)
+  66%
+    background-color: rgba(0,0,0,.1)
+  100%
+    background-color: rgba(0,0,0,0)
+
+body #box
+  div
+    animation: 1s flow infinite
+
+body #box
+  @for $i from 1 through 70
+
+    $ct: ($i*0.02s)
+
+    div:nth-child(#{$i})
+      animation-delay: $ct

@@ -11,7 +11,7 @@ charprops = {
   },
   "Batman": {
     background: "#737373",
-    tagline: ["BECAUSE I'M","BATMAN"],
+    tagline: ["BECAUSE I","AM BATMAN"],
     eventname: "MISC"
   },
   "Rick": {
