@@ -7,7 +7,8 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  font-size: 18px; }
+  font-size: 18px;
+  overflow: hidden; }
 
 body {
   background: #262626; }
@@ -40,7 +41,10 @@ section#loader {
       display: none; }
     section#loader #frame #box {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
       section#loader #frame #box div {
         width: 100%;
         height: 100%;
@@ -71,17 +75,6 @@ section#loader {
         height: 45px;
         background: url(../img/17.png) no-repeat right;
         background-size: contain; }
-      section#loader #frame #box #Events {
-        position: absolute;
-        top: 87%;
-        left: 50%;
-        font-size: 1.5em;
-        background: #FFE14A;
-        font-family: "Azo Sans Bold";
-        padding: 6px 10px 0 10px;
-        color: #262626;
-        transform: translateX(-50%);
-        white-space: nowrap; }
     section#loader #frame svg {
       width: 100%;
       height: 100%; }
@@ -163,6 +156,24 @@ section#loader {
         animation-delay: 9.8s;
         animation-duration: 28s; }
 
+#Events {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-size: 1.5em;
+  background: #FFE14A;
+  font-family: "Azo Sans Bold";
+  padding: 6px 10px 0 10px;
+  color: #262626;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: 0.4s all ease-in; }
+
+#Events:hover {
+  background: #FC0C84;
+  color: #fff;
+  cursor: pointer; }
+
 #Landing {
   display: flex;
   width: 100%;
@@ -206,10 +217,11 @@ section#loader {
         font-family: "Azo Sans Bold";
         padding: 6px 10px 0 10px;
         color: #fff;
-        transition: 0.7s all cubic-bezier(1, 0, 0, 1); }
+        transition: 0.4s all ease-in; }
       #Landing header nav #Register:hover {
         background: #FFE14A;
-        color: #262626; }
+        color: #262626;
+        cursor: pointer; }
   #Landing footer {
     display: flex;
     flex-direction: column-reverse;
@@ -247,12 +259,12 @@ section#loader {
         white-space: nowrap; }
 
 footer > ul {
-  height: 60px;
+  height: 80px;
   display: flex;
   align-self: flex-end; }
   footer > ul li {
     width: 50px;
-    margin: 0 5px;
+    margin: 0 10px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
@@ -305,7 +317,8 @@ section#ham_menu {
   section#ham_menu aside.nav {
     display: flex;
     flex-direction: column;
-    margin: 10px 5px; }
+    margin: 10px 5px;
+    overflow-y: auto; }
     section#ham_menu aside.nav div {
       margin: 15px 0;
       display: flex;
@@ -469,6 +482,8 @@ body #box div:nth-child(69) {
   transition: all 3.06s 1.58s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.06s 1.38s; }
 body #box div:nth-child(70) {
   transition: all 3.1s 1.6s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.1s 1.4s; }
+body #box div:nth-child(71) {
+  transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s; }
 
 #Landing header nav #ham {
   width: 83px;
@@ -525,17 +540,17 @@ body #box div:nth-child(70) {
     align-self: center;
     margin-bottom: 20px; }
 
-  section#loader #frame #box #Events {
-    top: 95%; }
+  #Events {
+    top: 80%; }
 
-  section#loader #frame #box #Events, #Landing header nav #Register {
+  #Events, #Landing header nav #Register {
     font-size: 1.2em; }
 
   #Landing header nav #ham {
     display: block; } }
 @media all and (max-width: 550px) {
-  section#loader #frame #box #Events {
-    top: 105%; } }
+  #Events {
+    top: 75%; } }
 @media all and (max-height: 550px) {
   #Landing footer nav {
     height: 35px; }
@@ -546,155 +561,175 @@ body #box div:nth-child(70) {
     top: 35%; } }
 @keyframes flow {
   0% {
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: rgba(255, 255, 255, 0); }
   30% {
-    background-color: rgba(255, 0, 0, 0.47); }
+    background-color: rgba(255, 255, 255, 0.47); }
   66% {
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: rgba(255, 255, 255, 0.1); }
   100% {
-    background-color: rgba(0, 0, 0, 0); } }
-body #box div {
-  animation: 1s flow infinite; }
+    background-color: rgba(255, 255, 255, 0); } }
+body #box2 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  body #box2 div {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
 
-body #box div:nth-child(1) {
+body #box2 div {
+  animation: 1s flow infinite;
+  opacity: 0.1; }
+
+body #box2 div:nth-child(1) {
   animation-delay: 0.02s; }
-body #box div:nth-child(2) {
+body #box2 div:nth-child(2) {
   animation-delay: 0.04s; }
-body #box div:nth-child(3) {
+body #box2 div:nth-child(3) {
   animation-delay: 0.06s; }
-body #box div:nth-child(4) {
+body #box2 div:nth-child(4) {
   animation-delay: 0.08s; }
-body #box div:nth-child(5) {
+body #box2 div:nth-child(5) {
   animation-delay: 0.1s; }
-body #box div:nth-child(6) {
+body #box2 div:nth-child(6) {
   animation-delay: 0.12s; }
-body #box div:nth-child(7) {
+body #box2 div:nth-child(7) {
   animation-delay: 0.14s; }
-body #box div:nth-child(8) {
+body #box2 div:nth-child(8) {
   animation-delay: 0.16s; }
-body #box div:nth-child(9) {
+body #box2 div:nth-child(9) {
   animation-delay: 0.18s; }
-body #box div:nth-child(10) {
+body #box2 div:nth-child(10) {
   animation-delay: 0.2s; }
-body #box div:nth-child(11) {
+body #box2 div:nth-child(11) {
   animation-delay: 0.22s; }
-body #box div:nth-child(12) {
+body #box2 div:nth-child(12) {
   animation-delay: 0.24s; }
-body #box div:nth-child(13) {
+body #box2 div:nth-child(13) {
   animation-delay: 0.26s; }
-body #box div:nth-child(14) {
+body #box2 div:nth-child(14) {
   animation-delay: 0.28s; }
-body #box div:nth-child(15) {
+body #box2 div:nth-child(15) {
   animation-delay: 0.3s; }
-body #box div:nth-child(16) {
+body #box2 div:nth-child(16) {
   animation-delay: 0.32s; }
-body #box div:nth-child(17) {
+body #box2 div:nth-child(17) {
   animation-delay: 0.34s; }
-body #box div:nth-child(18) {
+body #box2 div:nth-child(18) {
   animation-delay: 0.36s; }
-body #box div:nth-child(19) {
+body #box2 div:nth-child(19) {
   animation-delay: 0.38s; }
-body #box div:nth-child(20) {
+body #box2 div:nth-child(20) {
   animation-delay: 0.4s; }
-body #box div:nth-child(21) {
+body #box2 div:nth-child(21) {
   animation-delay: 0.42s; }
-body #box div:nth-child(22) {
+body #box2 div:nth-child(22) {
   animation-delay: 0.44s; }
-body #box div:nth-child(23) {
+body #box2 div:nth-child(23) {
   animation-delay: 0.46s; }
-body #box div:nth-child(24) {
+body #box2 div:nth-child(24) {
   animation-delay: 0.48s; }
-body #box div:nth-child(25) {
+body #box2 div:nth-child(25) {
   animation-delay: 0.5s; }
-body #box div:nth-child(26) {
+body #box2 div:nth-child(26) {
   animation-delay: 0.52s; }
-body #box div:nth-child(27) {
+body #box2 div:nth-child(27) {
   animation-delay: 0.54s; }
-body #box div:nth-child(28) {
+body #box2 div:nth-child(28) {
   animation-delay: 0.56s; }
-body #box div:nth-child(29) {
+body #box2 div:nth-child(29) {
   animation-delay: 0.58s; }
-body #box div:nth-child(30) {
+body #box2 div:nth-child(30) {
   animation-delay: 0.6s; }
-body #box div:nth-child(31) {
+body #box2 div:nth-child(31) {
   animation-delay: 0.62s; }
-body #box div:nth-child(32) {
+body #box2 div:nth-child(32) {
   animation-delay: 0.64s; }
-body #box div:nth-child(33) {
+body #box2 div:nth-child(33) {
   animation-delay: 0.66s; }
-body #box div:nth-child(34) {
+body #box2 div:nth-child(34) {
   animation-delay: 0.68s; }
-body #box div:nth-child(35) {
+body #box2 div:nth-child(35) {
   animation-delay: 0.7s; }
-body #box div:nth-child(36) {
+body #box2 div:nth-child(36) {
   animation-delay: 0.72s; }
-body #box div:nth-child(37) {
+body #box2 div:nth-child(37) {
   animation-delay: 0.74s; }
-body #box div:nth-child(38) {
+body #box2 div:nth-child(38) {
   animation-delay: 0.76s; }
-body #box div:nth-child(39) {
+body #box2 div:nth-child(39) {
   animation-delay: 0.78s; }
-body #box div:nth-child(40) {
+body #box2 div:nth-child(40) {
   animation-delay: 0.8s; }
-body #box div:nth-child(41) {
+body #box2 div:nth-child(41) {
   animation-delay: 0.82s; }
-body #box div:nth-child(42) {
+body #box2 div:nth-child(42) {
   animation-delay: 0.84s; }
-body #box div:nth-child(43) {
+body #box2 div:nth-child(43) {
   animation-delay: 0.86s; }
-body #box div:nth-child(44) {
+body #box2 div:nth-child(44) {
   animation-delay: 0.88s; }
-body #box div:nth-child(45) {
+body #box2 div:nth-child(45) {
   animation-delay: 0.9s; }
-body #box div:nth-child(46) {
+body #box2 div:nth-child(46) {
   animation-delay: 0.92s; }
-body #box div:nth-child(47) {
+body #box2 div:nth-child(47) {
   animation-delay: 0.94s; }
-body #box div:nth-child(48) {
+body #box2 div:nth-child(48) {
   animation-delay: 0.96s; }
-body #box div:nth-child(49) {
+body #box2 div:nth-child(49) {
   animation-delay: 0.98s; }
-body #box div:nth-child(50) {
+body #box2 div:nth-child(50) {
   animation-delay: 1s; }
-body #box div:nth-child(51) {
+body #box2 div:nth-child(51) {
   animation-delay: 1.02s; }
-body #box div:nth-child(52) {
+body #box2 div:nth-child(52) {
   animation-delay: 1.04s; }
-body #box div:nth-child(53) {
+body #box2 div:nth-child(53) {
   animation-delay: 1.06s; }
-body #box div:nth-child(54) {
+body #box2 div:nth-child(54) {
   animation-delay: 1.08s; }
-body #box div:nth-child(55) {
+body #box2 div:nth-child(55) {
   animation-delay: 1.1s; }
-body #box div:nth-child(56) {
+body #box2 div:nth-child(56) {
   animation-delay: 1.12s; }
-body #box div:nth-child(57) {
+body #box2 div:nth-child(57) {
   animation-delay: 1.14s; }
-body #box div:nth-child(58) {
+body #box2 div:nth-child(58) {
   animation-delay: 1.16s; }
-body #box div:nth-child(59) {
+body #box2 div:nth-child(59) {
   animation-delay: 1.18s; }
-body #box div:nth-child(60) {
+body #box2 div:nth-child(60) {
   animation-delay: 1.2s; }
-body #box div:nth-child(61) {
+body #box2 div:nth-child(61) {
   animation-delay: 1.22s; }
-body #box div:nth-child(62) {
+body #box2 div:nth-child(62) {
   animation-delay: 1.24s; }
-body #box div:nth-child(63) {
+body #box2 div:nth-child(63) {
   animation-delay: 1.26s; }
-body #box div:nth-child(64) {
+body #box2 div:nth-child(64) {
   animation-delay: 1.28s; }
-body #box div:nth-child(65) {
+body #box2 div:nth-child(65) {
   animation-delay: 1.3s; }
-body #box div:nth-child(66) {
+body #box2 div:nth-child(66) {
   animation-delay: 1.32s; }
-body #box div:nth-child(67) {
+body #box2 div:nth-child(67) {
   animation-delay: 1.34s; }
-body #box div:nth-child(68) {
+body #box2 div:nth-child(68) {
   animation-delay: 1.36s; }
-body #box div:nth-child(69) {
+body #box2 div:nth-child(69) {
   animation-delay: 1.38s; }
-body #box div:nth-child(70) {
+body #box2 div:nth-child(70) {
   animation-delay: 1.4s; }
+
+@media all and (orientation: landscape) and (max-height: 500px) {
+  footer > ul {
+    height: 40px; }
+
+  #Events {
+    top: 70%; } }
 
 /*# sourceMappingURL=loader.css.map */

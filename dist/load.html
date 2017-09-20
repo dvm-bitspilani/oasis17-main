@@ -57,12 +57,12 @@
           <aside id="logotext">
             <span id="o17"></span>
             <span id="realmsOfFiction"></span>
-            <span id="Events"><label>VIEW EVENTS</label></span>
           </aside>
         </div>
       </div>
     </section>
     <section id="Landing" class="inactive">
+      <span id="Events"><label>VIEW EVENTS</label></span>
       <header>
         <nav>
           <ul>
@@ -102,7 +102,7 @@
     </section>
     <section id="ham_menu" class="inactive">
       <aside class="head">
-        <span class="arrow"></span>
+        <span class="arrow" id="back_arrow"></span>
         <span>OASIS'17</span>
       </aside>
       <aside class="nav">
@@ -137,22 +137,24 @@
       window.addEventListener("resize",handleResize)
 
       window.addEventListener('load',function(){
-        for(var i = 1; i <= 70; i++)
+        for(var i = 1; i <= 70; i++){
           box.innerHTML += '<div id="a'+i+'"></div>';
+        }
+        box.className = "transparent"
         setTimeout(function(){
           box.className = "logo";
-          document.querySelector('svg').remove();
           setTimeout(function(){
+            document.querySelector('svg').remove();
             box.className = "text";
             setTimeout(function(){
-              logotext.style.opacity = 1;
-              Landing.style.opacity = 1;
+              loader.className = "loaded";
               setTimeout(function(){
-                loader.className = "loaded";
-              },1000);
-            },2000);
-          },500);
-        },3000);
+                logotext.style.opacity = 1;
+                Landing.style.opacity = 1;
+              },750);
+            },3000);
+          },3000);
+        },2000);
       });
 
       ham.addEventListener('click',function(){
@@ -171,6 +173,11 @@
           if(e.target.getAttribute("id")=="ham_wrapper")
             ham.click();
       });
+
+      back_arrow.addEventListener("click",function(){
+        ham.click();
+      });
+
     </script>
   </body>
 </html>

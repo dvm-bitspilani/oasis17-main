@@ -8,6 +8,7 @@ body
   height: 100vh
   position: relative
   font-size: 18px
+  overflow: hidden
 
 body
   background: #262626
@@ -45,6 +46,9 @@ section#loader
     #box
       width: 100%
       height: 100%
+      position: absolute
+      top: 0
+      left: 0
       div
         width: 100%
         height: 100%
@@ -75,17 +79,6 @@ section#loader
         height: 45px
         background: url(../img/17.png) no-repeat right
         background-size: contain
-      #Events
-        position: absolute
-        top: 87%
-        left: 50%
-        font-size: 1.5em
-        background: #FFE14A
-        font-family: "Azo Sans Bold"
-        padding: 6px 10px 0 10px
-        color: #262626
-        transform: translateX(-50%)
-        white-space: nowrap
     svg
       width: 100%
       height: 100%
@@ -108,6 +101,23 @@ section#loader
         polygon:nth-of-type(#$i)
           animation-delay: $d
           animation-duration: $t
+
+#Events
+  position: absolute
+  top: 75%
+  left: 50%
+  font-size: 1.5em
+  background: #FFE14A
+  font-family: "Azo Sans Bold"
+  padding: 6px 10px 0 10px
+  color: #262626
+  transform: translateX(-50%)
+  white-space: nowrap
+  transition: 0.4s all ease-in
+#Events:hover
+  background: #FC0C84
+  color: #fff
+  cursor: pointer
 
 #Landing
   display: flex
@@ -152,10 +162,11 @@ section#loader
         font-family: "Azo Sans Bold"
         padding: 6px 10px 0 10px
         color: #fff
-        transition: 0.7s all cubic-bezier(1,0,0,1)
+        transition: 0.4s all ease-in
       #Register:hover
         background: #FFE14A
         color: #262626
+        cursor: pointer
   footer
     display: flex
     flex-direction: column-reverse
@@ -192,12 +203,12 @@ section#loader
         font-size: 0.8em
         white-space: nowrap
 footer > ul
-  height: 60px
+  height: 80px
   display: flex
   align-self: flex-end
   li
     width: 50px
-    margin: 0 5px
+    margin: 0 10px
     background-size: contain
     background-position: center
     background-repeat: no-repeat
@@ -251,6 +262,7 @@ section#ham_menu
     display: flex
     flex-direction: column
     margin: 10px 5px
+    overflow-y: auto
     div
       margin: 15px 0
       display: flex
@@ -276,7 +288,7 @@ section#ham_menu.inactive
 
 $fluidpolygons: .7,.3,0,1
 body #box
-  @for $i from 1 through 70
+  @for $i from 1 through 71
 
     $s: ($i*0.04+0.3s)
     $t: ($i*0.02s+0.2s)
@@ -332,16 +344,16 @@ body #box
   footer > ul
     align-self: center
     margin-bottom: 20px
-  section#loader #frame #box #Events
-    top: 95%
-  section#loader #frame #box #Events, #Landing header nav #Register
+  #Events
+    top: 80%
+  #Events, #Landing header nav #Register
     font-size: 1.2em
   #Landing header nav #ham
     display: block
 
 @media all and (max-width: 550px)
-  section#loader #frame #box #Events
-    top: 105%
+  #Events
+    top: 75%
 
 @media all and (max-height: 550px)
   #Landing footer nav
@@ -353,22 +365,41 @@ body #box
 
 @keyframes flow
   0%
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(255,255,255,0)
   30%
-    background-color: rgba(255,0,0,.47)
+    background-color: rgba(255,255,255,.47)
   66%
-    background-color: rgba(0,0,0,.1)
+    background-color: rgba(255,255,255,.1)
   100%
-    background-color: rgba(0,0,0,0)
+    background-color: rgba(255,255,255,0)
 
-body #box
+body #box2
+  display: none
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  div
+    position: absolute
+    width: 100%
+    height: 100%
+
+body #box2
   div
     animation: 1s flow infinite
+    opacity: 0.1
 
-body #box
+body #box2
   @for $i from 1 through 70
 
     $ct: ($i*0.02s)
 
     div:nth-child(#{$i})
       animation-delay: $ct
+
+@media all and (orientation: landscape) and (max-height: 500px)
+  footer > ul
+    height: 40px
+  #Events
+    top: 70%
