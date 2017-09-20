@@ -13,5 +13,17 @@
 @font-face {
   font-family: "bonn";
   src: url("../fonts/BONN/bonnr.ttf") format("truetype"); }
+@font-face {
+  font-family: "Azo Sans Regular";
+  src: url("../fonts/Azo Sans/Regular.otf"); }
+@font-face {
+  font-family: "Azo Sans Medium";
+  src: url("../fonts/Azo Sans/Medium.otf"); }
+@font-face {
+  font-family: "Azo Sans Thin";
+  src: url("../fonts/Azo Sans/Thin.otf"); }
+@font-face {
+  font-family: "Azo Sans Bold";
+  src: url("../fonts/Azo Sans/Bold.otf"); }
 
 /*# sourceMappingURL=fonts.css.map */

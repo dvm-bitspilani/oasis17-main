@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Loading the Fiction</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/oasis.css">
+    <link rel="stylesheet" href="css/fonts.css">
   </head>
   <body>
     <section id="loader">
@@ -51,9 +54,54 @@
           <!-- </g> -->
         </svg>
         <div id="box" class="inactive logo">
-
+          <aside id="logotext">
+            <span id="o17"></span>
+            <span id="realmsOfFiction"></span>
+            <span id="Events"><label>VIEW EVENTS</label></span>
+          </aside>
         </div>
       </div>
+    </section>
+    <section id="Landing" class="inactive">
+      <header>
+        <nav>
+          <ul>
+            <li>ABOUT</li>
+            <li>PROF SHOW</li>
+            <li>SPONSORS</li>
+            <li>CONTACT</li>
+          </ul>
+          <div id="ham">
+
+          </div>
+          <span id="Register"><label>REGISTER</label></span>
+        </nav>
+        <aside class="micro">
+
+        </aside>
+      </header>
+      <footer>
+        <nav>
+          <ul>
+            <li>SCHEDULE</li>
+            <li>WORKSHOPS</li>
+            <li>BUS SERVICE</li>
+            <li>OASIS PRESS</li>
+            <li>JOY OF GIVING WEEK</li>
+            <li>STORE</li>
+          </ul>
+          <span id="Aftermovie">AFTER MOVIE 2016</span>
+        </nav>
+        <ul>
+          <li class="facebook"></li>
+          <li class="twitter"></li>
+          <li class="youtube"></li>
+          <li class="github"></li>
+        </ul>
+      </footer>
+    </section>
+    <section id="ham" class="inactive">
+    
     </section>
     <script type="text/javascript">
       function handleResize(){
@@ -71,6 +119,13 @@
           document.querySelector('svg').remove();
           setTimeout(function(){
             box.className = "text";
+            setTimeout(function(){
+              logotext.style.opacity = 1;
+              Landing.style.opacity = 1;
+              setTimeout(function(){
+                loader.className = "loaded";
+              },1000);
+            },2000);
           },500);
         },3000);
       })

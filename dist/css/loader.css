@@ -6,10 +6,14 @@
 body {
   width: 100vw;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  font-size: 18px; }
 
 body {
-  background: #000; }
+  background: #262626; }
+
+ul {
+  list-style-type: none !important; }
 
 @keyframes lineani {
   0% {
@@ -23,11 +27,14 @@ section#loader {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative;
+  transition: height 0.1s ease-out; }
   section#loader #frame {
     width: 70vh;
     height: 70vh;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     section#loader #frame .inactive {
       display: none; }
     section#loader #frame #box {
@@ -37,6 +44,43 @@ section#loader {
         width: 100%;
         height: 100%;
         position: absolute; }
+      section#loader #frame #box #logotext {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-weight: bold;
+        font-family: sans-serif;
+        opacity: 0;
+        transition: opacity 1s ease-out; }
+      section#loader #frame #box #realmsOfFiction {
+        position: absolute;
+        top: 77%;
+        height: 25px;
+        width: 95%;
+        right: 4%;
+        background: url(../img/realmsoffiction.png) no-repeat right;
+        background-size: contain; }
+      section#loader #frame #box #o17 {
+        position: absolute;
+        left: 94%;
+        top: 36%;
+        width: 45px;
+        height: 45px;
+        background: url(../img/17.png) no-repeat right;
+        background-size: contain; }
+      section#loader #frame #box #Events {
+        position: absolute;
+        top: 84%;
+        left: 50%;
+        font-size: 1.5em;
+        background: #FFE14A;
+        font-family: "Azo Sans Bold";
+        padding: 6px 10px 0 10px;
+        color: #262626;
+        transform: translateX(-50%);
+        white-space: nowrap; }
     section#loader #frame svg {
       width: 100%;
       height: 100%; }
@@ -117,6 +161,102 @@ section#loader {
       section#loader #frame svg polygon:nth-of-type(24) {
         animation-delay: 9.8s;
         animation-duration: 28s; }
+
+#Landing {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 1s ease-out; }
+  #Landing header {
+    display: flex;
+    position: relative;
+    flex-direction: column; }
+    #Landing header nav {
+      display: flex;
+      justify-content: space-between; }
+      #Landing header nav ul {
+        font-family: "Azo Sans Regular";
+        display: flex;
+        width: 50%;
+        color: #fff;
+        justify-content: space-around; }
+        #Landing header nav ul li {
+          height: 75px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+          font-size: 1rem; }
+      #Landing header nav #Register {
+        margin-right: 30px;
+        margin-top: 30px;
+        font-size: 2em;
+        background: #FC0C84;
+        font-family: "Azo Sans Bold";
+        padding: 6px 10px 0 10px;
+        color: #fff; }
+  #Landing footer {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative; }
+    #Landing footer nav {
+      background: #fff;
+      font-family: "Azo Sans Regular";
+      display: flex;
+      position: relative;
+      height: 70px;
+      overflow: hidden; }
+      #Landing footer nav ul {
+        display: flex;
+        width: 90%;
+        color: #262626;
+        flex: 3; }
+        #Landing footer nav ul li {
+          padding: 0 30px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          font-size: 0.8em;
+          align-self: center; }
+      #Landing footer nav #Aftermovie {
+        padding-right: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+        font-size: 0.8em;
+        white-space: nowrap; }
+
+footer > ul {
+  height: 60px;
+  display: flex;
+  align-self: flex-end; }
+  footer > ul li {
+    width: 50px;
+    margin: 0 5px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  footer > ul li.facebook {
+    background-image: url(../img/facebook.svg); }
+  footer > ul li.twitter {
+    background-image: url(../img/twitter.svg); }
+  footer > ul li.youtube {
+    background-image: url(../img/youtube.svg); }
+  footer > ul li.github {
+    background-image: url(../img/github.svg); }
+
+#loader.loaded {
+  height: calc(100% - 70px); }
 
 body #box div:nth-child(1) {
   transition: all 0.34s 0.22s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.34s 0.02s; }
@@ -259,9 +399,70 @@ body #box div:nth-child(69) {
 body #box div:nth-child(70) {
   transition: all 3.1s 1.6s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.1s 1.4s; }
 
+#Landing header nav #ham {
+  width: 63px;
+  height: 63px;
+  background: url(../img/); }
+
 @media all and (orientation: portrait) {
   section#loader #frame {
-    width: 95vw;
-    height: 95vw; } }
+    width: calc(95vw - 20px);
+    height: calc(95vw - 20px); }
+
+  section#loader #frame #box #realmsOfFiction {
+    background-position: center; }
+
+  section#loader #frame #box #o17 {
+    width: 30px;
+    height: 30px;
+    top: 35%; }
+
+  footer > ul {
+    height: 45px; }
+
+  footer > ul li {
+    width: 50px;
+    height: 40px; }
+
+  section#loader #frame #box #realmsOfFiction {
+    height: 25px; }
+
+  #Landing header nav #Register {
+    margin-right: 20px; }
+
+  section#loader #frame #box #realmsOfFiction {
+    width: 100%;
+    right: 0%; } }
+@media all and (max-width: 1050px) {
+  #Landing footer nav ul li {
+    font-size: 0.7em;
+    padding: 0 15px; }
+
+  #Landing footer nav #Aftermovie {
+    font-size: 0.7em; } }
+@media all and (max-width: 790px) {
+  #Landing footer nav, #Landing header nav ul {
+    display: none; }
+
+  footer > ul {
+    align-self: center;
+    margin-bottom: 20px; }
+
+  section#loader #frame #box #Events {
+    top: 95%; }
+
+  section#loader #frame #box #Events, #Landing header nav #Register {
+    font-size: 1.2em; } }
+@media all and (max-width: 550px) {
+  section#loader #frame #box #Events {
+    top: 105%; } }
+@media all and (max-height: 550px) {
+  #Landing footer nav {
+    height: 35px; }
+
+  section#loader #frame #box #o17 {
+    width: 25px;
+    height: 25px;
+    top: 35%; } }
 
 /*# sourceMappingURL=loader.css.map */
