@@ -141,17 +141,18 @@
                         <h1 class=" name dust">EVENT NAME</h1>
                         <p>brief</p>
                         <p id="bottom"></p>
+                        <div class="content">
+                            <p>There is no Internet connection
+                                <br> Try:
+                                <br> Checking the network cables, modem and router
+                                <br> Reconnecting to Wi-Fi
+                                <br> DNS_PROBE_FINISHED_NO_INTERNET
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
-            <div class="content">
-                <p>There is no Internet connection
-                    <br> Try:
-                    <br> Checking the network cables, modem and router
-                    <br> Reconnecting to Wi-Fi
-                    <br> DNS_PROBE_FINISHED_NO_INTERNET
-                </p>
-            </div>
+            <div class="dummy"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -159,16 +160,23 @@
          $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
         });
-        $('.cross').click(function() {
+         var disable_cross = false
+        $('.cross').click(function(e) {
+            console.log(e.target, disable_cross)
+            if(!disable_cross)
             $('.lightbox').slideToggle();
         });
         $('#cross_info').click(function() {
-            $('.lightbox').fadeIn(800);
+            // $('.lightbox').fadeIn(800);
+            
             $('.info_wrapper').fadeOut(500);
+            setTimeout(()=>{disable_cross = false;}, 400)
         });
         $('.evt').click(function() {
-            $('.lightbox').fadeOut(500);
+            disable_cross = true;
             $('.info_wrapper').fadeIn(500);
+            
+            // $('.lightbox').fadeOut(500);
         });
     </script>
     <script src="./js/characters.js"></script>
