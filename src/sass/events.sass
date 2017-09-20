@@ -33,12 +33,6 @@ header
   padding: 0 20px
   z-index: 1
 
-  .logo
-    height: 100px
-    width: 100px
-    background: url(../img/Oasis-Logo.png)
-    background-size: contain
-
   #Arrows
     display: flex
     display: none
@@ -50,6 +44,14 @@ header
       height: 50px
       width: 50px
 
+.logo
+  height: 100px
+  width: 100px
+  margin: 10px
+  position: absolute
+  top: 0
+  background: url(../img/Oasis-Logo.png)
+  background-size: contain
 
 section
   position: absolute
@@ -162,8 +164,19 @@ section
 @media all and (max-aspect-ratio: 1/1)
   #Main .change
     display: none
+  header
+    display: flex
+    -webkit-flex-direction: column 
+    -ms-flex-direction: column 
+    flex-direction: column 
+    justify-content: center
   header #Arrows
     display: flex
+    -webkit-align-self: flex-end 
+    align-self: flex-end 
+  .logo
+    width: 70px
+    height: 70px
   section #EventName
     justify-content: center
   section #TagLine

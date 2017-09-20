@@ -2,6 +2,23 @@
     font-family: 'bonn';
     src: url("../fonts/BONN/bonnr.ttf") format('truetype');
 }
+.crosscont_1
+{
+    position: absolute;
+    top: 0;
+    margin-top: 5vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    margin-top: 0;
+    /* padding-top: 3vh; */
+    /* position: fixed; */
+    z-index: 100;
+    width: 100vw;
+     background: linear-gradient(#fafafa 50%,transparent);
+}
 
 * {
     font-family: "Bonnbeta";
@@ -14,6 +31,10 @@ body {
     margin: 0;
     display: block;
     background-position: fixed;
+}
+
+.lightbox{
+    z-index: 10;
 }
 
 .logo {
@@ -67,33 +88,36 @@ body {
 }
 
 .content {
-    width: 80%;
-    height: auto;
+   width: 80%;
+    /* height: auto; */
     margin: auto;
     text-align: center;
     justify-content: center;
     display: flex;
-    font-size: 1.5em;
+    font-size: 1em;
     position: relative;
-    margin-top: 30vh;
-    flex-wrap: wrap;
-    line-height: 1.1em;
+    /* margin-top: 30vh; */
+    /* line-height: 1.1em; */
+    margin: 50px auto;
+    color: #000;
 }
 
 .content p {
+
 }
 
 .crosscont {
     display: flex;
     justify-content: center;
-    height: 12vh;
-    margin-top: 5vh;
-    padding-top: 3vh;
+    align-items: center;
+    height: 18vh;
+    margin-top: 0;
+    /* padding-top: 3vh; */
     position: fixed;
     z-index: 100;
     width: 100vw;
     /* margin-bottom: 10vh; */
-    background: linear-gradient(#fafafa,transparent);
+    background: linear-gradient(#fafafa 50%,transparent);
 }
 
 .crosslink {
@@ -124,6 +148,7 @@ body {
     z-index: 10;
      width: 50px;
     height: 50px;
+    margin: auto;
 
 
 }
@@ -174,6 +199,7 @@ a.crosslink:hover #clk {
  }
 
 .evtcont_info {
+    
     padding: 0;
     position: absolute;
     width: 100%;
@@ -193,7 +219,7 @@ a.crosslink:hover #clk {
 }
 
 .evtname {
-    padding-top: 2.4vh;
+    padding-top: 10.4vh;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -254,6 +280,10 @@ a.crosslink:hover #clk {
     color: #c471f5;
     margin-bottom: 1vh;
     font-weight: bold;
+}
+.evt .content p{
+    color: #666;
+    width: inherit;
 }
 
 #a h4 {
@@ -331,4 +361,46 @@ a.crosslink:hover #clk {
 #Box
 {
     z-index: 0 !important;
+}
+
+
+@media only screen and (max-width: 768px){
+    .evt .name{
+        font-size: 2em;
+    }
+
+#a
+{
+    padding-top: 5vh;   
+}
+
+#Arrows
+{
+    display: flex;
+    position: absolute;
+    right: 0px;
+}
+}
+
+
+.dummy{
+    position: absolute;
+    top: 80vh;
+    height: 22vh;
+    left: 0;
+    right: 0;
+    margin-top: -2vh;
+    background: linear-gradient(transparent, #fafafa 46%);
+    /* background: #000; */
+    z-index: 100;
+}
+
+.info_wrapper{
+    z-index: 20;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
