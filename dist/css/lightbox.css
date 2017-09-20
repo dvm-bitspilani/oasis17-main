@@ -129,6 +129,7 @@ body {
     z-index: 10;
      width: 50px;
     height: 50px;
+    margin: auto;
 
 
 }
@@ -338,8 +339,24 @@ a.crosslink:hover #clk {
     z-index: 0 !important;
 }
 
+
 @media only screen and (max-width: 768px){
     .evt .name{
         font-size: 2em;
     }
+
+#a
+{
+    padding-top: 5vh;   
 }
+.cross_cont
+{
+    position: relative;
+    margin-top: 9vh;
+    z-index: 100;
+}
+#Arrows
+{
+    display: flex;
+    position: absolute;
+    right: 0px;
