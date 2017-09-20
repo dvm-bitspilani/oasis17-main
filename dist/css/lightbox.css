@@ -16,6 +16,10 @@ body {
     background-position: fixed;
 }
 
+.lightbox{
+    z-index: 10;
+}
+
 .logo {
     padding-left: 20px;
     z-index: 101;
@@ -86,14 +90,15 @@ body {
 .crosscont {
     display: flex;
     justify-content: center;
-    height: 12vh;
-    margin-top: 5vh;
-    padding-top: 3vh;
+    align-items: center;
+    height: 18vh;
+    margin-top: 0;
+    /* padding-top: 3vh; */
     position: fixed;
     z-index: 100;
     width: 100vw;
     /* margin-bottom: 10vh; */
-    background: linear-gradient(#fafafa,transparent);
+    background: linear-gradient(#fafafa 50%,transparent);
 }
 
 .crosslink {
@@ -193,7 +198,7 @@ a.crosslink:hover #clk {
 }
 
 .evtname {
-    padding-top: 2.4vh;
+    padding-top: 10.4vh;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -331,4 +336,10 @@ a.crosslink:hover #clk {
 #Box
 {
     z-index: 0 !important;
+}
+
+@media only screen and (max-width: 768px){
+    .evt .name{
+        font-size: 2em;
+    }
 }
