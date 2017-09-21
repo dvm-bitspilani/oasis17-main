@@ -518,13 +518,15 @@ body #box div:nth-child(71) {
   height: 100%;
   z-index: 5;
   background: #262626;
-  opacity: 1; }
+  opacity: 1;
+  pointer-events: all; }
 
 #contacts {
   display: none; }
 
 #item.inactive {
-  opacity: 0; }
+  opacity: 0;
+  pointer-events: none; }
 
 #Landing header nav #ham {
   width: 83px;

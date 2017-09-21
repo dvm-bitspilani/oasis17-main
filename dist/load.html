@@ -70,7 +70,7 @@
             <li>ABOUT</li>
             <li>PROF SHOW</li>
             <li style="display: none">SPONSORS</li>
-            <li onclick=open('contact')>CONTACT</li>
+            <li id="contact">CONTACT</li>
           </ul>
           <div id="ham">
 
@@ -216,10 +216,16 @@
     	</script>
     </div>
     <script type="text/javascript">
+    var item = document.querySelector('#item');
+    var ham_menu = document.querySelector('#ham_menu');
       function open(ref) {
+        console.log(3);
         item.className="";
         item.innerHTML=eval(ref).innerHTML;
       }
+      contact.addEventListener("click",function(){
+        open('contacts');
+      });
       function handleResize(){
         document.body.style.height = window.innerHeight+"px";
       }
