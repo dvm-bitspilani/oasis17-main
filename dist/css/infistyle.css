@@ -1,0 +1,79 @@
+svg {
+  width: 100%;
+  height: 100%; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /*background-color:black; */ }
+
+svg {
+  animation: dwn 5s linear infinite; }
+
+#re {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%); }
+
+#rot {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%; }
+
+#r1, #r2, #r3, #r4, #r5, #r6 {
+  animation: mk 1s linear infinite;
+  transform-origin: 50% 50%; }
+
+@keyframes mk {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(30px); } }
+@keyframes dwn {
+  0%,100% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-10px); } }
+@media (max-width: 699px) {
+  #re {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -webkit-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%); } }
+#rot {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%; }
+
+#r1, #r2, #r3, #r4, #r5, #r6 {
+  animation: mk 1s linear infinite;
+  transform-origin: 50% 50%; }
+
+@keyframes mk {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(30px); } }
+@keyframes dwn {
+  0%,100% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-10px); } }
+@media (max-width: 699px) {
+  #re {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -webkit-clip-path: polygo; } }
+
+/*# sourceMappingURL=svg.css.map */
