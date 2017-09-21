@@ -14,8 +14,13 @@ charprops = {
     tagline: ["BECAUSE I","AM BATMAN"],
     eventname: "MISCELLANEOUS"
   },
+  "Goku": {
+    background: "#ff8122",
+    tagline: ["KAMEHAME","HAAAAAA"],
+    eventname: "PHOTOGRAPHY"
+  },
   "Ezio": {
-    background: "#737373",
+    background: "#C51640",
     tagline: ["WE ARE...","ASSASSINS"],
     eventname: "FASHION"
   },

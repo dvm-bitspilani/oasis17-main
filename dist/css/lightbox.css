@@ -199,7 +199,7 @@ a.crosslink:hover #clk {
  }
 
 .evtcont_info {
-    
+
     padding: 0;
     position: absolute;
     width: 100%;
@@ -358,10 +358,6 @@ a.crosslink:hover #clk {
         transform: rotate(45deg);
     }
 }
-#Box
-{
-    z-index: 0 !important;
-}
 
 
 @media only screen and (max-width: 768px){
@@ -371,7 +367,7 @@ a.crosslink:hover #clk {
 
 #a
 {
-    padding-top: 5vh;   
+    padding-top: 5vh;
 }
 
 #Arrows

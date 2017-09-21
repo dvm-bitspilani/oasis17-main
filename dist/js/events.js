@@ -13,7 +13,7 @@ var background = document.querySelector('#events_wrapper');
 var tagline = document.querySelector('#TagLine')
 var eventname = document.querySelector('#EventName')
 var characters = [
-  "Johnny","Deadpool","Batman","Ezio",
+  "Johnny","Deadpool","Batman","Ezio","Goku",
   "Rick","Minion","Pikachu",
   "Dexter","V","Harry"
 ];
