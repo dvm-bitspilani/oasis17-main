@@ -1,0 +1,161 @@
+@font-face 
+	font-family: 'bonnr'
+	src: url("../fonts/BONN/bonnr.ttf") format('truetype')
+
+@keyframes backrotate 
+	0% 
+		transform: rotate(0deg)
+	100% 
+		transform: rotate(360deg)
+
+@keyframes cross
+	0%
+		transform: rotate(-45deg)
+	50% 
+		transform: rotate(45deg)
+	100% 
+		transform: rotate(-315deg)
+@keyframes anticross 
+	0% 
+		transform: rotate(45deg)
+	50% 
+		transform: rotate(20deg)
+	100% 
+		transform: rotate(45deg)
+.hide
+	transition: all 0.2s linear
+	height: 0
+
+.hide_toggle
+	display: none
+.show
+	display : block
+
+.logo
+	z-index : 11
+*
+	padding : 0px
+	margin : 0px
+.lightbox
+	display : none
+	width : 100vw
+	height : 100vh
+	overflow : hidden
+	position : absolute
+	background : #fafafa
+	font-family : 'bonnr'
+	z-index : 10
+.backrotate
+	width : 100vw
+	position : absolute
+	height : 100vh
+	z-index : 0
+	background-image: url("../img/flex2.png")
+	background-position : center
+	background-size : cover
+	animation : backrotate 110s linear 
+.crosscont
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 18vh
+	margin-top: 0
+	position: fixed
+	z-index: 100
+	width: 100vw
+	background: linear-gradient(#fafafa 50%,transparent)
+	.cross
+		border: 5px solid #373839
+		border-radius: 50%
+		z-index: 10
+		width: 50px
+		height: 50px
+		margin: auto
+		.crosslink
+			margin: auto
+			width: 100%
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+		.crossbar
+			position: absolute
+			margin: 0 auto
+			width: 7px
+			height: 30px
+			border-radius: 3px
+			border: 1px solid #fa71cd
+			background-color: #fa71cd
+
+		#anticlk 
+			transform-origin: 50% 50%
+			transform: rotate(-45deg)
+		a.crosslink:hover #anticlk
+			animation: cross .4s linear																																																																																																																																																																																																																		
+		#clk 
+			transform-origin: 50% 50%
+			transform: rotate(45deg)
+		a.crosslink:hover #clk
+			animation: anticross .4s linear
+.evtcont::-webkit-scrollbar
+	width : 0px
+.evtcont
+	display : flex
+	justify-content : center
+	width : auto
+	margin : auto
+	text-align : center
+	padding-top : 8vh !important
+	margin-top : 7vh !important
+	letter-spacing : 0.3em
+	height : 80vh
+	overflow-y : scroll
+	.evtname
+		list-style: none
+		font-size: 1.4rem
+		z-index: 20
+		#a p 
+			color: #FD9372
+		#b p 
+			color: #a09de5
+		#c p 
+			color: #64d6e2
+		#d p 
+			color: #FDACB4	
+		#e p
+			color: #8e24aa
+		#f p
+			color: #F6D860
+		li
+		
+			margin-bottom : 10px
+			padding-top : 2vh !important
+
+		#bottom
+			width: 50%
+			margin : auto
+			border-radius : 10px
+			height: 1.5px
+			background-color : #262626
+		#bottom_info
+			width: 10vw
+			margin : auto
+			border-radius : 10px
+			height: 1.5px
+			background-color : #262626
+.info_wrapper
+	display : none
+	background-color : #fafafa
+	position : absolute
+	overflow : hidden
+	width : 100vw
+	height : 100vh
+	font-family : 'bonnr'
+	z-index : 10
+	.evtinfo
+		padding-top : 10vh !important
+		.content
+			width: 90vw
+			margin: auto
+			padding-top : 2vh !important 
+			font-size: 0.8em

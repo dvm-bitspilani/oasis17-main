@@ -12,8 +12,16 @@
   margin: 0px;
   letter-spacing: 0.1em; }
 
+.hide {
+  transition: all 0.2s linear;
+  height: 0; }
+
+.hide_toggle {
+  display: none; }
+
 .about_cont {
   background-color: #262626;
+  display: block;
   background-image: url("../img/flex.png");
   background-position: center;
   background-size: cover;
@@ -23,13 +31,10 @@
 
 .back {
   position: fixed;
-  background: red;
-  margin: 4vh 0 0 4vh;
-  width: 80px;
-  height: 6vh; }
+  margin: 4vh 0 0 4vh; }
   .back img {
-    width: 60px;
-    height: 30px; }
+    width: 50%;
+    height: 50%; }
 
 .backcont {
   font-size: 2em;

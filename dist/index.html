@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/lightbox.css">
   </head>
   <body >
-    <div id="events_wrapper" class="ltr">
+ <div id="events_wrapper" class="ltr">
       <div class="logo"></div>
     <header>
       <div id="Arrows">
@@ -82,53 +82,43 @@
             <ul class="evtname">
                 <li id="a" class="evt">
                     <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
+                    <p id="p1"></p>
                     <p id="bottom"></p>
                 </li>
                 <li id="b" class="evt">
                     <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
+                    <p id="p2"></p>
                     <p id="bottom"></p>
                 </li>
                 <li id="c" class="evt">
                     <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
+                    <p id="p3"></p>
                     <p id="bottom"></p>
                 </li>
                 <li id="d" class="evt">
-                    <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
+                    <h1 class="name dust">EVENT NAME</h1>
+                    <p id="p4"></p>
                     <p id="bottom"></p>
                 </li>
                 <li id="e" class="evt">
                     <h1 class=" name dust">EVENT NAME</h1>
-                    <p id="">brief</p>
+                    <p id="p5"></p>
                     <p id="bottom"></p>
                 </li>
                 <li id="f" class="evt">
                     <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
-                    <p id="bottom"></p>
-                </li>
-                <li id="f" class="evt">
-                    <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
-                    <p id="bottom"></p>
-                </li>
-                <li id="f" class="evt">
-                    <h1 class=" name dust">EVENT NAME</h1>
-                    <p>brief</p>
+                    <p id="p6"></p>
                     <p id="bottom"></p>
                 </li>
             </ul>
         </div>
         <div class="dummy"></div>
     </div>
-    <div class="info_wrapper">
+     <div class="info_wrapper">
         <div class="backrotate">
         </div>
         <div class="info">
-            <div class="crosscont_1">
+            <div class="crosscont">
                 <div class="cross" id="cross_info">
                     <a class="crosslink" href="#">
                         <p class="crossbar" id="anticlk"></p>
@@ -136,12 +126,12 @@
                     </a>
                 </div>
             </div>
-            <div class="evtcont_info">
-                <ul class="evtname">
-                    <li id="f" class="evt">
+            <div class="evtcont">
+                <div class="evtname">
+                    <div class="evtinfo">
                         <h1 class=" name dust">EVENT NAME</h1>
                         <p>brief</p>
-                        <p id="bottom"></p>
+                        <p id="bottom_info"></p>
                         <div class="content">
                             <p>There is no Internet connection
                                 <br> Try:
@@ -150,14 +140,14 @@
                                 <br> DNS_PROBE_FINISHED_NO_INTERNET
                             </p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
             <div class="dummy"></div>
         </div>
     </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
          $('#ViewEvent').click(function() {
             $('.lightbox').slideToggle();
@@ -169,19 +159,23 @@
             $('.lightbox').slideToggle();
         });
         $('#cross_info').click(function() {
-            // $('.lightbox').fadeIn(800);
-            
             $('.info_wrapper').fadeOut(500);
             setTimeout(()=>{disable_cross = false;}, 400)
         });
         $('.evt').click(function() {
             disable_cross = true;
             $('.info_wrapper').fadeIn(500);
-            
-            // $('.lightbox').fadeOut(500);
         });
     </script>
     <script src="./js/characters.js"></script>
     <script src="./js/events.js"></script>
+    <script type="text/javascript">
+        var EVENTNAMEString = '{}';
+        var EVENTNAMEobj= JSON.parse(EVENTNAMEString);
+        for(var x=1 ; x<=6 ;x++)
+        {
+        document.getElementById("p"+x).innerHTML = EVENTNAMEobj.x;
+        }
+    </script>
   </body>
 </html>

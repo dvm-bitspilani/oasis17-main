@@ -1,5 +1,4 @@
 // Styling
-
 function handleResize(){
   document.body.style.height = window.innerHeight+"px";
 }
@@ -79,3 +78,23 @@ document.body.addEventListener('click',function(e){
 });
 
 changeChar(0);
+/*sponsors about animation*/
+function hide_about()
+{   var back = document.querySelector(".back");
+    var about = document.querySelector(".about_cont");
+    var cont = document.querySelector(".container");
+    about.className = "hide";
+    setTimeout(function(){
+      about.className = "hide_toggle";
+    },150);
+}
+function hide()
+{ var back = document.querySelector(".back");
+  var spons = document.querySelector(".sponsors_wrapper");
+  var cont = document.querySelector(".sponsors_container");
+  cont.className = "hide_toggle";
+    spons.className = "hide";
+    setTimeout(function(){
+      spons.className = "hide_toggle";
+    },200);
+}
