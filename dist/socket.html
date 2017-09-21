@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/lightbox.css"> -->
   </head>
   <body class="ltr">
+  <div id="events_wrapper">
     <header>
       <div class="logo"></div>
       <div id="Arrows">
@@ -154,6 +155,7 @@
             </div>
         </div>
     </div>
+    </div>
     <script>
     var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
     exampleSocket.onopen = function (event) {
@@ -201,23 +203,49 @@
           mime: "png"
         }
       ];
+
       for (var i in data) {
-        exampleSocket.send(JSON.stringify(data[i]));
+          data[i].last = retrive_last(data[i].url);
+          console.log(data[i] .last);
+          exampleSocket.send(JSON.stringify(data[i]));
       }
     };
     exampleSocket.onmessage = function(event) {
       var res = JSON.parse(event.data);
       console.log(res);
-      if(res.ext == "css") {
-        var stylesheet = document.createElement("style");
-        document.head.appendChild(stylesheet);
-        stylesheet.innerHTML = res.data;
+      if(res.load){
+        if(res.ext == "css") {
+          inject(res.data, "style");
+        }
+        else if(res.ext == "js") {
+         inject(res.data, "script");
+        }
+        save(res);
+      }else{
+        inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"));
       }
-      else if(res.ext == "js") {
-        var script = document.createElement("script");
-        document.body.appendChild(script);
-        script.innerHTML = res.data;
+    }
+
+    function save(res){
+      window.localStorage.setItem(res.url, "true");
+      window.localStorage.setItem(res.url + "_data",res.data);
+      window.localStorage.setItem(res.url + "_last",res.last);
+      window.localStorage.setItem(res.url + "_ext",res.ext);
+      if(res.ext =="css"){
+        window.localStorage.setItem(res.url + "_tag","style");
+      }else if(res.ext =="js"){
+        window.localStorage.setItem(res.url + "_tag","script");
       }
+
+    }
+    function retrive_last(url){
+      return window.localStorage.getItem(url + "_last");
+    }
+
+    function inject(data, tag){
+      var ele = document.createElement(tag);
+      document.head.appendChild(ele);
+      ele.innerHTML = data;
     }
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
