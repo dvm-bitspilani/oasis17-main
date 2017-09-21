@@ -361,6 +361,7 @@
         </div>
     </div>
     <script>
+    console.log('run')
     var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
@@ -465,9 +466,9 @@
         save(res);
       }else{
         if(Object.keys(res).indexOf("ref"))
-        {inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"),res.ref)}
+        {inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"),res.ref, res.url)}
         else{
-          inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"), null)
+          inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"), null, res.url)
         }
       }
     }
@@ -491,7 +492,7 @@
       return window.localStorage.getItem(url + "_last");
     }
 
-    function inject(data, tag, ref){
+    function inject(data, tag, ref, url){
       
       if(tag != "null")
       {
@@ -501,9 +502,10 @@
       }else{
         console.log(tag)
         if(ref){
+          console.log('setting Image');
           eval(ref).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
           eval(ref).style.backgroundSize = "contain";
-          // console.log(eval(res.ref).style.background, 'umms');
+          
         }
       }
     }
@@ -549,7 +551,11 @@
       });
       
       Events.addEventListener('click', function(){
-        open('events');
+        events.style.width = "100vw";
+        events.style.height = "100vh";
+        events.style.position = "absolute";
+        events.style.top  = "0px";
+        $(events).fadeIn();
       })
       function handleResize(){
         document.body.style.height = window.innerHeight+"px";
