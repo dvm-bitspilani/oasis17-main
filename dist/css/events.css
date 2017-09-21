@@ -1,199 +1,185 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-body, html {
+#events_wrapper {
   width: 100vw;
   height: 100vh;
   position: relative;
   font-size: 18px; }
-
-.change {
-  width: 75px;
-  height: 75px;
-  border-radius: 100%;
-  background: url(../img/arrow1.png) no-repeat center;
-  background-size: cover; }
-
-.change.prev {
-  transform: rotate(180deg); }
-
-header {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 1; }
-  header #Arrows {
-    display: flex;
-    display: none;
-    height: 50px;
-    width: 150px;
-    justify-content: space-around; }
-    header #Arrows div {
-      height: 50px;
-      width: 50px; }
-
-.logo {
-  height: 100px;
-  width: 100px;
-  margin: 10px;
-  position: absolute;
-  top: 0;
-  background: url(../img/Oasis-Logo.png);
-  background-size: contain; }
-
-section {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100%;
-  align-items: center;
-  justify-content: space-around;
-  background: #938FFF;
-  transition: background 0.7s cubic-bezier(0.53, 0.54, 0.1, 0.4); }
-  section #Main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    flex: 1;
-    align-content: space-around; }
-  section #Polys {
-    position: relative;
-    display: flex;
-    width: 100vw;
-    flex: 1;
-    align-items: center;
-    justify-content: space-around; }
-    section #Polys #Box {
-      position: relative;
-      width: 60vh;
-      height: 60vh;
-      margin-top: -5vh;
-      z-index: 1; }
-      section #Polys #Box div {
-        position: absolute;
-        width: 100%;
-        height: 100%; }
-  section #EventName {
+  #events_wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  #events_wrapper .change {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background: url(../img/arrow1.png) no-repeat center;
+    background-size: cover; }
+  #events_wrapper .change.prev {
+    transform: rotate(180deg); }
+  #events_wrapper header {
     position: absolute;
     display: flex;
-    width: 100vw;
-    height: 11vh;
-    font-size: 15vh;
-    font-family: "Bonnbeta";
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 30px;
-    bottom: 10px;
-    color: #fff;
-    letter-spacing: 4pt;
-    text-align: center; }
-    section #EventName span {
-      margin-right: -4pt; }
-  section #TagLine {
-    position: absolute;
-    right: 0;
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1; }
+    #events_wrapper header #Arrows {
+      display: flex;
+      display: none;
+      height: 50px;
+      width: 150px;
+      justify-content: space-around; }
+      #events_wrapper header #Arrows div {
+        height: 50px;
+        width: 50px; }
+  #events_wrapper .logo {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    background: url(../img/Oasis-Logo.png);
+    background-size: contain; }
+  #events_wrapper section {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    min-width: 400px;
-    max-width: 100vw;
-    font-size: 15vh;
-    font-family: "Bonnbeta";
-    text-transform: uppercase;
-    align-content: flex-end;
-    padding: 30px;
-    word-wrap: break-word;
-    text-align: right;
-    color: rgba(255, 255, 255, 0.42);
-    letter-spacing: 4pt; }
-    section #TagLine span {
-      margin-right: -4pt; }
-  section nav {
-    position: relative;
-    display: flex;
-    height: 8vh;
     width: 100vw;
-    background: #fff;
+    height: 100%;
     align-items: center;
-    justify-content: space-between; }
-    section nav ul {
+    justify-content: space-around;
+    background: #938FFF;
+    transition: background 0.7s cubic-bezier(0.53, 0.54, 0.1, 0.4); }
+    #events_wrapper section #Main {
       position: relative;
       display: flex;
-      justify-content: space-around;
-      list-style-type: none; }
-      section nav ul li {
+      flex-direction: column;
+      width: 100vw;
+      flex: 1;
+      align-content: space-around; }
+    #events_wrapper section #Polys {
+      position: relative;
+      display: flex;
+      width: 100vw;
+      flex: 1;
+      align-items: center;
+      justify-content: space-around; }
+      #events_wrapper section #Polys #Box {
+        position: relative;
+        width: 60vh;
+        height: 60vh;
+        margin-top: -5vh;
+        z-index: 1; }
+        #events_wrapper section #Polys #Box div {
+          position: absolute;
+          width: 100%;
+          height: 100%; }
+    #events_wrapper section #EventName {
+      position: absolute;
+      display: flex;
+      width: 100vw;
+      height: 11vh;
+      font-size: 15vh;
+      font-family: "Bonnbeta";
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 30px;
+      bottom: 10px;
+      color: #fff;
+      letter-spacing: 4pt;
+      text-align: center; }
+      #events_wrapper section #EventName span {
+        margin-right: -4pt; }
+    #events_wrapper section #TagLine {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      min-width: 400px;
+      max-width: 100vw;
+      font-size: 15vh;
+      font-family: "Bonnbeta";
+      text-transform: uppercase;
+      align-content: flex-end;
+      padding: 30px;
+      word-wrap: break-word;
+      text-align: right;
+      color: rgba(255, 255, 255, 0.42);
+      letter-spacing: 4pt; }
+      #events_wrapper section #TagLine span {
+        margin-right: -4pt; }
+    #events_wrapper section nav {
+      position: relative;
+      display: flex;
+      height: 8vh;
+      width: 100vw;
+      background: #fff;
+      align-items: center;
+      justify-content: space-between; }
+      #events_wrapper section nav ul {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none; }
+        #events_wrapper section nav ul li {
+          font-family: "MontserratEL";
+          font-size: 4vh;
+          margin: 0 20px;
+          padding: 5px 7px; }
+      #events_wrapper section nav div {
         font-family: "MontserratEL";
         font-size: 4vh;
         margin: 0 20px;
-        padding: 5px 7px; }
-    section nav div {
-      font-family: "MontserratEL";
-      font-size: 4vh;
-      margin: 0 20px;
-      padding: 0 10px; }
-
-@media all and (max-aspect-ratio: 1 / 1) {
-  #Main .change {
-    display: none; }
-
-  header {
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: center; }
-
-  header #Arrows {
-    display: flex;
-    -webkit-align-self: flex-end;
-    align-self: flex-end; }
-
-  .logo {
-    width: 70px;
-    height: 70px; }
-
-  section #EventName {
-    justify-content: center; }
-
-  section #TagLine {
-    top: 70px; }
-
-  #Box {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vw; } }
+        padding: 0 10px; }
+  @media all and (max-aspect-ratio: 1 / 1) {
+    #events_wrapper #Main .change {
+      display: none; }
+    #events_wrapper header {
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      justify-content: center; }
+    #events_wrapper header #Arrows {
+      display: flex;
+      -webkit-align-self: flex-end;
+      align-self: flex-end; }
+    #events_wrapper .logo {
+      width: 70px;
+      height: 70px; }
+    #events_wrapper section #EventName {
+      justify-content: center; }
+    #events_wrapper section #TagLine {
+      top: 70px; }
+    #events_wrapper #Box {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vw; } }
 @media all and (max-aspect-ratio: 1 / 1) and (max-width: 800px) {
-  section nav {
+  #events_wrapper section nav {
     justify-content: center; }
-    section nav ul li {
+    #events_wrapper section nav ul li {
       font-family: RobotoC;
       font-size: 5vh; }
-    section nav li:nth-child(2), section nav div {
+    #events_wrapper section nav li:nth-child(2), #events_wrapper section nav div {
       display: none; } }
 @media all and (max-aspect-ratio: 1 / 1) and (max-width: 475px) {
-  section #TagLine {
+  #events_wrapper section #TagLine {
     display: none; }
-
-  section #EventName {
+  #events_wrapper section #EventName {
     font-size: 8vh;
     height: 7vh; }
-
-  section #Polys #Box {
+  #events_wrapper section #Polys #Box {
     margin-top: 5vh; } }
-@media all and (orientation: portrait) and (max-height: 500px) {
-  section #Polys #Box {
-    width: 60vh;
-    height: 60vh; } }
+
+  @media all and (orientation: portrait) and (max-height: 500px) {
+    #events_wrapper section #Polys #Box {
+      width: 60vh;
+      height: 60vh; } }
 
 /*# sourceMappingURL=events.css.map */
