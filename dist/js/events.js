@@ -7,17 +7,17 @@ window.addEventListener("orientationchange",handleResize);
 window.addEventListener("resize",handleResize)
 
 // Handling Character Transitions
-var box = document.querySelector('#Box')
+var Box = document.querySelector('#Box')
 var background = document.querySelector('#events_wrapper');
 var tagline = document.querySelector('#TagLine')
 var eventname = document.querySelector('#EventName')
 var characters = [
-  "Johnny","Deadpool","Batman",
+  "Johnny","Deadpool","Batman","Ezio","Goku",
   "Rick","Minion","Pikachu",
   "Dexter","V","Harry"
 ];
 function get(dir) {
-  var curr = box.className;
+  var curr = Box.className;
   var icurr = characters.indexOf(curr);
   if(icurr != -1) {
     var raw = icurr + dir;
@@ -33,7 +33,7 @@ function changeChar(dir){
   var props = charprops[character];
   document.body.className = direction;
   background.style.background = props.background;
-  box.className = character;
+  Box.className = character;
   tagline.innerHTML = "";
   for (var tag in props.tagline){
     tagline.innerHTML += "<span>"+props.tagline[tag]+"</span>";

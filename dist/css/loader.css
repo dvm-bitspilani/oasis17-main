@@ -83,78 +83,75 @@ section#loader {
         stroke-dashoffset: 2000px;
         animation: 5s lineani cubic-bezier(0.7, 0.3, 0, 1) both;
         stroke: #ffffff; }
-      section#loader #frame svg polygon:nth-of-type(1) {
+      section#loader #frame svg .first:nth-of-type(1) {
         animation-delay: 0.2s;
         animation-duration: 2.75s; }
-      section#loader #frame svg polygon:nth-of-type(2) {
+      section#loader #frame svg .first:nth-of-type(2) {
         animation-delay: 0.4s;
         animation-duration: 3.5s; }
-      section#loader #frame svg polygon:nth-of-type(3) {
+      section#loader #frame svg .first:nth-of-type(3) {
         animation-delay: 0.6s;
         animation-duration: 4.25s; }
-      section#loader #frame svg polygon:nth-of-type(4) {
+      section#loader #frame svg .first:nth-of-type(4) {
         animation-delay: 0.8s;
         animation-duration: 5s; }
-      section#loader #frame svg polygon:nth-of-type(5) {
+      section#loader #frame svg .first:nth-of-type(5) {
         animation-delay: 1s;
         animation-duration: 5.75s; }
-      section#loader #frame svg polygon:nth-of-type(6) {
+      section#loader #frame svg .first:nth-of-type(6) {
         animation-delay: 1.2s;
         animation-duration: 6.5s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 6.4s;
-        animation-duration: 15.25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 6.6s;
-        animation-duration: 16s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 6.8s;
-        animation-duration: 16.75s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 7s;
-        animation-duration: 17.5s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 7.2s;
-        animation-duration: 18.25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 7.4s;
-        animation-duration: 19s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 7.6s;
-        animation-duration: 19.75s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 7.8s;
-        animation-duration: 20.5s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 8s;
-        animation-duration: 21.25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 8.2s;
-        animation-duration: 22s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 8.4s;
-        animation-duration: 22.75s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 8.6s;
-        animation-duration: 23.5s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 8.8s;
-        animation-duration: 24.25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 9s;
-        animation-duration: 25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 9.2s;
-        animation-duration: 25.75s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 9.4s;
-        animation-duration: 26.5s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 9.6s;
-        animation-duration: 27.25s; }
-      section#loader #frame svg polygon:nth-of-type(#$i) {
-        animation-delay: 9.8s;
-        animation-duration: 28s; }
+      section#loader #frame svg .second:nth-of-type(1) {
+        animation-delay: 1.2s;
+        animation-duration: 2.75s; }
+      section#loader #frame svg .second:nth-of-type(2) {
+        animation-delay: 1.4s;
+        animation-duration: 3.5s; }
+      section#loader #frame svg .second:nth-of-type(3) {
+        animation-delay: 1.6s;
+        animation-duration: 4.25s; }
+      section#loader #frame svg .second:nth-of-type(4) {
+        animation-delay: 1.8s;
+        animation-duration: 5s; }
+      section#loader #frame svg .second:nth-of-type(5) {
+        animation-delay: 2s;
+        animation-duration: 5.75s; }
+      section#loader #frame svg .second:nth-of-type(6) {
+        animation-delay: 2.2s;
+        animation-duration: 6.5s; }
+      section#loader #frame svg .second:nth-of-type(7) {
+        animation-delay: 2.4s;
+        animation-duration: 7.25s; }
+      section#loader #frame svg .second:nth-of-type(8) {
+        animation-delay: 2.6s;
+        animation-duration: 8s; }
+      section#loader #frame svg .second:nth-of-type(9) {
+        animation-delay: 2.8s;
+        animation-duration: 8.75s; }
+      section#loader #frame svg .second:nth-of-type(10) {
+        animation-delay: 3s;
+        animation-duration: 9.5s; }
+      section#loader #frame svg .second:nth-of-type(11) {
+        animation-delay: 3.2s;
+        animation-duration: 10.25s; }
+      section#loader #frame svg .second:nth-of-type(12) {
+        animation-delay: 3.4s;
+        animation-duration: 11s; }
+      section#loader #frame svg .second:nth-of-type(13) {
+        animation-delay: 3.6s;
+        animation-duration: 11.75s; }
+      section#loader #frame svg .second:nth-of-type(14) {
+        animation-delay: 3.8s;
+        animation-duration: 12.5s; }
+      section#loader #frame svg .second:nth-of-type(15) {
+        animation-delay: 4s;
+        animation-duration: 13.25s; }
+      section#loader #frame svg .second:nth-of-type(16) {
+        animation-delay: 4.2s;
+        animation-duration: 14s; }
+      section#loader #frame svg .second:nth-of-type(17) {
+        animation-delay: 4.4s;
+        animation-duration: 14.75s; }
 
 #Events {
   position: absolute;
@@ -196,7 +193,7 @@ section#loader {
       #Landing header nav ul {
         font-family: "Azo Sans Regular";
         display: flex;
-        width: 50%;
+        width: 35%;
         color: #fff;
         justify-content: space-around;
         padding-left: 20px; }
@@ -206,9 +203,22 @@ section#loader {
           align-items: center;
           justify-content: center;
           text-transform: uppercase;
-          font-size: 1rem; }
+          font-size: 1rem;
+          position: relative; }
         #Landing header nav ul li:hover {
           cursor: pointer; }
+        #Landing header nav ul li::after {
+          position: absolute;
+          left: 50%;
+          top: calc(50% + 15px);
+          content: "";
+          width: 0;
+          height: 1px;
+          background: #fff;
+          transform: translateX(-50%);
+          transition: 0.3s all cubic-bezier(1, 0, 0, 1); }
+        #Landing header nav ul li:hover::after {
+          width: 100%; }
       #Landing header nav #Register {
         margin-right: 30px;
         margin-top: 30px;
@@ -245,9 +255,22 @@ section#loader {
           align-items: center;
           white-space: nowrap;
           font-size: 0.8em;
-          align-self: center; }
+          align-self: center;
+          position: relative; }
         #Landing footer nav ul li:hover {
           cursor: pointer; }
+        #Landing footer nav ul li::after {
+          position: absolute;
+          left: 50%;
+          top: calc(50% + 15px);
+          content: "";
+          width: 0;
+          height: 1px;
+          background: #282828;
+          transform: translateX(-50%);
+          transition: 0.3s all cubic-bezier(1, 0, 0, 1); }
+        #Landing footer nav ul li:hover::after {
+          width: 58%; }
       #Landing footer nav #Aftermovie {
         padding-right: 20px;
         height: 100%;
@@ -256,7 +279,8 @@ section#loader {
         justify-content: flex-end;
         flex: 1;
         font-size: 0.8em;
-        white-space: nowrap; }
+        white-space: nowrap;
+        color: #262626; }
 
 footer > ul {
   height: 80px;
@@ -274,8 +298,9 @@ footer > ul {
     background-image: url(../img/twitter.svg); }
   footer > ul li.youtube {
     background-image: url(../img/youtube.svg); }
-  footer > ul li.github {
-    background-image: url(../img/github.svg); }
+  footer > ul li.instagram, footer > ul li.github {
+    background-image: url(../img/instagram.svg);
+    background-size: 85% auto; }
 
 section#ham_menu {
   display: flex;
@@ -291,7 +316,6 @@ section#ham_menu {
   transition: 0.5s transform cubic-bezier(1, 0, 0, 1);
   z-index: 3;
   background-size: cover;
-  box-shadow: 0 0 100px #333333;
   font-family: "Azo Sans Regular"; }
   section#ham_menu aside.head {
     height: 80px;
@@ -485,6 +509,25 @@ body #box div:nth-child(70) {
 body #box div:nth-child(71) {
   transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s; }
 
+#item {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: #262626;
+  opacity: 1;
+  pointer-events: all; }
+
+#contacts {
+  display: none; }
+
+#item.inactive {
+  opacity: 0;
+  pointer-events: none; }
+
 #Landing header nav #ham {
   width: 83px;
   height: 63px;
@@ -541,7 +584,7 @@ body #box div:nth-child(71) {
     margin-bottom: 20px; }
 
   #Events {
-    top: 80%; }
+    top: 77%; }
 
   #Events, #Landing header nav #Register {
     font-size: 1.2em; }

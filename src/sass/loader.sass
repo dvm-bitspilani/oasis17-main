@@ -90,15 +90,15 @@ section#loader
 
       @for $i from 1 through 6
         $t: (2s + 0.75*$i)
-        $d: ($i*0.2s)
-        polygon:nth-of-type(#{$i})
+        $d: (0s + $i*0.2s)
+        .first:nth-of-type(#{$i})
           animation-delay: $d
           animation-duration: $t
 
-      @for $i from 7 through 24
-        $t: (10s + 0.75*$i)
-        $d: (5s + $i*0.2)
-        polygon:nth-of-type(#$i)
+      @for $i from 1 through 17
+        $t: (2s + 0.75*$i)
+        $d: (1s + $i*0.2)
+        .second:nth-of-type(#{$i})
           animation-delay: $d
           animation-duration: $t
 
@@ -141,7 +141,7 @@ section#loader
       ul
         font-family: "Azo Sans Regular"
         display: flex
-        width: 50%
+        width: 35%
         color: #fff
         justify-content: space-around
         padding-left: 20px
@@ -152,8 +152,22 @@ section#loader
           justify-content: center
           text-transform: uppercase
           font-size: 1rem
+          position: relative
         li:hover
           cursor: pointer
+        li::after
+          position: absolute
+          left: 50%
+          top: calc(50% + 15px)
+          content: ''
+          width: 0
+          height: 1px
+          background: #fff
+          transform: translateX(-50%)
+          transition: 0.3s all cubic-bezier(1,0,0,1)
+        li:hover::after
+          width: 100%
+
       #Register
         margin-right: 30px
         margin-top: 30px
@@ -191,8 +205,21 @@ section#loader
           white-space: nowrap
           font-size: 0.8em
           align-self: center
+          position: relative
         li:hover
           cursor: pointer
+        li::after
+          position: absolute
+          left: 50%
+          top: calc(50% + 15px)
+          content: ''
+          width: 0
+          height: 1px
+          background: #282828
+          transform: translateX(-50%)
+          transition: 0.3s all cubic-bezier(1,0,0,1)
+        li:hover::after
+          width: 58%
       #Aftermovie
         padding-right: 20px
         height: 100%
@@ -202,6 +229,7 @@ section#loader
         flex: 1
         font-size: 0.8em
         white-space: nowrap
+        color: #262626
 footer > ul
   height: 80px
   display: flex
@@ -218,8 +246,9 @@ footer > ul
     background-image: url(../img/twitter.svg)
   li.youtube
     background-image: url(../img/youtube.svg)
-  li.github
-    background-image: url(../img/github.svg)
+  li.instagram, li.github
+    background-image: url(../img/instagram.svg)
+    background-size: 85% auto
 
 section#ham_menu
   display: flex
@@ -235,7 +264,7 @@ section#ham_menu
   transition: 0.5s transform cubic-bezier(1,0,0,1)
   z-index: 3
   background-size: cover
-  box-shadow: 0 0 100px #333333
+  // box-shadow: 0 0 100px #333333 // CHANGE!!
   font-family: "Azo Sans Regular"
   aside.head
     height: 80px
@@ -297,6 +326,25 @@ body #box
     div:nth-child(#{$i})
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
 
+#item
+  position: absolute
+  display: flex
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 5
+  background: #262626
+  opacity: 1
+  pointer-events: all
+
+#contacts
+  display: none
+
+#item.inactive
+  opacity: 0
+  pointer-events: none
+
 #Landing header nav #ham
   width: 83px
   height: 63px
@@ -340,12 +388,12 @@ body #box
 
 @media all and (max-width: 790px)
   #Landing footer nav, #Landing header nav ul
-    display: none
+    display: none // CHANGE!! ADD FOOTER TOO
   footer > ul
     align-self: center
     margin-bottom: 20px
   #Events
-    top: 80%
+    top: 77% // CHANGE!!
   #Events, #Landing header nav #Register
     font-size: 1.2em
   #Landing header nav #ham
