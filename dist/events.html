@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events | Oasis'17</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/characters.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body >
+    <div id="events_wrapper" class="ltr">
+      <div class="logo"></div>
+    <header>
+      <div id="Arrows">
+        <div class="change prev"></div>
+        <div class="change next"></div>
+      </div>
+    </header>
+    <section>
+      <div id="Main">
+        <div id="Polys">
+          <div class="change prev"></div>
+          <div id="Box" class="Johnny">
+            <div id="a1"></div>
+            <div id="a2"></div>
+            <div id="a3"></div>
+            <div id="a4"></div>
+            <div id="a5"></div>
+            <div id="a6"></div>
+            <div id="a7"></div>
+            <div id="a8"></div>
+            <div id="a9"></div>
+            <div id="a10"></div>
+            <div id="a11"></div>
+            <div id="a12"></div>
+            <div id="a13"></div>
+            <div id="a14"></div>
+            <div id="a15"></div>
+            <div id="a16"></div>
+            <div id="a17"></div>
+            <div id="a18"></div>
+            <div id="a19"></div>
+            <div id="a20"></div>
+            <div id="a21"></div>
+            <div id="a22"></div>
+            <div id="a23"></div>
+            <div id="a24"></div>
+          </div>
+          <div class="change next"></div>
+        </div>
+        <div id="EventName">
+          <span>Random Name</span>
+        </div>
+        <div id="TagLine">
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li id="ViewEvent">EVENTS</li>
+          <li>ALL CATEGORIES</li>
+        </ul>
+        <div></div>
+      </nav>
+    </section>
+    <div class="parent lightbox">
+        <div class="backrotate">
+        </div>
+        <div class='crosscont'>
+            <div class="cross">
+                <a class="crosslink" href="#">
+                    <p class="crossbar" id="anticlk"></p>
+                    <p class="crossbar" id="clk"></p>
+                </a>
+            </div>
+        </div>
+        <div class="evtcont">
+            <ul class="evtname">
+                <li id="a" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="b" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="c" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="d" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="e" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p id="">brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+            </ul>
+        </div>
+        <div class="dummy"></div>
+    </div>
+    <div class="info_wrapper">
+        <div class="backrotate">
+        </div>
+        <div class="info">
+            <div class="crosscont_1">
+                <div class="cross" id="cross_info">
+                    <a class="crosslink" href="#">
+                        <p class="crossbar" id="anticlk"></p>
+                        <p class="crossbar" id="clk"></p>
+                    </a>
+                </div>
+            </div>
+            <div class="evtcont_info">
+                <ul class="evtname">
+                    <li id="f" class="evt">
+                        <h1 class=" name dust">EVENT NAME</h1>
+                        <p>brief</p>
+                        <p id="bottom"></p>
+                        <div class="content">
+                            <p>There is no Internet connection
+                                <br> Try:
+                                <br> Checking the network cables, modem and router
+                                <br> Reconnecting to Wi-Fi
+                                <br> DNS_PROBE_FINISHED_NO_INTERNET
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="dummy"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+         $('#ViewEvent').click(function() {
+            $('.lightbox').slideToggle();
+        });
+         var disable_cross = false
+        $('.cross').click(function(e) {
+            console.log(e.target, disable_cross)
+            if(!disable_cross)
+            $('.lightbox').slideToggle();
+        });
+        $('#cross_info').click(function() {
+            // $('.lightbox').fadeIn(800);
+
+            $('.info_wrapper').fadeOut(500);
+            setTimeout(()=>{disable_cross = false;}, 400)
+        });
+        $('.evt').click(function() {
+            disable_cross = true;
+            $('.info_wrapper').fadeIn(500);
+
+            // $('.lightbox').fadeOut(500);
+        });
+    </script>
+    <script src="./js/characters.js"></script>
+    <script src="./js/events.js"></script>
+  </body>
+</html>
