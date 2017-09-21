@@ -64,7 +64,7 @@
     </section>
     <section id="Landing" class="inactive">
       <span id="Events"><label>VIEW EVENTS</label></span>
-      <header>
+      <header style="opacity:0">
         <nav>
           <ul>
             <li>ABOUT</li>
@@ -81,7 +81,7 @@
 
         </aside>
       </header>
-      <footer>
+      <footer style="opacity:0">
         <nav>
           <ul>
             <li>SCHEDULE</li>
@@ -215,6 +215,343 @@
         }
     	</script>
     </div>
+    <div id="events">
+      <div id="events_wrapper" class="ltr">
+      <div class="logo" id="logo"></div>
+    <header>
+      <div id="Arrows">
+        <div class="change prev" id="arrow1"></div>
+        <div class="change next" id="arrow2"></div>
+      </div>
+    </header>
+    <section>
+      <div id="Main">
+        <div id="Polys">
+          <div class="change prev" id="arrow3"></div>
+          <div id="Box" class="Johnny">
+            <div id="a1"></div>
+            <div id="a2"></div>
+            <div id="a3"></div>
+            <div id="a4"></div>
+            <div id="a5"></div>
+            <div id="a6"></div>
+            <div id="a7"></div>
+            <div id="a8"></div>
+            <div id="a9"></div>
+            <div id="a10"></div>
+            <div id="a11"></div>
+            <div id="a12"></div>
+            <div id="a13"></div>
+            <div id="a14"></div>
+            <div id="a15"></div>
+            <div id="a16"></div>
+            <div id="a17"></div>
+            <div id="a18"></div>
+            <div id="a19"></div>
+            <div id="a20"></div>
+            <div id="a21"></div>
+            <div id="a22"></div>
+            <div id="a23"></div>
+            <div id="a24"></div>
+          </div>
+          <div class="change next" id="arrow4"></div>
+        </div>
+        <div id="EventName">
+          <span>Random Name</span>
+        </div>
+        <div id="TagLine">
+          <span></span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li id="ViewEvent">EVENTS</li>
+          <li>ALL CATEGORIES</li>
+        </ul>
+        <div></div>
+      </nav>
+    </section>
+    <div class="parent lightbox">
+        <div class="backrotate" id="backrotate2">
+        </div>
+        <div class='crosscont'>
+            <div class="cross">
+                <a class="crosslink" href="#">
+                    <p class="crossbar" id="anticlk"></p>
+                    <p class="crossbar" id="clk"></p>
+                </a>
+            </div>
+        </div>
+        <div class="evtcont">
+            <ul class="evtname">
+                <li id="a" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="b" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="c" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="d" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="e" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p id="">brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+                <li id="f" class="evt">
+                    <h1 class=" name dust">EVENT NAME</h1>
+                    <p>brief</p>
+                    <p id="bottom"></p>
+                </li>
+            </ul>
+        </div>
+        <div class="dummy"></div>
+    </div>
+    <div class="info_wrapper">
+        <div class="backrotate" id="backrotate1">
+        </div>
+        <div class="info">
+            <div class="crosscont_1">
+                <div class="cross" id="cross_info">
+                    <a class="crosslink" href="#">
+                        <p class="crossbar" id="anticlk"></p>
+                        <p class="crossbar" id="clk"></p>
+                    </a>
+                </div>
+            </div>
+            <div class="evtcont_info">
+                <ul class="evtname">
+                    <li id="f" class="evt">
+                        <h1 class=" name dust">EVENT NAME</h1>
+                        <p>brief</p>
+                        <p id="bottom"></p>
+                        <div class="content">
+                            <p>There is no Internet connection
+                                <br> Try:
+                                <br> Checking the network cables, modem and router
+                                <br> Reconnecting to Wi-Fi
+                                <br> DNS_PROBE_FINISHED_NO_INTERNET
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="dummy"></div>
+        </div>
+    </div>
+    <script>
+    console.log('run')
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    exampleSocket.onopen = function (event) {
+      console.log("WS Opened Successfully");
+      var data = [
+        {
+          type: "static",
+          url: "css/events.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/characters.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/transitions.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/lightbox.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/fonts.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/characters.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/events.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "img/arrow_back.png",
+          ext: "img",
+          mime: "png",
+          ref: "logo"
+        },
+        {
+          type: "static",
+          url: "img/arrow1.png",
+          ext: "img",
+          mime: "png",
+          ref: "arrow1"
+        },
+        {
+          type: "static",
+          url: "img/arrow1.png",
+          ext: "img",
+          mime: "png",
+          ref:"arrow2"
+        },{
+          type: "static",
+          url: "img/arrow1.png",
+          ext: "img",
+          mime: "png",
+          ref:"arrow3"
+        },
+        {
+          type: "static",
+          url: "img/arrow1.png",
+          ext: "img",
+          mime: "png",
+          ref:"arrow4"
+        },
+        {
+          type: "static",
+          url:"img/flex2.png",
+          ext: "img",
+          mime: "png",
+          ref:"backrotate1"
+        },
+        {
+          type: "static",
+          url: "img/flex2.png",
+          ext: "img",
+          mime: "png",
+          ref:"backrotate2"
+        },
+        {
+          type: "static",
+          url: "fonts/bbr.ttf",
+          ext: "ttf"
+        },
+      ];
+
+      for (var i in data) {
+          data[i].last = retrive_last(data[i].url);
+          console.log(data[i] .last);
+          exampleSocket.send(JSON.stringify(data[i]));
+      }
+    };
+    exampleSocket.onmessage = function(event) {
+      var res = JSON.parse(event.data);
+      console.log(res);
+      if(res.load){
+        if(res.ext == "css") {
+          inject(res.data, "style");
+        }
+        else if(res.ext == "js") {
+         inject(res.data, "script");
+        }else if(res.ext =="img"){
+          
+          eval(res.ref).style.background = "url("+res.data+")";
+          eval(res.ref).style.backgroundSize = "contain";
+          console.log(eval(res.ref).style.background, 'umms');
+        }
+        save(res);
+      }else{
+        if(Object.keys(res).indexOf("ref"))
+        {inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"),res.ref, res.url)}
+        else{
+          inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"), null, res.url)
+        }
+      }
+    }
+
+    function save(res){
+      window.localStorage.setItem(res.url, "true");
+      window.localStorage.setItem(res.url + "_data",res.data);
+      window.localStorage.setItem(res.url + "_last",res.last);
+      window.localStorage.setItem(res.url + "_ext",res.ext);
+      if(res.ext =="css"){
+        window.localStorage.setItem(res.url + "_tag","style");
+      }else if(res.ext =="js"){
+        window.localStorage.setItem(res.url + "_tag","script");
+      }else{
+        window.localStorage.setItem(res.url + "_tag","null");
+        
+      }
+
+    }
+    function retrive_last(url){
+      return window.localStorage.getItem(url + "_last");
+    }
+
+    function inject(data, tag, ref, url){
+      
+      if(tag != "null")
+      {
+        var ele = document.createElement(tag);
+        document.head.appendChild(ele);
+        ele.innerHTML = data;
+      }else{
+        console.log(tag)
+        if(ref){
+          console.log('setting Image');
+          eval(ref).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
+          eval(ref).style.backgroundSize = "contain";
+          
+        }
+      }
+    }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+         $('#ViewEvent').click(function() {
+            $('.lightbox').slideToggle();
+        });
+         var disable_cross = false
+        $('.cross').click(function(e) {
+            console.log(e.target, disable_cross)
+            if(!disable_cross)
+            $('.lightbox').slideToggle();
+        });
+        $('#cross_info').click(function() {
+            // $('.lightbox').fadeIn(800);
+
+            $('.info_wrapper').fadeOut(500);
+            setTimeout(()=>{disable_cross = false;}, 400)
+        });
+        $('.evt').click(function() {
+            disable_cross = true;
+            $('.info_wrapper').fadeIn(500);
+
+            // $('.lightbox').fadeOut(500);
+        });
+    </script>
+
+
+    </div>
     <script type="text/javascript">
     var item = document.querySelector('#item');
     var ham_menu = document.querySelector('#ham_menu');
@@ -226,6 +563,14 @@
       contact.addEventListener("click",function(){
         open('contacts');
       });
+      
+      Events.addEventListener('click', function(){
+        events.style.width = "100vw";
+        events.style.height = "100vh";
+        events.style.position = "absolute";
+        events.style.top  = "0px";
+        $(events).fadeIn();
+      })
       function handleResize(){
         document.body.style.height = window.innerHeight+"px";
       }
@@ -236,7 +581,7 @@
       window.addEventListener('load',function(){
         setTimeout(function(){
           for(var i = 1; i <= 70; i++){
-            box.innerHTML += '<div id="a'+i+'"></div>';
+            box.innerHTML += '<div id="b'+i+'"></div>';
           }
           box.className = "transparent"
           setTimeout(function(){

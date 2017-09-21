@@ -12,7 +12,7 @@ charprops = {
   "Batman": {
     background: "#737373",
     tagline: ["BECAUSE I","AM BATMAN"],
-    eventname: "MISCELLANEOUS"
+    eventname: "MISC"
   },
   "Goku": {
     background: "#ff8122",
@@ -42,7 +42,7 @@ charprops = {
   "Dexter": {
     background: "#C937F3",
     tagline: ["DEEDEE","DEEDEEE"],
-    eventname: "TYAGI"
+    eventname: "ONLINE"
   },
   "V": {
     background: "#C471F5",
