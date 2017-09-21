@@ -9,7 +9,7 @@ window.addEventListener("resize",handleResize)
 
 // Handling Character Transitions
 var box = document.querySelector('#Box')
-var background = document.querySelector('section')
+var background = document.querySelector('#events_wrapper');
 var tagline = document.querySelector('#TagLine')
 var eventname = document.querySelector('#EventName')
 var characters = [
