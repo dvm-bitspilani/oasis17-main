@@ -483,8 +483,7 @@
         window.localStorage.setItem(res.url + "_tag","script");
       }else{
         window.localStorage.setItem(res.url + "_tag","null");
-        if(res.ref)
-          window.localStorage.setItem(res.ref, res.ref);
+        
       }
 
     }
@@ -493,17 +492,17 @@
     }
 
     function inject(data, tag, ref){
-      console.log(tag)
-      if(tag !="null")
+      
+      if(tag != "null")
       {
         var ele = document.createElement(tag);
         document.head.appendChild(ele);
         ele.innerHTML = data;
       }else{
-
-        if(window.localStorage.getItem(ref)){
-          eval(window.localStorage.getItem(url + "_ref")).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
-          eval(window.localStorage.getItem(url + "_ref")).style.backgroundSize = "contain";
+        console.log(tag)
+        if(ref){
+          eval(ref).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
+          eval(ref).style.backgroundSize = "contain";
           // console.log(eval(res.ref).style.background, 'umms');
         }
       }
