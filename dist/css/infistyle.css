@@ -1,10 +1,6 @@
-svg {
-  width: 100%;
-  height: 100%; }
-
 * {
-  padding: 0;
-  margin: 0; }
+  padding: 0%;
+  margin: 0%; }
 
 body {
   width: 100vw;
@@ -13,23 +9,114 @@ body {
   /*background-color:black; */ }
 
 svg {
-  animation: dwn 5s linear infinite; }
+  width: 100%;
+  height: 100%;
+  animation: dwn 5s linear infinite;
+  -webkit-animation: dwn 5s linear infinite;
+  -moz-animation: dwn 5s linear infinite;
+  -o-animation: dwn 5s linear infinite; }
 
 #re {
   background-color: black;
   height: 100%;
   width: 100%;
-  clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%); }
+  clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%);
+  -webkit-clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%);
+  -moz-clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%);
+  -o-clip-path: polygon(47% 32%, 50% 32%, 50% 53%, 47% 53%); }
 
 #rot {
   width: 100%;
   height: 100%;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
   transform: rotate(-45deg);
-  transform-origin: 50% 50%; }
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg); }
 
 #r1, #r2, #r3, #r4, #r5, #r6 {
   animation: mk 1s linear infinite;
-  transform-origin: 50% 50%; }
+  -webkit-animation: mk 1s linear infinite;
+  -moz-animation: mk 1s linear infinite;
+  -o-animation: mk 1s linear infinite;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%; }
+
+@keyframes mk {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(30px); } }
+@keyframes dwn {
+  0%,100% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-10px); } }
+@-webkit-keyframes mk {
+  0% {
+    -webkit-transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(30px); } }
+@-webkit-keyframes dwn {
+  0%,100% {
+    -webkit-transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px); } }
+@-moz-keyframes mk {
+  0% {
+    -moz-transform: translateY(0); }
+  100% {
+    -moz-transform: translateY(30px); } }
+@-moz-keyframes dwn {
+  0%,100% {
+    -moz-transform: translateY(0); }
+  50% {
+    -moz-transform: translateY(-10px); } }
+@-o-keyframes mk {
+  0% {
+    -o-transform: translateY(0); }
+  100% {
+    -o-transform: translateY(30px); } }
+@-o-keyframes dwn {
+  0%,100% {
+    -o-transform: translateY(0); }
+  50% {
+    -o-transform: translateY(-10px); } }
+@media (max-width: 699px) {
+  #re {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -webkit-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -moz-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -o-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%); } }
+#rot {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 50%;
+  -webkittransform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg); }
+
+#r1, #r2, #r3, #r4, #r5, #r6 {
+  animation: mk 1s linear infinite;
+  -webkit-animation: mk 1s linear infinite;
+  -moz-animation: mk 1s linear infinite;
+  -o-animation: mk 1s linear infinite;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%; }
 
 @keyframes mk {
   0% {
@@ -41,39 +128,45 @@ svg {
     transform: translateY(0px); }
   50% {
     transform: translateY(-10px); } }
-@media (max-width: 699px) {
-  #re {
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
-    -webkit-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%); } }
-#rot {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-45deg);
-  transform-origin: 50% 50%; }
-
-#r1, #r2, #r3, #r4, #r5, #r6 {
-  animation: mk 1s linear infinite;
-  transform-origin: 50% 50%; }
-
-@keyframes mk {
+@-webkit-keyframes mk {
   0% {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0); }
   100% {
-    transform: translateY(30px); } }
-@keyframes dwn {
+    -webkit-transform: translateY(30px); } }
+@-webkit-keyframes dwn {
   0%,100% {
-    transform: translateY(0px); }
+    -webkit-transform: translateY(0px); }
   50% {
-    transform: translateY(-10px); } }
+    -webkit-transform: translateY(-10px); } }
+@-moz-keyframes mk {
+  0% {
+    -moz-transform: translateY(0); }
+  100% {
+    -moz-transform: translateY(30px); } }
+@-moz-keyframes dwn {
+  0%,100% {
+    -moz-transform: translateY(0px); }
+  50% {
+    -moz-transform: translateY(-10px); } }
+@-o-keyframes mk {
+  0% {
+    -o-transform: translateY(0); }
+  100% {
+    -o-transform: translateY(30px); } }
+@-o-keyframes dwn {
+  0%,100% {
+    -o-transform: translateY(0px); }
+  50% {
+    -o-transform: translateY(-10px); } }
 @media (max-width: 699px) {
   #re {
     background-color: black;
     height: 100%;
     width: 100%;
     clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
-    -webkit-clip-path: polygo; } }
-
+    -webkit-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -moz-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%);
+    -o-clip-path: polygon(47% 33%, 52% 33%, 52% 51%, 47% 51%); } }
 /*# sourceMappingURL=svg.css.map */
+
+/*# sourceMappingURL=infistyle.css.map */
