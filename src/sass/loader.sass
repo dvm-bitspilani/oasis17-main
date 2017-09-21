@@ -49,6 +49,8 @@ section#loader
       position: absolute
       top: 0
       left: 0
+      margin: 0
+      padding: 0
       div
         width: 100%
         height: 100%
@@ -114,6 +116,7 @@ section#loader
   transform: translateX(-50%)
   white-space: nowrap
   transition: 0.4s all ease-in
+  z-index: 1
 #Events:hover
   background: #FC0C84
   color: #fff
@@ -338,7 +341,7 @@ body #box
   opacity: 1
   pointer-events: all
 
-#contacts
+#contacts, #events
   display: none
 
 #item.inactive
