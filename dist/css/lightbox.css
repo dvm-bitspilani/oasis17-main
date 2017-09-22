@@ -1,5 +1,3 @@
-/* testing sockets ! :P */
-
 @font-face {
   font-family: "bonnr";
   src: url("../fonts/BONN/bonnr.ttf") format("truetype"); }
@@ -106,7 +104,6 @@
   width: 0px; }
 
 .evtcont {
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   width: auto;
@@ -118,31 +115,6 @@
   height: 80vh;
   overflow-y: scroll; }
   .evtcont .evtname {
-=======
-    padding: 0;
-    position: relative;
-    width: 100%;
-    margin-top: 13vh;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    margin-top: 9vh;
- }
-
-.evtcont_info {
-
-    padding: 0;
-    position: absolute;
-    width: 100%;
-}
-
-.evtlist {
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
->>>>>>> f0c94a39a89028e8b000c73a55310afc5c962224
     list-style: none;
     font-size: 1.4rem;
     z-index: 20; }
@@ -174,7 +146,6 @@
       height: 1.5px;
       background-color: #262626; }
 
-<<<<<<< HEAD
 .info_wrapper {
   display: none;
   background-color: #fafafa;
@@ -193,84 +164,3 @@
       font-size: 0.8em; }
 
 /*# sourceMappingURL=lightbox.css.map */
-=======
-@keyframes backrotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes cross {
-    0% {
-        transform: rotate(-45deg);
-    }
-
-    50% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(-315deg);
-    }
-}
-
-@keyframes anticross {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    50% {
-        transform: rotate(20deg);
-    }
-
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-
-@media only screen and (max-width: 768px){
-    .evt .name{
-        font-size: 2em;
-    }
-
-#a
-{
-    padding-top: 5vh;
-}
-
-#Arrows
-{
-    display: flex;
-    position: absolute;
-    right: 0px;
-}
-}
-
-
-.dummy{
-    position: absolute;
-    top: 80vh;
-    height: 22vh;
-    left: 0;
-    right: 0;
-    margin-top: -2vh;
-    background: linear-gradient(transparent, #fafafa 46%);
-    /* background: #000; */
-    z-index: 100;
-}
-
-.info_wrapper{
-    z-index: 20;
-}
-.info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
->>>>>>> f0c94a39a89028e8b000c73a55310afc5c962224
