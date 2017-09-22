@@ -3,6 +3,7 @@ function handleResize(){
   document.body.style.height = window.innerHeight+"px";
 }
 window.addEventListener("load",handleResize);
+handleResize();
 window.addEventListener("orientationchange",handleResize);
 window.addEventListener("resize",handleResize)
 
@@ -71,6 +72,7 @@ document.body.addEventListener('touchmove', function(e){
 });
 document.body.addEventListener('click',function(e){
   var className = e.target.className;
+  console.log(className);
   if(className == "change next")
     changeChar(1);
   else if(className == "change prev")

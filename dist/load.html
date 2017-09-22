@@ -285,7 +285,7 @@
     </div>
     <script>
     var loadedData = [];
-    var exampleSocket = new WebSocket("ws://localhost:3000", "echo-protocol");
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
@@ -407,6 +407,7 @@
 
     function handleLoad(url) {
       if(url=="css/fonts2.css"||url=="css/oasis.css") {
+        console.log(url);
         if(firstdone == 0) {
           firstdone = 1;
           var first = document.querySelectorAll("svg .first");
