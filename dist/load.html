@@ -354,6 +354,7 @@
         }
         save(res);
         loadedData.push(res.url);
+        handleLoad(res.url);
       }
       else {
         if(Object.keys(res).indexOf("ref"))
@@ -362,6 +363,7 @@
           inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"), null, res.url)
         }
         loadedData.push(res.url);
+        handleLoad(res.url);
       }
     }
 
@@ -399,8 +401,6 @@
           
         }
       }
-
-      handleLoad(url);
     }
 
     var firstdone = 0;
