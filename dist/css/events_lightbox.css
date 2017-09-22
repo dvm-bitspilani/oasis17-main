@@ -31,14 +31,13 @@
   margin: 0;
   display: block;
   position: absolute;
-  bottom: 0px;
+  top: 100%;
   height: 100%;
   width: 100%;
   letter-spacing: 0.105em;
-  display: none;
   background-color: #fafafa;
   font-family: bonn;
-  z-index: 2;
+  z-index: 4;
   overflow-x: hidden; }
 
 .content {
@@ -242,5 +241,4 @@ a.crosslink:hover #clk {
   100% {
     transform: rotate(45deg); } }
 
-/*# sourceMappingURL=events_lightbox.css.map 
-*/
+/*# sourceMappingURL=events_lightbox.css.map */

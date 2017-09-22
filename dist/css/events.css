@@ -11,7 +11,7 @@
     width: 75px;
     height: 75px;
     border-radius: 100%;
-    background: url(../img/arrow1.png) no-repeat center;
+    background: url(img/arrow1.png) no-repeat center;
     background-size: cover; }
   #events_wrapper .change.prev {
     transform: rotate(180deg); }
@@ -36,13 +36,18 @@
         height: 50px;
         width: 50px; }
   #events_wrapper .logo {
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+    height: 60px;
+    width: 60px;
+    margin: 20px;
     position: absolute;
     top: 0;
-    background: url(../img/Oasis-Logo.png);
-    background-size: contain; }
+    background: url(img/close_white.svg);
+    background-size: contain;
+    z-index: 3;
+    transition: 0.3s transform cubic-bezier(0.7, 0.3, 0, 1);
+    cursor: pointer; }
+  #events_wrapper .logo:hover {
+    transform: rotate(360deg); }
   #events_wrapper section {
     position: absolute;
     display: flex;

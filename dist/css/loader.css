@@ -83,8 +83,13 @@ section#loader {
       section#loader #frame svg * {
         stroke-dasharray: 2000px;
         stroke-dashoffset: 2000px;
-        animation: 5s lineani cubic-bezier(0.7, 0.3, 0, 1) both;
         stroke: #ffffff; }
+      section#loader #frame svg .first {
+        transition: 4s stroke-dashoffset cubic-bezier(0.7, 0.3, 0, 1);
+        transition-delay: 0s; }
+      section#loader #frame svg .second {
+        transition: 5s stroke-dashoffset cubic-bezier(0.7, 0.3, 0, 1);
+        transition-delay: 2s; }
       section#loader #frame svg .first:nth-of-type(1) {
         animation-delay: 0.2s;
         animation-duration: 2.75s; }
@@ -272,8 +277,6 @@ section#loader {
           background: #282828;
           transform: translateX(-50%);
           transition: 0.3s all cubic-bezier(1, 0, 0, 1); }
-        #Landing footer nav ul li:hover::after {
-          width: 58%; }
       #Landing footer nav #Aftermovie {
         padding-right: 20px;
         height: 100%;
@@ -515,6 +518,7 @@ body #box div:nth-child(71) {
 #item {
   position: absolute;
   display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;
@@ -522,10 +526,46 @@ body #box div:nth-child(71) {
   z-index: 5;
   background: #262626;
   opacity: 1;
-  pointer-events: all; }
+  pointer-events: all;
+  padding: 50px 70px; }
+  #item .header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center; }
+    #item .header #item_title {
+      display: block;
+      background: #FC0C84;
+      color: #fff;
+      font-family: "Azo Sans Bold";
+      padding: 5px 20px;
+      font-size: 1.5em; }
+      #item .header #item_title span {
+        display: block;
+        padding-top: 5px; }
+    #item .header #back_to_landing {
+      height: 50px;
+      width: 50px;
+      background: url(../img/close_white.svg) no-repeat center;
+      background-size: contain;
+      transition: 0.3s transform cubic-bezier(1, 0, 0, 1); }
+    #item .header #back_to_landing:hover {
+      transform: rotate(360deg); }
+  #item #item_content {
+    flex: 1;
+    margin-top: 30px; }
 
-#contacts, #events {
+#contacts {
   display: none; }
+
+#events {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s top cubic-bezier(0.7, 0.3, 0, 1); }
+
+#events.inactive {
+  top: 100%; }
 
 #item.inactive {
   opacity: 0;
@@ -593,7 +633,10 @@ body #box div:nth-child(71) {
     font-size: 1.2em; }
 
   #Landing header nav #ham {
-    display: block; } }
+    display: block; }
+
+  #item {
+    padding: 30px 40px; } }
 @media all and (max-width: 550px) {
   #Events {
     top: 75%; } }

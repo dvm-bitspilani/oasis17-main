@@ -87,8 +87,14 @@ section#loader
       *
         stroke-dasharray: 2000px
         stroke-dashoffset: 2000px
-        animation: 5s lineani cubic-bezier(.7,.3,0,1) both
+        // animation: 5s lineani cubic-bezier(.7,.3,0,1) both
         stroke: #ffffff
+      .first
+        transition: 4s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition-delay: 0s
+      .second
+        transition: 5s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition-delay: 2s
 
       @for $i from 1 through 6
         $t: (2s + 0.75*$i)
@@ -222,7 +228,7 @@ section#loader
           transform: translateX(-50%)
           transition: 0.3s all cubic-bezier(1,0,0,1)
         li:hover::after
-          width: 58%
+          // width: 58%
       #Aftermovie
         padding-right: 20px
         height: 100%
@@ -332,6 +338,7 @@ body #box
 #item
   position: absolute
   display: flex
+  flex-direction: column
   top: 0
   left: 0
   width: 100%
@@ -340,9 +347,46 @@ body #box
   background: #262626
   opacity: 1
   pointer-events: all
+  padding: 50px 70px
+  .header
+    display: flex
+    justify-content: space-between
+    height: 50px
+    align-items: center
+    #item_title
+      display: block
+      background: #FC0C84
+      color: #fff
+      font-family: "Azo Sans Bold"
+      padding: 5px 20px
+      font-size: 1.5em
+      span
+        display: block
+        padding-top: 5px
+    #back_to_landing
+      height: 50px
+      width: 50px
+      background: url(../img/close_white.svg) no-repeat center
+      background-size: contain
+      transition: 0.3s transform cubic-bezier(1,0,0,1)
+    #back_to_landing:hover
+      transform: rotate(360deg)
+  #item_content
+    flex: 1
+    margin-top: 30px
 
-#contacts, #events
+#contacts
   display: none
+
+#events
+  position: absolute
+  top: 0
+  left: 0
+  transition: 0.4s top cubic-bezier(0.7,0.3,0,1)
+
+#events.inactive
+  top: 100%
+
 
 #item.inactive
   opacity: 0
@@ -401,6 +445,8 @@ body #box
     font-size: 1.2em
   #Landing header nav #ham
     display: block
+  #item
+    padding: 30px 40px
 
 @media all and (max-width: 550px)
   #Events

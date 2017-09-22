@@ -98,3 +98,9 @@ function hide()
       spons.className = "hide_toggle";
     },200);
 }
+
+// function show events
+var eventsToggle = document.querySelector("#ViewEvent");
+eventsToggle.onclick = function() {
+  document.querySelector(".lightbox").style.top = "0%";
+}
