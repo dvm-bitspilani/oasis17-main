@@ -101,8 +101,12 @@ function hide()
     },200);
 }
 
-// function show events
-var eventsToggle = document.querySelector("#ViewEvent");
-eventsToggle.onclick = function() {
+// function show eventsvar disable_cross = false;
+ViewEvent.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "0%";
-}
+  close_event.style.display = "block";
+});
+close_event.addEventListener("click",function(){
+  document.querySelector(".lightbox").style.top = "100%";
+  close_event.style.display = "none";
+});

@@ -8,9 +8,7 @@ body {
   height: 100vh;
   position: relative;
   font-size: 18px;
-  overflow: hidden; }
-
-body {
+  overflow: hidden;
   background: #262626; }
 
 ul {
@@ -64,7 +62,7 @@ section#loader {
       section#loader #frame #box #realmsOfFiction {
         position: absolute;
         top: 77%;
-        height: 25px;
+        height: 33px;
         width: 95%;
         right: 4%;
         background: url(../img/realmsoffiction.png) no-repeat right;
@@ -201,7 +199,7 @@ section#loader {
       #Landing header nav ul {
         font-family: "Azo Sans Regular";
         display: flex;
-        width: 35%;
+        width: 30%;
         color: #fff;
         justify-content: space-around;
         padding-left: 20px; }
@@ -235,7 +233,8 @@ section#loader {
         font-family: "Azo Sans Bold";
         padding: 6px 10px 0 10px;
         color: #fff;
-        transition: 0.4s all ease-in; }
+        transition: 0.4s all ease-in;
+        cursor: pointer; }
       #Landing header nav #Register:hover {
         background: #FFE14A;
         color: #262626;
@@ -297,7 +296,8 @@ footer > ul {
     margin: 0 10px;
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    cursor: pointer; }
   footer > ul li.facebook {
     background-image: url(../img/facebook.svg); }
   footer > ul li.twitter {
@@ -557,17 +557,18 @@ body #box div:nth-child(71) {
     margin-top: 30px;
     overflow-y: auto; }
 
-#contacts, #about {
+#contacts, #about, #dev {
   display: none; }
 
 #events {
   position: absolute;
   top: 0;
   left: 0;
-  transition: 0.4s top cubic-bezier(0.7, 0.3, 0, 1); }
+  transition: 0.4s top cubic-bezier(0.7, 0.3, 0, 1), 0.4s height cubic-bezier(0.7, 0.3, 0, 1); }
 
 #events.inactive {
-  top: 100%; }
+  top: 100%;
+  height: 0; }
 
 #abouttext {
   color: #ffffff;
@@ -589,6 +590,19 @@ body #box div:nth-child(71) {
 
 #Landing header nav #ham:hover {
   cursor: pointer; }
+
+#tilt {
+  background: #2E2E2E;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s background cubic-bezier(1, 0, 0, 1);
+  transform: skew(-14deg); }
+
+#tilt.inactive {
+  background: transparent; }
 
 @media all and (orientation: portrait) {
   section#loader #frame {
@@ -618,7 +632,12 @@ body #box div:nth-child(71) {
 
   section#loader #frame #box #realmsOfFiction {
     width: 100%;
-    right: 0%; } }
+    right: 0%; }
+
+  #tilt {
+    top: 87%;
+    left: 0;
+    transform: skewY(-14deg); } }
 @media all and (max-width: 1050px) {
   #Landing footer nav ul li {
     font-size: 0.7em;

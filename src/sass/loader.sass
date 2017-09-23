@@ -9,8 +9,6 @@ body
   position: relative
   font-size: 18px
   overflow: hidden
-
-body
   background: #262626
 
 ul
@@ -68,7 +66,7 @@ section#loader
       #realmsOfFiction
         position: absolute
         top: 77%
-        height: 25px
+        height: 33px
         width: 95%
         right: 4%
         background: url(../img/realmsoffiction.png) no-repeat right
@@ -150,7 +148,7 @@ section#loader
       ul
         font-family: "Azo Sans Regular"
         display: flex
-        width: 35%
+        width: 30%
         color: #fff
         justify-content: space-around
         padding-left: 20px
@@ -186,6 +184,7 @@ section#loader
         padding: 6px 10px 0 10px
         color: #fff
         transition: 0.4s all ease-in
+        cursor: pointer
       #Register:hover
         background: #FFE14A
         color: #262626
@@ -249,6 +248,7 @@ footer > ul
     background-size: contain
     background-position: center
     background-repeat: no-repeat
+    cursor: pointer 
   li.facebook
     background-image: url(../img/facebook.svg)
   li.twitter
@@ -377,17 +377,18 @@ body #box
     margin-top: 30px
     overflow-y: auto
 
-#contacts,#about
+#contacts,#about,#dev
   display: none
 
 #events
   position: absolute
   top: 0
   left: 0
-  transition: 0.4s top cubic-bezier(0.7,0.3,0,1)
+  transition: 0.4s top cubic-bezier(0.7,0.3,0,1), 0.4s height cubic-bezier(0.7,0.3,0,1)
 
 #events.inactive
   top: 100%
+  height: 0
 
 #abouttext
   color: #ffffff
@@ -409,6 +410,18 @@ body #box
 #Landing header nav #ham:hover
   // transform: scale(1.2)
   cursor: pointer
+
+#tilt
+  background: #2E2E2E
+  position: absolute
+  top: 0
+  left: 50%
+  width: 100%
+  height: 100%
+  transition: 0.7s background cubic-bezier(1,0,0,1)
+  transform: skew(-14deg)
+#tilt.inactive
+  background: transparent
 
 @media all and (orientation: portrait)
   section#loader #frame
@@ -432,6 +445,10 @@ body #box
   section#loader #frame #box #realmsOfFiction
     width: 100%
     right: 0%
+  #tilt
+    top: 87%
+    left: 0
+    transform: skewY(-14deg)
 
 @media all and (max-width: 1050px)
   #Landing footer nav ul li

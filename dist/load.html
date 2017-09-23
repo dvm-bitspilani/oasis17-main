@@ -58,6 +58,9 @@
           </aside>
         </div>
       </div>
+      <div id="tilt" class="inactive">
+          
+      </div>
     </section>
     <section id="Landing" class="inactive">
       <span id="Events"><label>VIEW EVENTS</label></span>
@@ -65,14 +68,14 @@
         <nav>
           <ul>
             <li onclick="openItem('about')">ABOUT</li>
-            <li>PROF SHOW</li>
+            <li style="display: none">PROF SHOW</li>
             <li style="display: none">SPONSORS</li>
             <li id="contact" onclick="openItem('contacts')">CONTACT</li>
           </ul>
           <div id="ham">
 
           </div>
-          <span id="Register"><label>REGISTER</label></span>
+          <span id="Register" onclick="window.open('https://bits-oasis.org/2017/register/')"><label>REGISTER</label></span>
         </nav>
         <aside class="micro">
 
@@ -81,9 +84,9 @@
       <footer>
         <nav>
           <ul>
-            <li>SCHEDULE</li>
-            <li>DEVELOPERS</li>
-            <li>AFTERMOVIE 2016</li>
+            <li style="display: none">SCHEDULE</li>
+            <li onclick="openItem('dev')">DEVELOPERS</li>
+            <li onclick="window.open('https://www.youtube.com/watch?v=rh7WkyNXNRE')">AFTERMOVIE 2016</li>
             <li style="display: none">OASIS PRESS</li>
             <li style="display: none">JOY OF GIVING WEEK</li>
             <li style="display: none">STORE</li>
@@ -91,10 +94,10 @@
           <span id="Aftermovie">31 OCTOBER &mdash; 4 NOVEMBER</span>
         </nav>
         <ul>
-          <li class="facebook"></li>
-          <li class="twitter"></li>
-          <li class="youtube"></li>
-          <li class="instagram"></li>
+          <li class="facebook" onclick="window.open('https://www.facebook.com/oasis.bitspilani/')"></li>
+          <li class="twitter" onclick="window.open('https://twitter.com/bitsoasis')"></li>
+          <li class="youtube" onclick="window.open('https://www.youtube.com/channel/UCf40GISJivaYZK2pPOyt1kw')"></li>
+          <li class="instagram" onclick="window.open('https://instagram.com/bitsoasis')"></li>
         </ul>
       </footer>
     </section>
@@ -106,17 +109,17 @@
       <aside class="nav">
         <div>
           <span onclick="openItem('about')">ABOUT</span>
-          <span>PROF SHOW</span>
+          <span style="display: none">PROF SHOW</span>
           <span style="display: none">SPONSORS</span>
           <span onclick="openItem('contacts')">CONTACT</span>
         </div>
         <div>
           <span>SCHEDULE</span>
-          <span>AFTERMOVIE 2016</span>
+          <span onclick="window.open('https://www.youtube.com/watch?v=rh7WkyNXNRE')">AFTERMOVIE 2016</span>
           <span style="display: none">BUS SERVICE</span>
           <span style="display: none">OASIS PRESS</span>
           <span style="display: none">JOY OF GIVING WEEK</span>
-          <span>DEVELOPERS</span>
+          <span onclick="openItem('dev')">DEVELOPERS</span>
         </div>
         <div>
           <span>31 OCTOBER &mdash; 4 NOVEMBER</span>
@@ -196,7 +199,7 @@
               </div>
               <div class='crosscont'>
                   <div class="cross">
-                      <a class="crosslink" href="#">
+                      <a class="crosslink" id="close_event">
                           <p class="crossbar" id="anticlk"></p>
                           <p class="crossbar" id="clk"></p>
                       </a>
@@ -306,6 +309,12 @@
       </div>
     </div>
 
+    <div id="dev">
+      <div id = "dev_wrapper">
+  
+      </div>
+    </div>
+
     <script>
     var loadedData = [];
     var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
@@ -361,6 +370,16 @@
           type: "static",
           url: "js/contact.js",
           ext: "js"
+        },
+        {
+          type: "static",
+          url: "css/devs.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/devs.js",
+          ext: "js"
         }
       ];
 
@@ -401,20 +420,26 @@
     }
 
     function save(res){
-      window.localStorage.setItem(res.url, "true");
-      window.localStorage.setItem(res.url + "_data",res.data);
-      window.localStorage.setItem(res.url + "_last",res.last);
-      window.localStorage.setItem(res.url + "_ext",res.ext);
-      if(res.ext =="css"){
-        window.localStorage.setItem(res.url + "_tag","style");
-      }else if(res.ext =="js"){
+      try {
+        window.localStorage.setItem(res.url, "true");
+        window.localStorage.setItem(res.url + "_data",res.data);
+        window.localStorage.setItem(res.url + "_last",res.last);
+        window.localStorage.setItem(res.url + "_ext",res.ext);
+        if(res.ext =="css"){
+          window.localStorage.setItem(res.url + "_tag","style");
+        }
+        else if(res.ext =="js"){
         window.localStorage.setItem(res.url + "_tag","script");
-      }else{
+        }
+        else{
         window.localStorage.setItem(res.url + "_tag","null");
-        
+        }
       }
-
+      catch(err) {
+        console.warn("Can't Access Local Storage; Site will load slower on repeated visits");
+      }
     }
+
     function retrive_last(url){
       return window.localStorage.getItem(url + "_last");
     }
@@ -459,12 +484,18 @@
     var ham_menu = document.querySelector('#ham_menu');
 
 
-      function openItem(ref) {
+    function openItem(ref) {
+      var time = 0;
+      if(ham_menu.className!="inactive") {
+        time = 500;
+      }
+      ham_menu.className = "inactive";
+      setTimeout(function(){
         item.className="";
         item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
         item_title.innerHTML = ref;
-        if(ham_menu.className=="") ham_menu.className = "inactive";
-      }
+      },time);
+    }
 
       
       Events.addEventListener('click', function(){
@@ -499,6 +530,7 @@
               setTimeout(function(){
                 logotext.style.opacity = 1;
                 Landing.style.opacity = 1;
+                tilt.className = "";
               },750);
             },3000);
           },3000);
