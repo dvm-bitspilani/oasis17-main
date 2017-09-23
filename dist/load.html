@@ -503,7 +503,7 @@
       if(ham_menu.className!="inactive") {
         time = 500;
       }
-      ham_menu.className = "inactive";
+      // ham_menu.className = "inactive";
       setTimeout(function(){
         item.className="";
         item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
@@ -574,6 +574,7 @@
 
       back_to_landing.addEventListener("click",function(){
         item.className = "inactive";
+        ham.click();
       });
 
     </script>
