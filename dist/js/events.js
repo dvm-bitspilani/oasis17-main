@@ -19,13 +19,13 @@ var characters = [
 ];
 var event_names = {
   "Johnny":["Choreo", "Dessert Duel" ,"Razzmataaz", "Street Dance", "Tandav"],
-  "DeadPool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
+  "Deadpool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
   "Batman": ["Beg Borrow Steal", "Mr. and Mrs. Oasis", "Protest Out of Waste", "Treasure Hunt", "Triathlon"],
   "Ezio": ["Fashion Parade"],
   "Goku": ["Exposure", "Oasis through my Eyes"],
   "Rick": ["Andholika", "Axetacy", "Drums Duel", "Free Jam", "Pitch Perfect", "Rap Wars", "Rocktaves", "Swaranjali", "Tarang"],
   "Minion": ["Mime", "Stage Play","Street Play"],
-  "Fine Art": ["Canvas Street","Contrasto", "Splash"],
+  "Pikachu": ["Canvas Street","Contrasto", "Splash"],
   "Dexter": ["Exposure","Online Quiz","Word Wars"],
   "V": ["Antakshari", "Blab", "Online Quiz", "Entertainment Quiz", "Filmy Muqabla", "Music Quiz", "Oasis Quiz","Scifi Quiz", "Theme Quiz"],
   "Harry": ["Ad/Poster Making", "Apt to Act", "Metamorphosis", "Story Completion", "Trailer Making"]
