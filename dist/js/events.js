@@ -82,7 +82,7 @@ document.body.addEventListener('touchstart', function(e){
   startX = parseInt(e.changedTouches[0].pageX);
 });
 document.body.addEventListener('touchmove', function(e){
-  alert(e.target.id);
+  // alert(e.target.id);
   if(found==1) return;
   var pageX = parseInt(e.changedTouches[0].pageX)
   delta = pageX - startX;
