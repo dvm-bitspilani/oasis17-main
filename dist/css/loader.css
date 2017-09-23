@@ -306,7 +306,7 @@ footer > ul {
     background-image: url(../img/youtube.svg); }
   footer > ul li.instagram, footer > ul li.github {
     background-image: url(../img/Instagram.svg);
-    background-size: 85% auto; }
+    background-size: 70%; }
 
 section#ham_menu {
   display: flex;
@@ -539,7 +539,8 @@ body #box div:nth-child(71) {
       color: #fff;
       font-family: "Azo Sans Bold";
       padding: 5px 20px;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      text-transform: uppercase; }
       #item .header #item_title span {
         display: block;
         padding-top: 5px; }
@@ -553,9 +554,10 @@ body #box div:nth-child(71) {
       transform: rotate(360deg); }
   #item #item_content {
     flex: 1;
-    margin-top: 30px; }
+    margin-top: 30px;
+    overflow-y: auto; }
 
-#contacts {
+#contacts, #about {
   display: none; }
 
 #events {
@@ -566,6 +568,12 @@ body #box div:nth-child(71) {
 
 #events.inactive {
   top: 100%; }
+
+#abouttext {
+  color: #ffffff;
+  text-align: justify;
+  font-family: "Azo Sans Regular";
+  font-size: 1.4rem; }
 
 #item.inactive {
   opacity: 0;

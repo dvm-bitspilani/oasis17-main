@@ -64,10 +64,10 @@
       <header>
         <nav>
           <ul>
-            <li>ABOUT</li>
+            <li onclick="openItem('about')">ABOUT</li>
             <li>PROF SHOW</li>
             <li style="display: none">SPONSORS</li>
-            <li id="contact">CONTACT</li>
+            <li id="contact" onclick="openItem('contacts')">CONTACT</li>
           </ul>
           <div id="ham">
 
@@ -105,10 +105,10 @@
       </aside>
       <aside class="nav">
         <div>
-          <span>ABOUT</span>
-          <span style="display: none">PROF SHOW</span>
+          <span onclick="openItem('about')">ABOUT</span>
+          <span>PROF SHOW</span>
           <span style="display: none">SPONSORS</span>
-          <span>CONTACT</span>
+          <span onclick="openItem('contacts')">CONTACT</span>
         </div>
         <div>
           <span>SCHEDULE</span>
@@ -134,8 +134,6 @@
       <div id="item_content">
 
       </div>
-    </div>
-    <div id="contacts">
     </div>
     <div id="events" class="inactive">
         <div id="events_wrapper" class="ltr">
@@ -283,6 +281,31 @@
               </div>
           </div>
     </div>
+    </div>
+
+    <div id="about">
+      <div id="abouttext">
+          Snatches of whatever your teacher’s been droning on about for the past hour,  would weave in and out of your fantasies, to be interrupted when she hurls her chalk at you.
+          <br><br>
+          Hours made to stand outside the class and silly impositions would follow. 
+          <br><br>
+          Middle school was dumb. Your attention span hasn't really changed much here in college though, has it?
+          It’s only fair. Who wouldn’t be wrestling orcs at Amon Hen, or duelling the Dark Lord in the Battle of Hogwarts? Perhaps battle in the Lannisters’ army, in their fight to keep the Iron throne, all the while ignoring the lecturer as he tries to give you an actual future? Yeah, we thought so. 
+          <br><br>
+          Join us this Oasis ‘17, the 46th edition of BITS Pilani’s annual cultural festival from the 31st October to the 3rd November, with some of the biggest music acts such as Parikrama and Amit Trivedi, and public figures such as Salman Khurshid and Kiran Bedi all a part of its proud history. From games, to mouth watering food stalls and exhilarating concerts, we promise them all.
+          <br><br>
+          Join us, as we bring to life these Realms of Fiction, from Gotham and Winterfell to Avalon and Vice City. 
+          <br><br>
+          Oasis ‘17. Bigger than ever.
+      </div>
+    </div>
+
+    <div id="contacts">
+      <div id = "contact_wrapper">
+
+      </div>
+    </div>
+
     <script>
     var loadedData = [];
     var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
@@ -329,6 +352,16 @@
           url: "js/events.js",
           ext: "js"
         },
+        {
+          type: "static",
+          url: "css/contact2.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/contact.js",
+          ext: "js"
+        }
       ];
 
       for (var i in data) {
@@ -424,13 +457,15 @@
 
     var item = document.querySelector('#item');
     var ham_menu = document.querySelector('#ham_menu');
-      function open(ref) {
+
+
+      function openItem(ref) {
         item.className="";
-        item.innerHTML=eval(ref).innerHTML;
+        item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
+        item_title.innerHTML = ref;
+        if(ham_menu.className=="") ham_menu.className = "inactive";
       }
-      contact.addEventListener("click",function(){
-        open('contacts');
-      });
+
       
       Events.addEventListener('click', function(){
         events.style.top = "0%";
