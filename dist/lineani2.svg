@@ -1,0 +1,36 @@
+<svg version="1.1" id="lines" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 71.4 243" style="enable-background:new 0 0 71.4 243;" xml:space="preserve">
+<style type="text/css">
+   .st0{clip-path:url(#SVGID_2_);}
+   .st1{fill:#FC0C84;}
+</style>
+<g>
+   <defs>
+       <rect id="SVGID_1_" width="71.4" height="243"/>
+   </defs>
+   <clipPath id="SVGID_2_">
+       <use xlink:href="#SVGID_1_"  style="overflow:hidden;"/>
+   </clipPath>
+   <g class="st0">
+       <rect x="-43.9" y="268.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -183.108 104.0609)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="241.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -164.0162 96.1528)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="214.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -144.9243 88.2447)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="187.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -125.8324 80.3366)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="160.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -106.7405 72.4284)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="133.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -87.6486 64.5203)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="106.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -68.5568 56.6122)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="79.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -49.4649 48.7041)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="52.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -30.373 40.796)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="25.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -11.2811 32.8879)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="-1.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 7.8108 24.9797)" class="st1" width="156" height="10"/>
+       <rect x="-43.9" y="-28.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 26.9027 17.0716)" class="st1" width="156" height="10"/>
+   </g>
+   <animateTransform attributeName="transform"
+         attributeType="XML"
+         type="translate"
+         from="0 00"
+         to="0 -81"
+         dur="3s"
+         repeatCount="indefinite"/>
+</g>
+</svg>

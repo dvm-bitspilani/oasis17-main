@@ -12,7 +12,7 @@ var devs = [
     },
     {
       name: "Madhur Wadhwa",
-      team: "Graphic Design",
+      team: "Graphic Designer",
       link1: "https://dribbble.com/madhurw7",
       image1: "img/dribbble.svg",
       link2: "https://behance.net/madhurw7",
@@ -43,6 +43,50 @@ var devs = [
         image3: "img/linkedin.svg",
         photo: "img/tushar.jpg"
     },
+    {
+        name: "Neethu Maria Joy",
+        team: "Frontend Developer",
+        link1: "https://github.com/roboneet",
+        image1: "img/github.svg",
+        link2: "f2016119@pilani.bits-pilani.ac.in",
+        image2: "img/email.svg",
+        link3: "https://www.linkedin.com/in/neethu-maria-joy-653655128/",
+        image3: "img/linkedin.svg",
+        photo: "img/neethu.jpg"
+    },
+    {
+        name: "Mihir Dharap",
+        team: "Graphic Designer",
+        link1: "https://instagram.com/_msd_737",
+        image1: "img/dribbble.svg",
+        link2: "https://www.linkedin.com/in/mihir-dharap-b7309b95/",
+        image2: "img/linkedin.svg",
+        link3: "mailto:msdharap@gmail.com",
+        image3: "img/email.svg",
+        photo: "img/mihir.jpg" 
+    },
+    {
+        name: "Navjot Bansal",
+        team: "Frontend Developer",
+        link1: "https://github.com/NavjotBansal",
+        image1: "img/github.svg",
+        link2: "f2016070@pilani.bits-pilani.ac.in",
+        image2: "img/email.svg",
+        link3: "https://www.linkedin.com/in/navjot-bansal-a67b87137/",
+        image3: "img/linkedin.svg",
+        photo: "img/navjot.jpg"
+    }, 
+    {
+        name: "Manan Agarwal",
+        team: "Design Volunteer",
+        link1: "https://github.com/MananAgarwal",
+        image1: "img/github.svg",
+        link2: "f2016607@pilani.bits-pilani.ac.in",
+        image2: "img/email.svg",
+        link3: "https://www.linkedin.com/in/manan-agarwal-98a881134/",
+        image3: "img/linkedin.svg",
+        photo: "img/manan.jpg"
+    }, 
 ];
 
 for (var d in devs) {

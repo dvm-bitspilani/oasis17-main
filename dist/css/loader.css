@@ -369,6 +369,9 @@ section#ham_menu.inactive {
   z-index: 2;
   display: none; }
 
+#loader {
+  overflow: hidden; }
+
 #loader.loaded {
   height: calc(100% - 70px); }
 
@@ -515,6 +518,34 @@ body #box div:nth-child(70) {
 body #box div:nth-child(71) {
   transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s; }
 
+#lineani1 {
+  position: absolute;
+  top: 75%;
+  left: 2.5%;
+  background: url(../lineani.svg);
+  height: 110px;
+  width: 50px;
+  background-size: cover; }
+
+#lineani2 {
+  position: absolute;
+  top: 74%;
+  right: 3.5%;
+  background: url(../lineani2.svg);
+  height: 90px;
+  width: 40px;
+  transform: rotate(90deg);
+  background-size: cover; }
+
+#triani3 {
+  position: absolute;
+  top: calc(75% - 50px);
+  width: 50px;
+  height: 50px;
+  left: 2.5%;
+  background: url(../triangle.svg);
+  transform: rotate(180deg); }
+
 #item {
   position: absolute;
   display: flex;
@@ -635,9 +666,13 @@ body #box div:nth-child(71) {
     right: 0%; }
 
   #tilt {
+    display: none;
     top: 87%;
     left: 0;
-    transform: skewY(-14deg); } }
+    transform: skewY(-14deg); }
+
+  #lineani1, #lineani2, #triani3 {
+    display: none; } }
 @media all and (max-width: 1050px) {
   #Landing footer nav ul li {
     font-size: 0.7em;
