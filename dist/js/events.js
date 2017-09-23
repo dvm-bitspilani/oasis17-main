@@ -43,9 +43,9 @@ function get(dir) {
 }
 
 function changeChar(dir){
-  // console.log("called");
+  console.log("called");
   var direction = (dir==-1)?"rtl":"ltr";
-  // console.log(direction)
+  console.log(direction)
   var character = characters[get(dir)];
   var props = charprops[character];
   document.body.className = direction;
@@ -57,7 +57,7 @@ function changeChar(dir){
   }
   eventname.innerHTML = "<span>"+props.eventname+"</span>";
   var string = "";
-  // console.log(event_names[character])
+  console.log(event_names[character])
   for(var i = 0; i< event_names[character].lenght; i++){
     
     string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1><p id='bottom'></p></li>"
