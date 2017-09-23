@@ -175,7 +175,7 @@
       justify-content: space-around;
       margin-left: 0; }
     #events_wrapper section nav ul li {
-      font-family: "Azo Sans Bold";
+      font-family: "Azo Sans Regular";
       font-size: 5vh; }
     #events_wrapper section nav li:nth-child(2), #events_wrapper section nav div {
       display: none; } }

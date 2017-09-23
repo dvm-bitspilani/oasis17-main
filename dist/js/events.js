@@ -17,6 +17,20 @@ var characters = [
   "Rick","Minion","Pikachu",
   "Dexter","V","Harry"
 ];
+var event_names = {
+  "Johnny":["Choreo", "Dessert Duel" ,"Razzmataaz", "Street Dance", "Tandav"],
+  "Deadpool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
+  "Batman": ["Beg Borrow Steal", "Mr. and Mrs. Oasis", "Protest Out of Waste", "Treasure Hunt", "Triathlon"],
+  "Ezio": ["Fashion Parade"],
+  "Goku": ["Exposure", "Oasis through my Eyes"],
+  "Rick": ["Andholika", "Axetacy", "Drums Duel", "Free Jam", "Pitch Perfect", "Rap Wars", "Rocktaves", "Swaranjali", "Tarang"],
+  "Minion": ["Mime", "Stage Play","Street Play"],
+  "Pikachu": ["Canvas Street","Contrasto", "Splash"],
+  "Dexter": ["Exposure","Online Quiz","Word Wars"],
+  "V": ["Antakshari", "Blab", "Online Quiz", "Entertainment Quiz", "Filmy Muqabla", "Music Quiz", "Oasis Quiz","Scifi Quiz", "Theme Quiz"],
+  "Harry": ["Ad/Poster Making", "Apt to Act", "Metamorphosis", "Story Completion", "Trailer Making"]
+}
+    // , ,[""]
 function get(dir) {
   var curr = Box.className;
   var icurr = characters.indexOf(curr);
@@ -29,7 +43,9 @@ function get(dir) {
 }
 
 function changeChar(dir){
+  console.log("called");
   var direction = (dir==-1)?"rtl":"ltr";
+  console.log(direction)
   var character = characters[get(dir)];
   var props = charprops[character];
   document.body.className = direction;
@@ -40,6 +56,14 @@ function changeChar(dir){
     tagline.innerHTML += "<span>"+props.tagline[tag]+"</span>";
   }
   eventname.innerHTML = "<span>"+props.eventname+"</span>";
+  var string = "";
+  console.log(character, event_names[character], event_names)
+  for(var i = 0; i< event_names[character].length; i++){
+    string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1><p id='bottom'></p></li>";
+    console.log(string);
+  }
+  console.log(eventnames__ , string )
+  eventnames__.innerHTML = string;
 }
 
 document.body.onkeydown = function(e) {
