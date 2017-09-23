@@ -58,8 +58,7 @@ function changeChar(dir){
   eventname.innerHTML = "<span>"+props.eventname+"</span>";
   var string = "";
   console.log(character, event_names[character], event_names)
-  for(var i = 0; i< event_names[character].lenght; i++){
-    
+  for(var i = 0; i< event_names[character].length; i++){
     string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1><p id='bottom'></p></li>";
     console.log(string);
   }
