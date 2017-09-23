@@ -63,6 +63,7 @@ function changeChar(dir){
     string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1><p id='bottom'></p></li>";
     console.log(string);
   }
+  console.log(eventnames__ , string )
   eventnames__.innerHTML = string;
 }
 
