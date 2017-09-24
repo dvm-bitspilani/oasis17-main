@@ -1,0 +1,574 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  width: 100vw
+  height: 100vh
+  position: relative
+  font-size: 18px
+  overflow: hidden
+  background: #262626
+
+ul
+  list-style-type: none !important
+
+@keyframes lineani
+  0%
+    stroke-dashoffset: 2000px
+    stroke-width: 0.3
+  100%
+    stroke-dashoffset: 0px
+    stroke-width: 0.7
+
+section#loader
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  transition: height 1s ease-out
+  z-index: 0
+
+  #frame
+    width: 70vh
+    height: 70vh
+    position: relative
+    z-index: 1
+
+    .inactive
+      display: none
+
+    #box
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      margin: 0
+      padding: 0
+      div
+        width: 100%
+        height: 100%
+        position: absolute
+      #logotext
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        color: #fff
+        font-weight: bold
+        font-family: sans-serif
+        opacity: 0
+        transition: opacity 1s ease-out
+      #realmsOfFiction
+        position: absolute
+        top: 77%
+        height: 33px
+        width: 95%
+        right: 4%
+        background: url(../img/realmsoffiction.png) no-repeat right
+        background-size: contain
+      #o17
+        position: absolute
+        left: 94%
+        top: 36%
+        width: 45px
+        height: 45px
+        background: url(../img/17.png) no-repeat right
+        background-size: contain
+    svg
+      width: 100%
+      height: 100%
+      *
+        stroke-dasharray: 2000px
+        stroke-dashoffset: 2000px
+        // animation: 5s lineani cubic-bezier(.7,.3,0,1) both
+        stroke: #ffffff
+      .first
+        transition: 4s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition-delay: 0s
+      .second
+        transition: 5s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition-delay: 2s
+
+      @for $i from 1 through 6
+        $t: (2s + 0.75*$i)
+        $d: (0s + $i*0.2s)
+        .first:nth-of-type(#{$i})
+          animation-delay: $d
+          animation-duration: $t
+
+      @for $i from 1 through 17
+        $t: (2s + 0.75*$i)
+        $d: (1s + $i*0.2)
+        .second:nth-of-type(#{$i})
+          animation-delay: $d
+          animation-duration: $t
+
+#Events
+  position: absolute
+  top: 75%
+  left: 50%
+  font-size: 1.5em
+  background: #FFE14A
+  font-family: "Azo Sans Bold"
+  padding: 6px 10px 0 10px
+  color: #262626
+  transform: translateX(-50%)
+  white-space: nowrap
+  transition: 0.4s all ease-in
+  z-index: 1
+#Events:hover
+  background: #FC0C84
+  color: #fff
+  cursor: pointer
+
+#Landing
+  display: flex
+  width: 100%
+  height: 100%
+  z-index: 0
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  flex-direction: column
+  justify-content: space-between
+  transition: opacity 1s ease-out
+  header
+    display: flex
+    position: relative
+    flex-direction: column
+    nav
+      display: flex
+      justify-content: space-between
+      ul
+        font-family: "Azo Sans Regular"
+        display: flex
+        width: 30%
+        color: #fff
+        justify-content: space-around
+        padding-left: 20px
+        li
+          height: 75px
+          display: flex
+          align-items: center
+          justify-content: center
+          text-transform: uppercase
+          font-size: 1rem
+          position: relative
+        li:hover
+          cursor: pointer
+        li::after
+          position: absolute
+          left: 50%
+          top: calc(50% + 15px)
+          content: ''
+          width: 0
+          height: 1px
+          background: #fff
+          transform: translateX(-50%)
+          transition: 0.3s all cubic-bezier(1,0,0,1)
+        li:hover::after
+          width: 100%
+
+      #Register
+        margin-right: 30px
+        margin-top: 30px
+        font-size: 2em
+        background: #FC0C84
+        font-family: "Azo Sans Bold"
+        padding: 6px 10px 0 10px
+        color: #fff
+        transition: 0.4s all ease-in
+        cursor: pointer
+      #Register:hover
+        background: #FFE14A
+        color: #262626
+        cursor: pointer
+  footer
+    display: flex
+    flex-direction: column-reverse
+    position: relative
+    nav
+      background: #fff
+      font-family: "Azo Sans Regular"
+      display: flex
+      position: relative
+      height: 70px
+      overflow: hidden
+      ul
+        display: flex
+        width: 90%
+        color: #262626
+        flex: 3
+        li
+          padding: 0 30px
+          height: 100%
+          display: flex
+          align-items: center
+          white-space: nowrap
+          font-size: 0.8em
+          align-self: center
+          position: relative
+        li:hover
+          cursor: pointer
+        li::after
+          position: absolute
+          left: 50%
+          top: calc(50% + 15px)
+          content: ''
+          width: 0
+          height: 1px
+          background: #282828
+          transform: translateX(-50%)
+          transition: 0.3s all cubic-bezier(1,0,0,1)
+        li:hover::after
+          // width: 58%
+      #Aftermovie
+        padding-right: 20px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex: 1
+        font-size: 0.8em
+        white-space: nowrap
+        color: #262626
+footer > ul
+  height: 80px
+  display: flex
+  align-self: flex-end
+  li
+    width: 50px
+    margin: 0 10px
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    cursor: pointer 
+  li.facebook
+    background-image: url(../img/facebook.svg)
+  li.twitter
+    background-image: url(../img/twitter.svg)
+  li.youtube
+    background-image: url(../img/youtube.svg)
+  li.instagram, li.github
+    background-image: url(../img/Instagram.svg)
+    background-size: 70%
+
+section#ham_menu
+  display: flex
+  position: absolute
+  flex-direction: column
+  left: 0
+  top: 0
+  width: 300px
+  max-width: 100%
+  height: 100%
+  background: #fff url(../img/grid.png)
+  transform: translateX(0)
+  transition: 0.5s transform cubic-bezier(1,0,0,1)
+  z-index: 3
+  background-size: cover
+  // box-shadow: 0 0 100px #333333 // CHANGE!!
+  font-family: "Azo Sans Regular"
+  aside.head
+    height: 80px
+    display: flex
+    justify-content: space-between
+    padding: 0 1.5em 0 25px
+    margin: 10px 5px
+    span
+      height: 1.5em
+      font-size: 1.5em
+      align-self: center
+      min-width: 1.5em
+      padding-top: 6px
+    span.arrow
+      background: url(../img/arrow_back.png) no-repeat center
+      background-size: contain
+      height: 1em
+      transition: 0.2s transform cubic-bezier(1,0,0,1)
+      transform-origin: center
+    span.arrow:hover
+      transform: rotate(360deg)
+      cursor: pointer
+  aside.nav
+    display: flex
+    flex-direction: column
+    margin: 10px 5px
+    overflow-y: auto
+    div
+      margin: 15px 0
+      display: flex
+      flex-direction: column
+      span
+        padding: 8px 30px
+
+section#ham_menu.inactive
+  transform: translateX(-100%)
+
+#ham_wrapper
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background: transparent
+  z-index: 2
+  display: none
+
+#loader
+  overflow: hidden
+
+#loader.loaded
+  height: calc(100% - 70px)
+
+$fluidpolygons: .7,.3,0,1
+body #box
+  @for $i from 1 through 71
+
+    $s: ($i*0.04+0.3s)
+    $t: ($i*0.02s+0.2s)
+    $ct: ($i*0.02s)
+
+    div:nth-child(#{$i})
+      transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
+
+#lineani1
+  position: absolute
+  top: 75%
+  left: 2.5%
+  background: url(../lineani.svg)
+  height: 110px
+  width: 50px
+  background-size: cover
+
+#lineani2
+  position: absolute
+  bottom: 0
+  right: 0
+  margin-bottom: 130px
+  margin-right: 40px
+  background: url(../lineani2.svg)
+  height: 90px
+  width: 40px
+  transform: rotate(90deg)
+  background-size: cover
+
+#triani3
+  position: absolute
+  top: calc(75% - 50px)
+  width: 50px
+  height: 50px
+  left: 2.5%
+  background: url(../triangle.svg)
+  transform: rotate(180deg)
+
+#triani4
+  position: absolute
+  bottom: 0
+  width: 37px
+  height: 37px
+  right: 0
+  margin-bottom: 156px
+  margin-right: 106px
+  background: url(../triangle2.svg)
+  transform: rotate(90deg)
+
+#item
+  position: absolute
+  display: flex
+  flex-direction: column
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 5
+  background: #262626
+  opacity: 1
+  pointer-events: all
+  padding: 50px 70px
+  .header
+    display: flex
+    justify-content: space-between
+    height: 50px
+    align-items: center
+    #item_title
+      display: block
+      background: #FC0C84
+      color: #fff
+      font-family: "Azo Sans Bold"
+      padding: 5px 20px
+      font-size: 1.5em
+      text-transform: uppercase
+      span
+        display: block
+        padding-top: 5px
+    #back_to_landing
+      height: 50px
+      width: 50px
+      background: url(../img/close_white.svg) no-repeat center
+      background-size: contain
+      transition: 0.3s transform cubic-bezier(1,0,0,1)
+    #back_to_landing:hover
+      transform: rotate(360deg)
+  #item_content
+    flex: 1
+    margin-top: 30px
+    overflow-y: auto
+
+#contacts,#about,#dev
+  display: none
+
+#events
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  transition: 0.4s top cubic-bezier(0.7,0.3,0,1), 0.4s height cubic-bezier(0.7,0.3,0,1)
+
+#events.inactive
+  top: 100%
+  display: none
+
+#abouttext
+  color: #ffffff
+  text-align: justify
+  font-family: "Azo Sans Regular"
+  font-size: 1.4rem
+
+#item.inactive
+  opacity: 0
+  pointer-events: none
+
+#Landing header nav #ham
+  width: 83px
+  height: 63px
+  background: url(../img/hamburger.svg) center no-repeat
+  display: none
+  padding-left: 40px
+  transition: 0.2s transform cubic-bezier(1,0,0,1)
+#Landing header nav #ham:hover
+  // transform: scale(1.2)
+  cursor: pointer
+
+#tilt
+  background: #2E2E2E
+  position: absolute
+  top: 0
+  left: 50%
+  width: 100%
+  height: 100%
+  transition: 0.7s background cubic-bezier(1,0,0,1)
+  transform: skew(-14deg)
+#tilt.inactive
+  background: transparent
+
+@media all and (orientation: portrait)
+  section#loader #frame
+    width: calc(95vw - 20px)
+    height: calc(95vw - 20px)
+  section#loader #frame #box #realmsOfFiction
+    background-position: center
+  section#loader #frame #box #o17
+    width: 30px
+    height: 30px
+    top: 35%
+  footer > ul
+    height: 45px
+  footer > ul li
+    width: 50px
+    height: 40px
+  section#loader #frame #box #realmsOfFiction
+    height: 25px
+  #Landing header nav #Register
+    margin-right: 20px
+  section#loader #frame #box #realmsOfFiction
+    width: 100%
+    right: 0%
+  #tilt
+    display: none
+    top: 87%
+    left: 0
+    transform: skewY(-14deg)
+  #lineani1, #lineani2, #triani3, #triani4
+    display: none
+
+@media all and (max-width: 1050px)
+  #Landing footer nav ul li
+    font-size: 0.7em
+    padding: 0 15px
+  #Landing footer nav #Aftermovie
+    font-size: 0.7em
+
+@media all and (max-width: 790px)
+  #Landing footer nav, #Landing header nav ul
+    display: none // CHANGE!! ADD FOOTER TOO
+  footer > ul
+    align-self: center
+    margin-bottom: 20px
+  #Events
+    top: 77% // CHANGE!!
+  #Events, #Landing header nav #Register
+    font-size: 1.2em
+  #Landing header nav #ham
+    display: block
+  #item
+    padding: 30px 40px
+
+@media all and (max-width: 550px)
+  #Events
+    top: 75%
+
+@media all and (max-height: 550px)
+  #Landing footer nav
+    height: 35px
+  section#loader #frame #box #o17
+    width: 25px
+    height: 25px
+    top: 35%
+
+@keyframes flow
+  0%
+    background-color: rgba(255,255,255,0)
+  30%
+    background-color: rgba(255,255,255,.47)
+  66%
+    background-color: rgba(255,255,255,.1)
+  100%
+    background-color: rgba(255,255,255,0)
+
+body #box2
+  display: none
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  div
+    position: absolute
+    width: 100%
+    height: 100%
+
+body #box2
+  div
+    animation: 1s flow infinite
+    opacity: 0.1
+
+body #box2
+  @for $i from 1 through 70
+
+    $ct: ($i*0.02s)
+
+    div:nth-child(#{$i})
+      animation-delay: $ct
+
+@media all and (orientation: landscape) and (max-height: 500px)
+  footer > ul
+    height: 40px
+  #Events
+    top: 70%

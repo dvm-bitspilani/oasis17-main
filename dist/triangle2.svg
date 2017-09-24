@@ -1,0 +1,70 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 71.4 71.4" style="enable-background:new 0 0 71.4 71.4;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#fc0c84;}
+                    @keyframes scaleright {
+                        0% {transform: scale(0)}
+                        40% {transform: scale(1)}
+                        70% {transform: scale(1)}
+                        100% {transform: scale(0)}
+                    }
+                    @keyframes scaleright2 {
+                        0% {transform: scale(0)}
+                        12% {transform: scale(0)}
+                        45% {transform: scale(1)}
+                        65% {transform: scale(1)}
+                        88% {transform: scale(0)}
+                        100% {transform: scale(0)}
+                        
+                    }
+                    @keyframes scaleright3 {
+                        0% {transform: scale(0)}
+                        25% {transform: scale(0)}
+                        45% {transform: scale(1)}
+                        65% {transform: scale(1)}
+                        75% {transform: scale(0)}
+                        100% {transform: scale(0)}
+                    }
+                    @keyframes scaleleft {
+                        0% {transform: scale(0)}
+                        35% {transform: scale(0)}
+                        45% {transform: scale(1)}
+                        55% {transform: scale(1)}
+                        80% {transform: scale(0)}
+                        100% {transform: scale(0)}
+                    }
+                    #right_x5F_1 polygon {
+                        animation: 2s scaleright infinite;
+                        transform-origin: center;
+                    }
+                    #right_x5F_2 polygon {
+                        animation: 2s scaleright2 infinite;
+                        transform-origin: center;
+                    }
+                    #right > polygon {
+                        animation: 2s scaleright3 infinite;
+                        transform-origin: center;
+                    }
+                    #left  polygon{
+                        animation: 2s scaleleft infinite;
+                        transform-origin: center;
+                    }
+                </style>
+                <g id="right">
+                    <g id="right_x5F_1" >
+                           <polygon class="st0" points="23.8,23.8 47.6,23.8 47.6,47.6     "/>
+                           <polygon class="st0" points="47.6,47.6 71.4,47.6 71.4,71.4     "/>
+                           <polygon class="st0" points="0,0 23.8,0 23.8,23.8     "/>
+                    </g>
+                    <g id="right_x5F_2">
+                        <polygon class="st0" points="23.8,0 47.6,0 47.6,23.8     "/>
+                        <polygon class="st0" points="47.6,23.8 71.4,23.8 71.4,47.6     "/>
+                    </g>
+                    <polygon id="right_x5F_3" class="st0" points="47.6,0 71.4,0 71.4,23.8    "/>
+                </g>
+                <g id="left" >
+                        <polygon class="st0" points="23.8,0 23.8,23.8 47.6,23.8  "/>
+                        <polygon class="st0" points="47.6,0 47.6,23.8 71.4,23.8  "/>
+                        <polygon class="st0" points="71.4,47.6 47.6,47.6 47.6,23.8  "/>
+                </g>    
+            </svg>
