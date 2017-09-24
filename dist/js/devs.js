@@ -1,15 +1,4 @@
 var devs = [
-	{
-	  name: "Chinmay Pandhare",
-	  team: "Frontend Developer",
-      link1: "https://github.com/ccpandhare",
-      image1: "img/github.svg",
-      link2: "mailto:pandharechinmay882@gmail.com",
-      image2: "img/email.svg",
-      link3: "https://linkedin.com/in/ccpandhare",
-      image3: "img/linkedin.svg",
-	  photo: "img/chinmay.jpg"
-    },
     {
       name: "Madhur Wadhwa",
       team: "Graphic Designer",
@@ -20,6 +9,17 @@ var devs = [
       link3: "mailto:madhurw7official@gmail.com",
       image3: "img/email.svg",
       photo: "img/madhur.jpg"
+    },
+    {
+        name: "Chinmay Pandhare",
+        team: "Frontend Developer",
+        link1: "https://github.com/ccpandhare",
+        image1: "img/github.svg",
+        link2: "mailto:pandharechinmay882@gmail.com",
+        image2: "img/email.svg",
+        link3: "https://linkedin.com/in/ccpandhare",
+        image3: "img/linkedin.svg",
+        photo: "img/chinmay.jpg"
     },
     {
         name: "Megh Thakkar",
@@ -37,7 +37,7 @@ var devs = [
         team: "Backend Developer",
         link1: "https://github.com/tushargoel1",
         image1: "img/github.svg",
-        link2: "f2016023@pilani.bits-pilani.ac.in",
+        link2: "mailto:f2016023@pilani.bits-pilani.ac.in",
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/tushar-goel-254a66147/",
         image3: "img/linkedin.svg",
@@ -48,7 +48,7 @@ var devs = [
         team: "Frontend Developer",
         link1: "https://github.com/roboneet",
         image1: "img/github.svg",
-        link2: "f2016119@pilani.bits-pilani.ac.in",
+        link2: "mailto:f2016119@pilani.bits-pilani.ac.in",
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/neethu-maria-joy-653655128/",
         image3: "img/linkedin.svg",
@@ -70,23 +70,45 @@ var devs = [
         team: "Frontend Developer",
         link1: "https://github.com/NavjotBansal",
         image1: "img/github.svg",
-        link2: "f2016070@pilani.bits-pilani.ac.in",
+        link2: "mailto:f2016070@pilani.bits-pilani.ac.in",
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/navjot-bansal-a67b87137/",
         image3: "img/linkedin.svg",
         photo: "img/navjot.jpg"
     }, 
     {
+        name: "Nilay Arora",
+        team: "Frontend Developer",
+        link1: "https://github.com/Nilay117",
+        image1: "img/github.svg",
+        link2: "mailto:f2016119@pilani.bits-pilani.ac.in",
+        image2: "img/email.svg",
+        link3: "https://www.linkedin.com/in/nilayarora117/",
+        image3: "img/linkedin.svg",
+        photo: "img/nilay.jpg"
+    },
+    {
+        name: "Pallav Soni",
+        team: "Frontend Developer",
+        link1: "https://github.com/pallav100",
+        image1: "img/github.svg",
+        link2: "mailto:devpallavsoni@gmail.com",
+        image2: "img/email.svg",
+        link3: "https://www.linkedin.com/in/pallav-soni-67985214b/",
+        image3: "img/linkedin.svg",
+        photo: "img/nilay.jpg"
+    },
+    {
         name: "Manan Agarwal",
         team: "Design Volunteer",
         link1: "https://github.com/MananAgarwal",
         image1: "img/github.svg",
-        link2: "f2016607@pilani.bits-pilani.ac.in",
+        link2: "mailto:f2016607@pilani.bits-pilani.ac.in",
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/manan-agarwal-98a881134/",
         image3: "img/linkedin.svg",
         photo: "img/manan.jpg"
-    }, 
+    }
 ];
 
 for (var d in devs) {
