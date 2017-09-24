@@ -586,7 +586,8 @@
 
       back_to_landing.addEventListener("click",function(){
         item.className = "inactive";
-        ham.click();
+        console.log(ham.style.display);
+        if(ham.offsetParent!=null) ham.click();
       });
 
     </script>
