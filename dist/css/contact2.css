@@ -65,7 +65,7 @@ body {
     height: 400px
   }
   #contact_wrapper {
-    width: 70%;
+    width: 80%;
   }
 }
 @media all and (max-width: 900px) {

@@ -28,8 +28,8 @@ var stuccans = [
 	  photo: "img/recnacc.jpg"
 	},
 	{
-	  name: "Nisanth Verma",
-	  post: "Department of Controlz",
+	  name: "Nisanth Varma",
+	  post: "Events, Competitions and operations",
 	  email: "controlz@bits-oasis.org",
 	  phone: "+91 80588 77118",
 	  photo: "img/controlz.jpg"
