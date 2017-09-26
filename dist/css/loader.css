@@ -518,6 +518,27 @@ body #box div:nth-child(70) {
 body #box div:nth-child(71) {
   transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s; }
 
+#dotanim {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  background: url(../anim.svg);
+  height: 150px;
+  width: 20vw;
+  background-size: cover; }
+
+#dotanim2 {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  margin-right: -30px;
+  background: url(../anim.svg);
+  height: 30px;
+  width: 25vh;
+  transform: rotate(90deg);
+  background-size: cover;
+  background-position: 0% 20%; }
+
 #lineani1 {
   position: absolute;
   top: 75%;

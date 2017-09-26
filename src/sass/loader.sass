@@ -337,6 +337,28 @@ body #box
 
     div:nth-child(#{$i})
       transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
+#dotanim
+  position: absolute
+  top: 5%
+  left: 0
+  background: url(../anim.svg)
+  height: 150px
+  width: 20vw
+  background-size: cover
+
+
+#dotanim2
+  position: absolute
+  top: 45%
+  right: 0
+  margin-right: -30px
+  background: url(../anim.svg)
+  height: 30px
+  width: 25vh
+  transform: rotate(90deg)
+  background-size: cover
+  background-position: 0% 20%
+
 
 #lineani1
   position: absolute
@@ -349,8 +371,10 @@ body #box
 
 #lineani2
   position: absolute
-  top: 74%
-  right: 3.5%
+  bottom: 0
+  right: 0
+  margin-bottom: 130px
+  margin-right: 40px
   background: url(../lineani2.svg)
   height: 90px
   width: 40px
@@ -365,6 +389,17 @@ body #box
   left: 2.5%
   background: url(../triangle.svg)
   transform: rotate(180deg)
+
+#triani4
+  position: absolute
+  bottom: 0
+  width: 37px
+  height: 37px
+  right: 0
+  margin-bottom: 156px
+  margin-right: 106px
+  background: url(../triangle2.svg)
+  transform: rotate(90deg)
 
 #item
   position: absolute
@@ -482,7 +517,7 @@ body #box
     top: 87%
     left: 0
     transform: skewY(-14deg)
-  #lineani1, #lineani2, #triani3
+  #lineani1, #lineani2, #triani3, #triani4
     display: none
 
 @media all and (max-width: 1050px)

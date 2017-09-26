@@ -23,14 +23,8 @@
   position: absolute;
   z-index: 0; }
 
-#close_event {
-  left: 16px;
-  top: 5px;
-}
-
 .lightbox {
   padding: 0;
-  overflow: hidden;
   margin: 0;
   display: block;
   position: absolute;
