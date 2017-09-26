@@ -531,9 +531,9 @@ body #box div:nth-child(71) {
   position: absolute;
   top: 45%;
   right: 0;
-  margin-right: -30px;
+  margin-right: -40px;
   background: url(../anim.svg);
-  height: 30px;
+  height: 4vh;
   width: 25vh;
   transform: rotate(90deg);
   background-size: cover;
@@ -552,7 +552,7 @@ body #box div:nth-child(71) {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: 130px;
+  margin-bottom: 18vh;
   margin-right: 40px;
   background: url(../lineani2.svg);
   height: 90px;
@@ -575,7 +575,7 @@ body #box div:nth-child(71) {
   width: 37px;
   height: 37px;
   right: 0;
-  margin-bottom: 156px;
+  margin-bottom: calc(18vh + 26px);
   margin-right: 106px;
   background: url(../triangle2.svg);
   transform: rotate(90deg); }
@@ -706,7 +706,7 @@ body #box div:nth-child(71) {
     left: 0;
     transform: skewY(-14deg); }
 
-  #lineani1, #lineani2, #triani3, #triani4 {
+  #lineani1, #lineani2, #triani3, #triani4, #dotanim, #dotanim2 {
     display: none; } }
 @media all and (max-width: 1050px) {
   #Landing footer nav ul li {
