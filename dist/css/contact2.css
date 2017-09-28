@@ -74,14 +74,15 @@ body {
   flex-direction: column;
   transition: 0.15s height ease-out;
   background: #FFE14A;
-  box-sizing: margin-box;
+  box-sizing: border-box;
+  height: auto;
 }
-#pcrExpandedData > *{
-  margin: 5px 0;
+#pcrExpandData > *{
+  padding: 2px 12px;
 }
-.pcrhidden {
+.pcrhidden, #pcrExpandData.pcrhidden {
   height: 0;
-  padding: 0 !important;
+  padding: 0;
 }
 @media all and (min-width: 1200px) {
   .person {

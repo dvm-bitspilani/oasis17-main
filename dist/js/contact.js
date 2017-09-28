@@ -109,6 +109,8 @@ for(i=0;i<8;i++){
 
 function expandPCR(e) {
 	var pic = e.parentNode.querySelector('.person-pic');
+	var pcrExpandData = document.querySelector('#pcrExpandData');
+	var expand = document.querySelector('#expand');
 	if (pic.className == "person-pic") {
 		pic.className = "person-pic pcrhidden";
 		pcrExpandData.className = "";
