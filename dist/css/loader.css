@@ -942,6 +942,22 @@ body #box2 {
 @media all and (orientation: landscape) and (max-height: 400px) {
   section#loader #frame #box #date {
     padding: 2vh; } }
+li#ViewEvent {
+  opacity: 0.75;
+  transition: all 1s linear; }
+  li#ViewEvent:hover {
+    cursor: pointer;
+    opacity: 1; }
+
+#Landing header nav #Register:hover, label {
+  cursor: pointer; }
+
+div.change.prev:hover {
+  cursor: pointer; }
+
+div.change.next:hover {
+  cursor: pointer; }
+
 /*# sourceMappingURL=loader.css.map */
 
 /*# sourceMappingURL=loader.css.map */
