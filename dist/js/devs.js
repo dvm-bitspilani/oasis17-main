@@ -96,7 +96,7 @@ var devs = [
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/pallav-soni-67985214b/",
         image3: "img/linkedin.svg",
-        photo: "img/pallav.jpg"
+        photo: "img/nilay.jpg"
     },
     {
         name: "Manan Agarwal",
