@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/loader.css">
+    <link rel="shortcut icon" href="https://bits-oasis.org/2017/static/pcradmin/images/Oasis-Logo.png">
 
 		<meta property="og:type" content="business.business">
 		<meta property="og:title" content="Oasis 2017 | Realms of Fiction | BITS Pilani">
@@ -348,7 +349,7 @@
 
     <script>
     var loadedData = [];
-    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    var exampleSocket = new WebSocket("ws://localhost:3000", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
