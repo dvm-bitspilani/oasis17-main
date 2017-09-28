@@ -346,7 +346,7 @@
 
     <script>
     var loadedData = [];
-    var exampleSocket = new WebSocket("ws://localhost:3000", "echo-protocol");
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
