@@ -70,17 +70,11 @@ section#loader {
       section#loader #frame #box #date {
         position: relative;
         display: flex;
-        /* flex-direction: column; */
         justify-content: center;
-        /* align-self: center; */
         top: 86%;
-        /* margin: auto auto; */
-        /* margin-left: 28%; */
-        /*margin-top: .3rem; */
         height: auto;
         width: 100%;
         font-size: 2.5vh;
-        /* right: 4%; */
         font-family: Azo Sans Regular; }
       section#loader #frame #box #o17 {
         position: absolute;
@@ -659,11 +653,12 @@ body #box div:nth-child(71) {
   pointer-events: none; }
 
 #Landing header nav #ham {
-  width: 83px;
-  height: 63px;
+  width: 40px;
+  height: 40px;
   background: url(../img/hamburger.svg) center no-repeat;
   display: none;
-  padding-left: 40px;
+  padding-left: 100px;
+  margin-top: 25px;
   transition: 0.2s transform cubic-bezier(1, 0, 0, 1); }
   #Landing header nav #ham:hover {
     cursor: pointer; }
