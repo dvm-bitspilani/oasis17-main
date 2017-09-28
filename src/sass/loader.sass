@@ -18,9 +18,11 @@ ul
   0%
     stroke-dashoffset: 2000px
     stroke-width: 0.3
+
   100%
     stroke-dashoffset: 0px
     stroke-width: 0.7
+
 
 section#loader
   width: 100%
@@ -31,16 +33,13 @@ section#loader
   position: relative
   transition: height 1s ease-out
   z-index: 0
-
   #frame
     width: 70vh
     height: 70vh
     position: relative
     z-index: 1
-
     .inactive
       display: none
-
     #box
       width: 100%
       height: 100%
@@ -71,6 +70,21 @@ section#loader
         right: 4%
         background: url(../img/realmsoffiction.png) no-repeat right
         background-size: contain
+      #date
+        position: relative
+        display: flex
+        /* flex-direction: column;
+        justify-content: center
+        /* align-self: center;
+        top: 86%
+        /* margin: auto auto;
+        /* margin-left: 28%;
+        /*margin-top: .3rem;
+        height: auto
+        width: 100%
+        font-size: 2.5vh
+        /* right: 4%;
+        font-family: Azo Sans Regular
       #o17
         position: absolute
         left: 94%
@@ -85,28 +99,84 @@ section#loader
       *
         stroke-dasharray: 2000px
         stroke-dashoffset: 2000px
-        // animation: 5s lineani cubic-bezier(.7,.3,0,1) both
         stroke: #ffffff
       .first
-        transition: 4s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition: 4s stroke-dashoffset cubic-bezier(0.7, 0.3, 0, 1)
         transition-delay: 0s
       .second
-        transition: 5s stroke-dashoffset cubic-bezier(0.7,0.3,0,1)
+        transition: 5s stroke-dashoffset cubic-bezier(0.7, 0.3, 0, 1)
         transition-delay: 2s
-
-      @for $i from 1 through 6
-        $t: (2s + 0.75*$i)
-        $d: (0s + $i*0.2s)
-        .first:nth-of-type(#{$i})
-          animation-delay: $d
-          animation-duration: $t
-
-      @for $i from 1 through 17
-        $t: (2s + 0.75*$i)
-        $d: (1s + $i*0.2)
-        .second:nth-of-type(#{$i})
-          animation-delay: $d
-          animation-duration: $t
+      .first
+        &:nth-of-type(1)
+          animation-delay: 0.2s
+          animation-duration: 2.75s
+        &:nth-of-type(2)
+          animation-delay: 0.4s
+          animation-duration: 3.5s
+        &:nth-of-type(3)
+          animation-delay: 0.6s
+          animation-duration: 4.25s
+        &:nth-of-type(4)
+          animation-delay: 0.8s
+          animation-duration: 5s
+        &:nth-of-type(5)
+          animation-delay: 1s
+          animation-duration: 5.75s
+        &:nth-of-type(6)
+          animation-delay: 1.2s
+          animation-duration: 6.5s
+      .second
+        &:nth-of-type(1)
+          animation-delay: 1.2s
+          animation-duration: 2.75s
+        &:nth-of-type(2)
+          animation-delay: 1.4s
+          animation-duration: 3.5s
+        &:nth-of-type(3)
+          animation-delay: 1.6s
+          animation-duration: 4.25s
+        &:nth-of-type(4)
+          animation-delay: 1.8s
+          animation-duration: 5s
+        &:nth-of-type(5)
+          animation-delay: 2s
+          animation-duration: 5.75s
+        &:nth-of-type(6)
+          animation-delay: 2.2s
+          animation-duration: 6.5s
+        &:nth-of-type(7)
+          animation-delay: 2.4s
+          animation-duration: 7.25s
+        &:nth-of-type(8)
+          animation-delay: 2.6s
+          animation-duration: 8s
+        &:nth-of-type(9)
+          animation-delay: 2.8s
+          animation-duration: 8.75s
+        &:nth-of-type(10)
+          animation-delay: 3s
+          animation-duration: 9.5s
+        &:nth-of-type(11)
+          animation-delay: 3.2s
+          animation-duration: 10.25s
+        &:nth-of-type(12)
+          animation-delay: 3.4s
+          animation-duration: 11s
+        &:nth-of-type(13)
+          animation-delay: 3.6s
+          animation-duration: 11.75s
+        &:nth-of-type(14)
+          animation-delay: 3.8s
+          animation-duration: 12.5s
+        &:nth-of-type(15)
+          animation-delay: 4s
+          animation-duration: 13.25s
+        &:nth-of-type(16)
+          animation-delay: 4.2s
+          animation-duration: 14s
+        &:nth-of-type(17)
+          animation-delay: 4.4s
+          animation-duration: 14.75s
 
 #Events
   position: absolute
@@ -121,10 +191,10 @@ section#loader
   white-space: nowrap
   transition: 0.4s all ease-in
   z-index: 1
-#Events:hover
-  background: #FC0C84
-  color: #fff
-  cursor: pointer
+  &:hover
+    background: #FC0C84
+    color: #fff
+    cursor: pointer
 
 #Landing
   display: flex
@@ -160,21 +230,20 @@ section#loader
           text-transform: uppercase
           font-size: 1rem
           position: relative
-        li:hover
-          cursor: pointer
-        li::after
-          position: absolute
-          left: 50%
-          top: calc(50% + 15px)
-          content: ''
-          width: 0
-          height: 1px
-          background: #fff
-          transform: translateX(-50%)
-          transition: 0.3s all cubic-bezier(1,0,0,1)
-        li:hover::after
-          width: 100%
-
+          &:hover
+            cursor: pointer
+          &::after
+            position: absolute
+            left: 50%
+            top: calc(50% + 15px)
+            content: ""
+            width: 0
+            height: 1px
+            background: #fff
+            transform: translateX(-50%)
+            transition: 0.3s all cubic-bezier(1, 0, 0, 1)
+          &:hover::after
+            width: 100%
       #Register
         margin-right: 30px
         margin-top: 30px
@@ -185,10 +254,10 @@ section#loader
         color: #fff
         transition: 0.4s all ease-in
         cursor: pointer
-      #Register:hover
-        background: #FFE14A
-        color: #262626
-        cursor: pointer
+        &:hover
+          background: #FFE14A
+          color: #262626
+          cursor: pointer
   footer
     display: flex
     flex-direction: column-reverse
@@ -214,30 +283,29 @@ section#loader
           font-size: 0.8em
           align-self: center
           position: relative
-        li:hover
-          cursor: pointer
-        li::after
-          position: absolute
-          left: 50%
-          top: calc(50% + 15px)
-          content: ''
-          width: 0
-          height: 1px
-          background: #282828
-          transform: translateX(-50%)
-          transition: 0.3s all cubic-bezier(1,0,0,1)
-        li:hover::after
-          // width: 58%
+          &:hover
+            cursor: pointer
+          &::after
+            position: absolute
+            left: 50%
+            top: calc(50% + 15px)
+            content: ""
+            width: 0
+            height: 1px
+            background: #282828
+            transform: translateX(-50%)
+            transition: 0.3s all cubic-bezier(1, 0, 0, 1)
       #Aftermovie
         padding-right: 20px
         height: 100%
-        display: flex
+        display: none
         align-items: center
         justify-content: flex-end
         flex: 1
         font-size: 0.8em
         white-space: nowrap
         color: #262626
+
 footer > ul
   height: 80px
   display: flex
@@ -248,16 +316,16 @@ footer > ul
     background-size: contain
     background-position: center
     background-repeat: no-repeat
-    cursor: pointer 
-  li.facebook
-    background-image: url(../img/facebook.svg)
-  li.twitter
-    background-image: url(../img/twitter.svg)
-  li.youtube
-    background-image: url(../img/youtube.svg)
-  li.instagram, li.github
-    background-image: url(../img/Instagram.svg)
-    background-size: 70%
+    cursor: pointer
+    &.facebook
+      background-image: url(../img/facebook.svg)
+    &.twitter
+      background-image: url(../img/twitter.svg)
+    &.youtube
+      background-image: url(../img/youtube.svg)
+    &.instagram, &.github
+      background-image: url(../img/Instagram.svg)
+      background-size: 70%
 
 section#ham_menu
   display: flex
@@ -270,46 +338,45 @@ section#ham_menu
   height: 100%
   background: #fff url(../img/grid.png)
   transform: translateX(0)
-  transition: 0.5s transform cubic-bezier(1,0,0,1)
+  transition: 0.5s transform cubic-bezier(1, 0, 0, 1)
   z-index: 3
   background-size: cover
-  // box-shadow: 0 0 100px #333333 // CHANGE!!
   font-family: "Azo Sans Regular"
-  aside.head
-    height: 80px
-    display: flex
-    justify-content: space-between
-    padding: 0 1.5em 0 25px
-    margin: 10px 5px
-    span
-      height: 1.5em
-      font-size: 1.5em
-      align-self: center
-      min-width: 1.5em
-      padding-top: 6px
-    span.arrow
-      background: url(../img/arrow_back.png) no-repeat center
-      background-size: contain
-      height: 1em
-      transition: 0.2s transform cubic-bezier(1,0,0,1)
-      transform-origin: center
-    span.arrow:hover
-      transform: rotate(360deg)
-      cursor: pointer
-  aside.nav
-    display: flex
-    flex-direction: column
-    margin: 10px 5px
-    overflow-y: auto
-    div
-      margin: 15px 0
+  aside
+    &.head
+      height: 80px
+      display: flex
+      justify-content: space-between
+      padding: 0 1.5em 0 25px
+      margin: 10px 5px
+      span
+        height: 1.5em
+        font-size: 1.5em
+        align-self: center
+        min-width: 1.5em
+        padding-top: 6px
+        &.arrow
+          background: url(../img/arrow_back.png) no-repeat center
+          background-size: contain
+          height: 1em
+          transition: 0.2s transform cubic-bezier(1, 0, 0, 1)
+          transform-origin: center
+          &:hover
+            transform: rotate(360deg)
+            cursor: pointer
+    &.nav
       display: flex
       flex-direction: column
-      span
-        padding: 8px 30px
-
-section#ham_menu.inactive
-  transform: translateX(-100%)
+      margin: 10px 5px
+      overflow-y: auto
+      div
+        margin: 15px 0
+        display: flex
+        flex-direction: column
+        span
+          padding: 8px 30px
+  &.inactive
+    transform: translateX(-100%)
 
 #ham_wrapper
   position: absolute
@@ -323,42 +390,173 @@ section#ham_menu.inactive
 
 #loader
   overflow: hidden
+  &.loaded
+    height: calc(100% - 70px)
 
-#loader.loaded
-  height: calc(100% - 70px)
+body #box div
+  &:nth-child(1)
+    transition: all 0.34s 0.22s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.34s 0.02s
+  &:nth-child(2)
+    transition: all 0.38s 0.24s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.38s 0.04s
+  &:nth-child(3)
+    transition: all 0.42s 0.26s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.42s 0.06s
+  &:nth-child(4)
+    transition: all 0.46s 0.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.46s 0.08s
+  &:nth-child(5)
+    transition: all 0.5s 0.3s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.5s 0.1s
+  &:nth-child(6)
+    transition: all 0.54s 0.32s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.54s 0.12s
+  &:nth-child(7)
+    transition: all 0.58s 0.34s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.58s 0.14s
+  &:nth-child(8)
+    transition: all 0.62s 0.36s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.62s 0.16s
+  &:nth-child(9)
+    transition: all 0.66s 0.38s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.66s 0.18s
+  &:nth-child(10)
+    transition: all 0.7s 0.4s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.7s 0.2s
+  &:nth-child(11)
+    transition: all 0.74s 0.42s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.74s 0.22s
+  &:nth-child(12)
+    transition: all 0.78s 0.44s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.78s 0.24s
+  &:nth-child(13)
+    transition: all 0.82s 0.46s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.82s 0.26s
+  &:nth-child(14)
+    transition: all 0.86s 0.48s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.86s 0.28s
+  &:nth-child(15)
+    transition: all 0.9s 0.5s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.9s 0.3s
+  &:nth-child(16)
+    transition: all 0.94s 0.52s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.94s 0.32s
+  &:nth-child(17)
+    transition: all 0.98s 0.54s cubic-bezier(0.7, 0.3, 0, 1), background-color 0.98s 0.34s
+  &:nth-child(18)
+    transition: all 1.02s 0.56s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.02s 0.36s
+  &:nth-child(19)
+    transition: all 1.06s 0.58s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.06s 0.38s
+  &:nth-child(20)
+    transition: all 1.1s 0.6s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.1s 0.4s
+  &:nth-child(21)
+    transition: all 1.14s 0.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.14s 0.42s
+  &:nth-child(22)
+    transition: all 1.18s 0.64s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.18s 0.44s
+  &:nth-child(23)
+    transition: all 1.22s 0.66s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.22s 0.46s
+  &:nth-child(24)
+    transition: all 1.26s 0.68s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.26s 0.48s
+  &:nth-child(25)
+    transition: all 1.3s 0.7s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.3s 0.5s
+  &:nth-child(26)
+    transition: all 1.34s 0.72s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.34s 0.52s
+  &:nth-child(27)
+    transition: all 1.38s 0.74s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.38s 0.54s
+  &:nth-child(28)
+    transition: all 1.42s 0.76s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.42s 0.56s
+  &:nth-child(29)
+    transition: all 1.46s 0.78s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.46s 0.58s
+  &:nth-child(30)
+    transition: all 1.5s 0.8s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.5s 0.6s
+  &:nth-child(31)
+    transition: all 1.54s 0.82s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.54s 0.62s
+  &:nth-child(32)
+    transition: all 1.58s 0.84s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.58s 0.64s
+  &:nth-child(33)
+    transition: all 1.62s 0.86s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.62s 0.66s
+  &:nth-child(34)
+    transition: all 1.66s 0.88s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.66s 0.68s
+  &:nth-child(35)
+    transition: all 1.7s 0.9s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.7s 0.7s
+  &:nth-child(36)
+    transition: all 1.74s 0.92s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.74s 0.72s
+  &:nth-child(37)
+    transition: all 1.78s 0.94s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.78s 0.74s
+  &:nth-child(38)
+    transition: all 1.82s 0.96s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.82s 0.76s
+  &:nth-child(39)
+    transition: all 1.86s 0.98s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.86s 0.78s
+  &:nth-child(40)
+    transition: all 1.9s 1s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.9s 0.8s
+  &:nth-child(41)
+    transition: all 1.94s 1.02s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.94s 0.82s
+  &:nth-child(42)
+    transition: all 1.98s 1.04s cubic-bezier(0.7, 0.3, 0, 1), background-color 1.98s 0.84s
+  &:nth-child(43)
+    transition: all 2.02s 1.06s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.02s 0.86s
+  &:nth-child(44)
+    transition: all 2.06s 1.08s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.06s 0.88s
+  &:nth-child(45)
+    transition: all 2.1s 1.1s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.1s 0.9s
+  &:nth-child(46)
+    transition: all 2.14s 1.12s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.14s 0.92s
+  &:nth-child(47)
+    transition: all 2.18s 1.14s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.18s 0.94s
+  &:nth-child(48)
+    transition: all 2.22s 1.16s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.22s 0.96s
+  &:nth-child(49)
+    transition: all 2.26s 1.18s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.26s 0.98s
+  &:nth-child(50)
+    transition: all 2.3s 1.2s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.3s 1s
+  &:nth-child(51)
+    transition: all 2.34s 1.22s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.34s 1.02s
+  &:nth-child(52)
+    transition: all 2.38s 1.24s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.38s 1.04s
+  &:nth-child(53)
+    transition: all 2.42s 1.26s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.42s 1.06s
+  &:nth-child(54)
+    transition: all 2.46s 1.28s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.46s 1.08s
+  &:nth-child(55)
+    transition: all 2.5s 1.3s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.5s 1.1s
+  &:nth-child(56)
+    transition: all 2.54s 1.32s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.54s 1.12s
+  &:nth-child(57)
+    transition: all 2.58s 1.34s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.58s 1.14s
+  &:nth-child(58)
+    transition: all 2.62s 1.36s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.62s 1.16s
+  &:nth-child(59)
+    transition: all 2.66s 1.38s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.66s 1.18s
+  &:nth-child(60)
+    transition: all 2.7s 1.4s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.7s 1.2s
+  &:nth-child(61)
+    transition: all 2.74s 1.42s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.74s 1.22s
+  &:nth-child(62)
+    transition: all 2.78s 1.44s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.78s 1.24s
+  &:nth-child(63)
+    transition: all 2.82s 1.46s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.82s 1.26s
+  &:nth-child(64)
+    transition: all 2.86s 1.48s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.86s 1.28s
+  &:nth-child(65)
+    transition: all 2.9s 1.5s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.9s 1.3s
+  &:nth-child(66)
+    transition: all 2.94s 1.52s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.94s 1.32s
+  &:nth-child(67)
+    transition: all 2.98s 1.54s cubic-bezier(0.7, 0.3, 0, 1), background-color 2.98s 1.34s
+  &:nth-child(68)
+    transition: all 3.02s 1.56s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.02s 1.36s
+  &:nth-child(69)
+    transition: all 3.06s 1.58s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.06s 1.38s
+  &:nth-child(70)
+    transition: all 3.1s 1.6s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.1s 1.4s
+  &:nth-child(71)
+    transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s
 
-$fluidpolygons: .7,.3,0,1
-body #box
-  @for $i from 1 through 71
-
-    $s: ($i*0.04+0.3s)
-    $t: ($i*0.02s+0.2s)
-    $ct: ($i*0.02s)
-
-    div:nth-child(#{$i})
-      transition: all $s $t cubic-bezier($fluidpolygons), background-color $s $ct
 #dotanim
   position: absolute
   top: 5%
   left: 0
   background: url(../anim.svg)
   height: 150px
-  width: 18vw
+  width: 16vw
   background-size: cover
-
 
 #dotanim2
   position: absolute
   top: 45%
   right: 0
-  margin-right: -40px
+  margin-right: -30px
   background: url(../anim.svg)
   height: 4vh
   width: 25vh
   transform: rotate(90deg)
   background-size: cover
   background-position: 0% 20%
-
 
 #lineani1
   position: absolute
@@ -435,15 +633,15 @@ body #box
       width: 50px
       background: url(../img/close_white.svg) no-repeat center
       background-size: contain
-      transition: 0.3s transform cubic-bezier(1,0,0,1)
-    #back_to_landing:hover
-      transform: rotate(360deg)
+      transition: 0.3s transform cubic-bezier(1, 0, 0, 1)
+      &:hover
+        transform: rotate(360deg)
   #item_content
     flex: 1
     margin-top: 30px
     overflow-y: auto
 
-#contacts,#about,#dev
+#contacts, #about, #dev
   display: none
 
 #events
@@ -451,17 +649,17 @@ body #box
   top: 0
   left: 0
   display: block
-  transition: 0.4s top cubic-bezier(0.7,0.3,0,1), 0.4s height cubic-bezier(0.7,0.3,0,1)
-
-#events.inactive
-  top: 100%
-  display: none
+  transition: 0.4s top cubic-bezier(0.7, 0.3, 0, 1), 0.4s height cubic-bezier(0.7, 0.3, 0, 1)
+  &.inactive
+    top: 100%
+    display: none
 
 #abouttext
   color: #ffffff
   text-align: justify
   font-family: "Azo Sans Regular"
   font-size: 1.4rem
+  padding: 1em
 
 #item.inactive
   opacity: 0
@@ -473,10 +671,9 @@ body #box
   background: url(../img/hamburger.svg) center no-repeat
   display: none
   padding-left: 40px
-  transition: 0.2s transform cubic-bezier(1,0,0,1)
-#Landing header nav #ham:hover
-  // transform: scale(1.2)
-  cursor: pointer
+  transition: 0.2s transform cubic-bezier(1, 0, 0, 1)
+  &:hover
+    cursor: pointer
 
 #tilt
   background: #2E2E2E
@@ -485,28 +682,46 @@ body #box
   left: 50%
   width: 100%
   height: 100%
-  transition: 0.7s background cubic-bezier(1,0,0,1)
+  transition: 0.7s background cubic-bezier(1, 0, 0, 1)
   transform: skew(-14deg)
-#tilt.inactive
-  background: transparent
+  &.inactive
+    background: transparent
 
 @media all and (orientation: portrait)
   section#loader #frame
     width: calc(95vw - 20px)
     height: calc(95vw - 20px)
-  section#loader #frame #box #realmsOfFiction
-    background-position: center
-  section#loader #frame #box #o17
-    width: 30px
-    height: 30px
-    top: 35%
+    #box
+      #realmsOfFiction
+        background-position: center
+      #o17
+        width: 30px
+        height: 30px
+        top: 35%
   footer > ul
     height: 45px
-  footer > ul li
-    width: 50px
-    height: 40px
-  section#loader #frame #box #realmsOfFiction
-    height: 25px
+    li
+      width: 50px
+      height: 40px
+  section#loader #frame #box
+    #realmsOfFiction
+      height: 25px
+    #date
+      position: relative
+      display: flex
+      /* flex-direction: column;
+      justify-content: center
+      /* align-self: center;
+      top: 86%
+      /* margin: auto auto;
+      /* margin-left: 28%;
+      margin-top: .3rem
+      height: auto
+      width: 100%
+      font-size: 1rem
+      /* right: 4%;
+      font-family: Azo Sans Regular
+      /* background-color: red;
   #Landing header nav #Register
     margin-right: 20px
   section#loader #frame #box #realmsOfFiction
@@ -521,24 +736,28 @@ body #box
     display: none
 
 @media all and (max-width: 1050px)
-  #Landing footer nav ul li
-    font-size: 0.7em
-    padding: 0 15px
-  #Landing footer nav #Aftermovie
-    font-size: 0.7em
+  #Landing footer nav
+    ul li
+      font-size: 0.7em
+      padding: 0 15px
+    #Aftermovie
+      font-size: 0.7em
 
 @media all and (max-width: 790px)
-  #Landing footer nav, #Landing header nav ul
-    display: none // CHANGE!! ADD FOOTER TOO
+  #Landing
+    footer nav, header nav ul
+      display: none
   footer > ul
     align-self: center
     margin-bottom: 20px
   #Events
-    top: 77% // CHANGE!!
-  #Events, #Landing header nav #Register
+    top: 77%
     font-size: 1.2em
-  #Landing header nav #ham
-    display: block
+  #Landing header nav
+    #Register
+      font-size: 1.2em
+    #ham
+      display: block
   #item
     padding: 30px 40px
 
@@ -556,13 +775,17 @@ body #box
 
 @keyframes flow
   0%
-    background-color: rgba(255,255,255,0)
+    background-color: rgba(255, 255, 255, 0)
+
   30%
-    background-color: rgba(255,255,255,.47)
+    background-color: rgba(255, 255, 255, 0.47)
+
   66%
-    background-color: rgba(255,255,255,.1)
+    background-color: rgba(255, 255, 255, 0.1)
+
   100%
-    background-color: rgba(255,255,255,0)
+    background-color: rgba(255, 255, 255, 0)
+
 
 body #box2
   display: none
@@ -575,22 +798,162 @@ body #box2
     position: absolute
     width: 100%
     height: 100%
-
-body #box2
-  div
     animation: 1s flow infinite
     opacity: 0.1
-
-body #box2
-  @for $i from 1 through 70
-
-    $ct: ($i*0.02s)
-
-    div:nth-child(#{$i})
-      animation-delay: $ct
+    &:nth-child(1)
+      animation-delay: 0.02s
+    &:nth-child(2)
+      animation-delay: 0.04s
+    &:nth-child(3)
+      animation-delay: 0.06s
+    &:nth-child(4)
+      animation-delay: 0.08s
+    &:nth-child(5)
+      animation-delay: 0.1s
+    &:nth-child(6)
+      animation-delay: 0.12s
+    &:nth-child(7)
+      animation-delay: 0.14s
+    &:nth-child(8)
+      animation-delay: 0.16s
+    &:nth-child(9)
+      animation-delay: 0.18s
+    &:nth-child(10)
+      animation-delay: 0.2s
+    &:nth-child(11)
+      animation-delay: 0.22s
+    &:nth-child(12)
+      animation-delay: 0.24s
+    &:nth-child(13)
+      animation-delay: 0.26s
+    &:nth-child(14)
+      animation-delay: 0.28s
+    &:nth-child(15)
+      animation-delay: 0.3s
+    &:nth-child(16)
+      animation-delay: 0.32s
+    &:nth-child(17)
+      animation-delay: 0.34s
+    &:nth-child(18)
+      animation-delay: 0.36s
+    &:nth-child(19)
+      animation-delay: 0.38s
+    &:nth-child(20)
+      animation-delay: 0.4s
+    &:nth-child(21)
+      animation-delay: 0.42s
+    &:nth-child(22)
+      animation-delay: 0.44s
+    &:nth-child(23)
+      animation-delay: 0.46s
+    &:nth-child(24)
+      animation-delay: 0.48s
+    &:nth-child(25)
+      animation-delay: 0.5s
+    &:nth-child(26)
+      animation-delay: 0.52s
+    &:nth-child(27)
+      animation-delay: 0.54s
+    &:nth-child(28)
+      animation-delay: 0.56s
+    &:nth-child(29)
+      animation-delay: 0.58s
+    &:nth-child(30)
+      animation-delay: 0.6s
+    &:nth-child(31)
+      animation-delay: 0.62s
+    &:nth-child(32)
+      animation-delay: 0.64s
+    &:nth-child(33)
+      animation-delay: 0.66s
+    &:nth-child(34)
+      animation-delay: 0.68s
+    &:nth-child(35)
+      animation-delay: 0.7s
+    &:nth-child(36)
+      animation-delay: 0.72s
+    &:nth-child(37)
+      animation-delay: 0.74s
+    &:nth-child(38)
+      animation-delay: 0.76s
+    &:nth-child(39)
+      animation-delay: 0.78s
+    &:nth-child(40)
+      animation-delay: 0.8s
+    &:nth-child(41)
+      animation-delay: 0.82s
+    &:nth-child(42)
+      animation-delay: 0.84s
+    &:nth-child(43)
+      animation-delay: 0.86s
+    &:nth-child(44)
+      animation-delay: 0.88s
+    &:nth-child(45)
+      animation-delay: 0.9s
+    &:nth-child(46)
+      animation-delay: 0.92s
+    &:nth-child(47)
+      animation-delay: 0.94s
+    &:nth-child(48)
+      animation-delay: 0.96s
+    &:nth-child(49)
+      animation-delay: 0.98s
+    &:nth-child(50)
+      animation-delay: 1s
+    &:nth-child(51)
+      animation-delay: 1.02s
+    &:nth-child(52)
+      animation-delay: 1.04s
+    &:nth-child(53)
+      animation-delay: 1.06s
+    &:nth-child(54)
+      animation-delay: 1.08s
+    &:nth-child(55)
+      animation-delay: 1.1s
+    &:nth-child(56)
+      animation-delay: 1.12s
+    &:nth-child(57)
+      animation-delay: 1.14s
+    &:nth-child(58)
+      animation-delay: 1.16s
+    &:nth-child(59)
+      animation-delay: 1.18s
+    &:nth-child(60)
+      animation-delay: 1.2s
+    &:nth-child(61)
+      animation-delay: 1.22s
+    &:nth-child(62)
+      animation-delay: 1.24s
+    &:nth-child(63)
+      animation-delay: 1.26s
+    &:nth-child(64)
+      animation-delay: 1.28s
+    &:nth-child(65)
+      animation-delay: 1.3s
+    &:nth-child(66)
+      animation-delay: 1.32s
+    &:nth-child(67)
+      animation-delay: 1.34s
+    &:nth-child(68)
+      animation-delay: 1.36s
+    &:nth-child(69)
+      animation-delay: 1.38s
+    &:nth-child(70)
+      animation-delay: 1.4s
 
 @media all and (orientation: landscape) and (max-height: 500px)
   footer > ul
     height: 40px
   #Events
     top: 70%
+
+@media all and (orientation: portrait) and (min-width: 551px)
+  section#loader #frame #box #date
+    margin-top: -3vh
+
+@media all and (orientation: landscape) and (max-height: 400px)
+  section#loader #frame #box #date
+    padding: 2vh
+
+
+/*# sourceMappingURL=loader.css.map
