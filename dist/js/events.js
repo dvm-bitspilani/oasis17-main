@@ -130,6 +130,8 @@ function hide()
 ViewEvent.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "0%";
   close_event.style.display = "block";
+
+  setTimeout(()=>{close_event.style.display = "flex";}, 10);
 });
 close_event.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "100%";
