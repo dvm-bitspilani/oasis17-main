@@ -381,11 +381,11 @@
           url: "css/events_lightbox.css",
           ext: "css"
         },
-        // {
-        //   type: "static",
-        //   url: "css/lightbox.css",
-        //   ext: "css"
-        // },
+        {
+          type: "static",
+          url: "css/lightbox.css",
+          ext: "css"
+        },
         {
           type: "static",
           url: "js/characters.js",
@@ -429,10 +429,10 @@
       // console.log(res);
       if(res.load){
         if(res.ext == "css") {
-          inject(res.data, "style");
+          inject(res.data, "style",null, res.url);
         }
         else if(res.ext == "js") {
-         inject(res.data, "script");
+         inject(res.data, "script",null, res.url);
         }else if(res.ext =="img"){
           
           eval(res.ref).style.background = "url("+res.data+")";
@@ -484,6 +484,7 @@
       if(tag != "null")
       {
         var ele = document.createElement(tag);
+        ele.setAttribute('data-url',url)
         document.head.appendChild(ele);
         ele.innerHTML = data;
       }else{

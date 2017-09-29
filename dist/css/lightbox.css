@@ -1,6 +1,6 @@
 @font-face {
   font-family: "bonnr";
-  src: url("../fonts/BONN/bonnr.ttf") format("truetype"); }
+  src: url("fonts/BONN/bonnr.ttf") format("truetype"); }
 @keyframes backrotate {
   0% {
     transform: rotate(0deg); }
@@ -30,12 +30,12 @@
 .show {
   display: block; }
 
-/* .logo {
+.logo {
   z-index: 11; }
 
 * {
   padding: 0px;
-  margin: 0px; } */
+  margin: 0px; }
 
 .lightbox {
   display: none;
@@ -109,15 +109,16 @@
   width: auto;
   margin: auto;
   text-align: center;
-  padding-top: 8vh !important;
   margin-top: 7vh !important;
   letter-spacing: 0.3em;
   height: 80vh;
   overflow-y: scroll; }
   .evtcont .evtname {
+    padding: 8vh 0 !important;
     list-style: none;
     font-size: 1.4rem;
-    z-index: 20; }
+    z-index: 20;
+    height: fit-content; }
     .evtcont .evtname #a p {
       color: #FD9372; }
     .evtcont .evtname #b p {
@@ -165,12 +166,12 @@
 
 .dummy {
   position: absolute;
-  top: 80vh;
-  height: 22vh;
+  top: 72vh;
+  height: 28vh;
   left: 0;
   right: 0;
   margin-top: -2vh;
-  background: linear-gradient(transparent, #fafafa 46%);
+  background: linear-gradient(transparent, #fafafa 42%);
   z-index: 100; }
 
 .evtcont_info {

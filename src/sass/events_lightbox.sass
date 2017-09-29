@@ -52,13 +52,13 @@
   align-items: center
   justify-content: center
   opacity: 1
-  top: 7vh
+  // top: 7vh
   height: 12vh
   width: 100%
   padding-right: 0
   z-index: 1
   padding-top: 9vh
-  background: linear-gradient(#fafafa,transparent)
+  background: linear-gradient(#fafafa 50%,transparent)
 .crosslink
   position: relative
   width: 100%
@@ -101,6 +101,7 @@ a.crosslink:hover #clk
   top: 0
   left: 0
 .evtcont
+  z-index: 0
   padding: 0
   position: relative
   width: 100%
@@ -128,7 +129,7 @@ a.crosslink:hover #clk
   list-style: none
   margin-top: 4vh
   width: 100vw
-  height: 100vh
+  // height: 100vh
 #info
   display: flex
   justify-content: flex-start
@@ -161,7 +162,13 @@ a.crosslink:hover #clk
   margin-bottom: 1.3rem
   font-size: 2.7em
   background-size: 100px 500px
-  font-color: #373839
+  color: #373839
+  width: fit-content
+  margin: 0 auto !important
+  border-bottom: 1px solid #777
+@media only screen and (max-width:750px)
+  .evt .name
+    font-size: 2em
 .evt p
   font-size: 1.7em
   margin-top: 2vh

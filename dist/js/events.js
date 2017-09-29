@@ -12,6 +12,7 @@ var Box = document.querySelector('#Box')
 var background = document.querySelector('#events_wrapper');
 var tagline = document.querySelector('#TagLine')
 var eventname = document.querySelector('#EventName')
+var lightbox_open_status = false;
 var characters = [
   "Johnny","Deadpool","Batman","Ezio","Goku",
   "Rick","Minion","Pikachu",
@@ -43,7 +44,7 @@ function get(dir) {
 }
 
 function changeChar(dir){
-  console.log("called");
+  // console.log("called");
   var direction = (dir==-1)?"rtl":"ltr";
   console.log(direction)
   var character = characters[get(dir)];
@@ -57,16 +58,17 @@ function changeChar(dir){
   }
   eventname.innerHTML = "<span>"+props.eventname+"</span>";
   var string = "";
-  console.log(character, event_names[character], event_names)
+  // console.log(character, event_names[character], event_names)
   for(var i = 0; i< event_names[character].length; i++){
-    string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1><p id='bottom'></p></li>";
-    console.log(string);
+    string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1></li>";
+    // console.log(string);
   }
-  console.log(eventnames__ , string )
+  // console.log(eventnames__ , string )
   eventnames__.innerHTML = string;
 }
 
 document.body.onkeydown = function(e) {
+  if(lightbox_open_status)return;
   if(e.keyCode == 37)
     changeChar(-1);
   else if(e.keyCode == 39)
@@ -97,7 +99,7 @@ document.body.addEventListener('touchmove', function(e){
 });
 document.body.addEventListener('click',function(e){
   var className = e.target.className;
-  console.log(className);
+  // console.log(className);
   if(className == "change next")
     changeChar(1);
   else if(className == "change prev")
@@ -130,10 +132,13 @@ function hide()
 ViewEvent.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "0%";
   close_event.style.display = "block";
-
+  document.getElementsByClassName('lightbox')[0].style.display = "block";
+  lightbox_open_status = true;
   setTimeout(()=>{close_event.style.display = "flex";}, 10);
 });
 close_event.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "100%";
+  document.getElementsByClassName('lightbox')[0].style.display = "none"
+  lightbox_open_status = false;
   close_event.style.display = "none";
 });
