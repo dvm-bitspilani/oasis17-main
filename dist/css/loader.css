@@ -934,9 +934,22 @@ body #box2 {
 @media all and (orientation: portrait) and (min-width: 551px) {
   section#loader #frame #box #date {
     margin-top: -3vh; } }
-@media all and (orientation: landscape) and (max-height: 400px) {
+@media all and (orientation: landscape) and (max-height: 599px) {
   section#loader #frame #box #date {
-    padding: 2vh; } }
+    padding: 2.5vh; }
+
+  #Events {
+    margin-top: 2.5vh; }
+
+  #dotanim {
+    margin-top: 3vh;
+    width: 20vw; } }
+@media all and (max-height: 400px) {
+  #dotanim2 {
+    display: none; } }
+@media all and (max-height: 200px) {
+  #dotanim {
+    display: none; } }
 li#ViewEvent {
   opacity: 0.75;
   transition: all 1s linear; }
@@ -947,12 +960,11 @@ li#ViewEvent {
 #Landing header nav #Register:hover, label {
   cursor: pointer; }
 
-div.change.prev:hover {
+div.change.prev:hover, div.change.next:hover {
   cursor: pointer; }
-
-div.change.next:hover {
-  cursor: pointer; }
-
+#events_wrapper section #Polys{
+  cursor: default;
+}
 /*# sourceMappingURL=loader.css.map */
 
 /*# sourceMappingURL=loader.css.map */

@@ -9,10 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; }
-  #events_wrapper:hover{
-    cursor: pointer;
-
-  }    
+     
   #events_wrapper .change {
     width: 75px;
     height: 75px;
