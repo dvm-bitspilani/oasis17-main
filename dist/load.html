@@ -576,7 +576,9 @@
       // ham_menu.className = "inactive";
       setTimeout(function(){
         item.className="";
-        window.__fadeIn__(item);
+        window.__fadeIn__(item, function(){
+          item.style.display = "flex";
+        });
         item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
         item_title.innerHTML = ref;
       },time);
