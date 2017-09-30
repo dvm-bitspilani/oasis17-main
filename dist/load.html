@@ -236,47 +236,18 @@
               </div>
               <div class="evtcont">
                   <ul class="evtname" id="eventnames__">
-                      <li id="a" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="b" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="c" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="d" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="e" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p id="">brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="f" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="f" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
-                      <li id="f" class="evt">
-                          <h1 class=" name dust">EVENT NAME</h1>
-                          <p>brief</p>
-                          <p id="bottom"></p>
-                      </li>
+                      
                   </ul>
+                  <div id="details">
+                    <div>
+                      <div class="heading">Exposure</div>
+                      <div class="contact"><span>Contacts</span><div><div><span>Name1</span><span>contact1</span></div><div><span>Name2</span><span>contact2</span></div></div></div>
+                    </div>
+                    <div>
+                      <div id="about_info"><div>ABOUT</div><div class="info_content open_info">Coming Soon</div></div>
+                      <div id="rules_info"><div>RULES</div><div class="info_content">Coming Soon</div></div>
+                    </div>
+                  </div>
               </div>
               <div class="dummy"></div>
           </div>
@@ -403,7 +374,7 @@
     <script>
     var loadedData = [];
     // "wss://bits-oasis.org/2017maintest"
-    var exampleSocket = new WebSocket("ws://127.0.0.1:3000", "echo-protocol");
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [

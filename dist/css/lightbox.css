@@ -181,4 +181,40 @@
   height: 100vh;
   text-align: center; }
 
+#details {
+  display: none;
+  margin: 8vh 0;
+  min-width: 80vw;
+  height: fit-content; }
+  #details .heading {
+    font-size: 3em;
+    padding: 30px; }
+  #details .contact {
+    padding: 20px; }
+    #details .contact > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      #details .contact > div div {
+        margin: 10px; }
+      #details .contact > div span {
+        display: block; }
+  #details #about_info, #details #rules_info {
+    text-align: left;
+    margin: 5px; }
+    #details #about_info div:nth-of-type(1), #details #rules_info div:nth-of-type(1) {
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #999;
+      border-radius: 3px; }
+  #details .info_content {
+    height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    background: #eee;
+    transition: all 0.5s linear; }
+  #details .open_info {
+    padding: 20px;
+    height: fit-content; }
+
 /*# sourceMappingURL=lightbox.css.map */
