@@ -18,6 +18,7 @@ var characters = [
   "Rick","Minion","Pikachu",
   "Dexter","V","Harry"
 ];
+window.characters = characters;
 var event_names = {
   "Johnny":["Choreo", "Dessert Duel" ,"Razzmataaz", "Street Dance", "Tandav"],
   "Deadpool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
@@ -66,7 +67,7 @@ function changeChar(dir){
   // console.log(eventnames__ , string )
   eventnames__.innerHTML = string;
 }
-
+window.changeChar = changeChar;
 document.body.onkeydown = function(e) {
   if(lightbox_open_status)return;
   if(e.keyCode == 37)

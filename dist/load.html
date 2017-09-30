@@ -218,7 +218,7 @@
             <nav>
               <ul>
                 <li id="ViewEvent">VIEW EVENTS</li>
-                <li style="display: none">ALL CATEGORIES</li>
+                <li id="viewAllCategories" style="cursor: pointer;">ALL CATEGORIES</li>
               </ul>
               <div></div>
             </nav>
@@ -331,6 +331,62 @@
           Oasis ‘17. Bigger than ever.
       </div>
     </div>
+    <div id="allCategories">
+      <div class="close" id="closeAllCategories">
+          <div class="cross">
+                      <a class="crosslink">
+                          <p class="crossbar" id="anticlk"></p>
+                          <p class="crossbar" id="clk"></p>
+                      </a>
+            </div>
+      </div>
+      <div class="display">
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Johnny">DANCE</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Deadpool">ORATORY</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Batman">MISC</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Ezio">FASHION</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Goku">PHOTOGRAPHY</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Rick">MUSIC</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Minion">DRAMA</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Pikachu">FINE ART</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Dexter">ONLINE</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="V">QUIZZING</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Harry">FILMS</div>
+        </div>
+      </div>
+    </div>
 
     <div id="contacts">
       <div id = "contact_wrapper">
@@ -347,7 +403,7 @@
     <script>
     var loadedData = [];
     // "wss://bits-oasis.org/2017maintest"
-    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    var exampleSocket = new WebSocket("ws://127.0.0.1:3000", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
@@ -403,6 +459,11 @@
         },
         {
           type: "static",
+          url: "css/all_categories.css",
+          ext: "css"
+        },
+        {
+          type: "static",
           url: "js/contact.js",
           ext: "js"
         },
@@ -414,6 +475,11 @@
         {
           type: "static",
           url: "js/devs.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/all_categories.js",
           ext: "js"
         }
       ];

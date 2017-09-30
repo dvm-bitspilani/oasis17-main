@@ -1,0 +1,75 @@
+#allCategories {
+  width: 100vw;
+  height: 0vh;
+  background-image: url("img/flex.png");
+  background-color: #fff;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  display: none;
+  z-index: 200;
+  transition: all 1s linear;
+  overflow: hidden;
+  padding: 40px; }
+  #allCategories * {
+    clear: both; }
+  #allCategories .close {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    margin: 40px; }
+  #allCategories .display {
+    width: 80vw;
+    display: flex;
+    margin: 0 5vw;
+    height: 80vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    overflow-y: scroll; }
+    #allCategories .display .event_item {
+      min-width: 200px;
+      height: contain;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      -webkit-justify-content: space-between;
+      justify-content: space-between; }
+      #allCategories .display .event_item .event_item_img {
+        min-width: 200px;
+        min-height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat; }
+      #allCategories .display .event_item .event_item_name {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Bonnbeta";
+        border-top: 1px solid #ddd;
+        padding: 20px; }
+    #allCategories .display .event_item:nth-of-type(1) .event_item_img {
+      background-image: url("img/Johnny.png"); }
+    #allCategories .display .event_item:nth-of-type(2) .event_item_img {
+      background-image: url("img/Deadpool.png"); }
+    #allCategories .display .event_item:nth-of-type(3) .event_item_img {
+      background-image: url("img/Batman.png"); }
+    #allCategories .display .event_item:nth-of-type(4) .event_item_img {
+      background-image: url("img/Ezio.png"); }
+    #allCategories .display .event_item:nth-of-type(5) .event_item_img {
+      background-image: url("img/Goku.png"); }
+    #allCategories .display .event_item:nth-of-type(6) .event_item_img {
+      background-image: url("img/Rick.png"); }
+    #allCategories .display .event_item:nth-of-type(7) .event_item_img {
+      background-image: url("img/Minion.png"); }
+    #allCategories .display .event_item:nth-of-type(8) .event_item_img {
+      background-image: url("img/Pikachu.png"); }
+    #allCategories .display .event_item:nth-of-type(9) .event_item_img {
+      background-image: url("img/Dexter.png"); }
+    #allCategories .display .event_item:nth-of-type(10) .event_item_img {
+      background-image: url("img/V.png"); }
+    #allCategories .display .event_item:nth-of-type(11) .event_item_img {
+      background-image: url("img/Harry.png"); }
+
+/*# sourceMappingURL=all_categories.css.map */

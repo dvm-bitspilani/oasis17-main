@@ -1,0 +1,69 @@
+$list: "Johnny" "Deadpool" "Batman" "Ezio" "Goku" "Rick" "Minion" "Pikachu" "Dexter" "V" "Harry" 
+
+#allCategories
+	width: 100vw
+	height: 0vh
+	background-image: url("img/flex.png")
+	background-color: #fff
+	background-size: cover
+	position: absolute
+	top: 0
+	display: none
+	z-index: 200
+	transition: all 1s linear
+	overflow: hidden 
+	padding: 40px
+	*
+		// border: 1px solid #000
+		clear: both
+		
+	.close
+		position: absolute
+		top: 0 
+		right: 0px
+		width: 50px
+		height: 50px
+		
+		margin: 40px
+		
+	.display
+		width: 80vw
+		display: flex
+		margin: 0 5vw
+		height: 80vh
+		flex-direction: row
+		flex-wrap: wrap
+		-webkit-justify-content: space-around 
+		justify-content: space-around 
+		overflow-y: scroll
+
+		.event_item
+			min-width: 200px
+			height: contain
+			margin: 20px
+			display: flex
+			flex-direction: column
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			
+
+			
+			.event_item_img
+				
+				min-width: 200px
+				min-height: 200px
+				background-size: cover
+				background-repeat: no-repeat
+				
+			.event_item_name
+				text-align: center
+				font-size: 30px
+				font-family: "Bonnbeta"
+				border-top: 1px solid #ddd
+				padding: 20px
+			
+		@each $name in $list
+			$i: index($list, $name)
+				
+			.event_item:nth-of-type(#{$i})	.event_item_img
+				background-image: url("img/#{$name}.png")
