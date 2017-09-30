@@ -241,7 +241,13 @@
                   <div id="details">
                     <div>
                       <div class="heading">Exposure</div>
-                      <div class="contact"><span>Contacts</span><div><div><span>Name1</span><span>contact1</span></div><div><span>Name2</span><span>contact2</span></div></div></div>
+                      <!-- <div class="contact">
+                        <span>Contacts</span>
+                          <div>
+                            <div><span>Name1</span><span>contact1</span></div>
+                            <div><span>Name2</span><span>contact2</span></div>
+                          </div>
+                      </div> -->
                     </div>
                     <div>
                       <div id="about_info"><div>ABOUT</div><div class="info_content open_info">Coming Soon</div></div>
@@ -374,7 +380,7 @@
     <script>
     var loadedData = [];
     // "wss://bits-oasis.org/2017maintest"
-    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    var exampleSocket = new WebSocket("ws://127.0.0.1:3000", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
@@ -431,6 +437,11 @@
         {
           type: "static",
           url: "css/all_categories.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/animations.css",
           ext: "css"
         },
         {
@@ -565,6 +576,7 @@
       // ham_menu.className = "inactive";
       setTimeout(function(){
         item.className="";
+        window.__fadeIn__(item);
         item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
         item_title.innerHTML = ref;
       },time);
@@ -573,10 +585,12 @@
       
       Events.addEventListener('click', function(){
         events.className = "";
+        window.__fadeIn__(events);
       });
 
       close_events.addEventListener('click',function(){
         events.className = "inactive";
+        window.__fadeIn__(events);
       });
 
       function handleResize(){
@@ -633,6 +647,7 @@
 
       back_to_landing.addEventListener("click",function(){
         item.className = "inactive";
+        window.__fadeOut__(item)
         console.log(ham.style.display);
         if(ham.offsetParent!=null) ham.click();
       });

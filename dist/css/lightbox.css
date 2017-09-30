@@ -118,7 +118,8 @@
     list-style: none;
     font-size: 1.4rem;
     z-index: 20;
-    height: fit-content; }
+    height: fit-content;
+    position: absolute; }
     .evtcont .evtname #a p {
       color: #FD9372; }
     .evtcont .evtname #b p {
@@ -185,7 +186,8 @@
   display: none;
   margin: 8vh 0;
   min-width: 80vw;
-  height: fit-content; }
+  height: fit-content;
+  position: absolute; }
   #details .heading {
     font-size: 3em;
     padding: 30px; }

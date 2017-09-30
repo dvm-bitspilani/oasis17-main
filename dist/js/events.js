@@ -135,16 +135,20 @@ function hide()
 ViewEvent.addEventListener("click",function(){
   document.querySelector(".lightbox").style.top = "0%";
   close_event.style.display = "block";
-  document.getElementsByClassName('lightbox')[0].style.display = "block";
+  close_event.style.opacity = 1;
+  fadeIn(document.getElementsByClassName('lightbox')[0]);
   lightbox_open_status = true;
   setTimeout(()=>{close_event.style.display = "flex";}, 10);
 });
 close_event.addEventListener("click",function(){
   if(!accordian_open){
-    document.querySelector(".lightbox").style.top = "100%";
-    document.getElementsByClassName('lightbox')[0].style.display = "none"
+    // document.querySelector(".lightbox").style.top = "100%";
+    // document.getElementsByClassName('lightbox')[0].style.display = "none"
+    fadeOut(document.getElementsByClassName('lightbox')[0], function(){
+      document.querySelector(".lightbox").style.top = "100%";
+    })
     lightbox_open_status = false;
-    close_event.style.display = "none";
+    fadeOut(close_event);
   }else{
     closeAccordian();
   }
@@ -160,18 +164,22 @@ eventnames__.addEventListener('click', function(e){
 
 })
 
+
 function showAccordion(name){
   accordian_open = true;
-  details.style.display = "block";
-  eventnames__.style.display = "none";
+  // details.style.display = "block";
+  // eventnames__.style.display = "none";
   details.getElementsByClassName('heading')[0].innerText = name;
+  fadeOut(eventnames__,fadeIn(details));
+  
   // document.getElementsByClassName('dummy')[0].style.display = "none";
 }
 function closeAccordian(){
   accordian_open = false;
-  details.style.display = "none";
-  eventnames__.style.display = "block";
-  document.getElementsByClassName('dummy')[0].style.display = "block";
+  // details.style.display = "none";
+  // eventnames__.style.display = "block";
+  fadeOut(details, fadeIn(eventnames__));
+  // document.getElementsByClassName('dummy')[0].style.display = "block";
 }
 
 var headers = [about_info, rules_info];
@@ -186,3 +194,44 @@ headers.forEach(function(ele){
     ele.getElementsByClassName('info_content')[0].className = neww + ' open_info'
   })
 })
+
+
+function addClass(el, name){
+  el.className += " "+name;
+}
+function removeClass(el, name){
+  el.className = el.className.replace(" " + name,'');
+}
+
+function fadeIn(el, callback = (()=>{})){
+  // el.style.opacity = 0;
+  removeClass(el, 'fadeOut');
+  removeClass(el, 'fadeIn');
+  el.style.display = "block";
+  addClass(el, 'fadeIn');
+  setTimeout(function(){
+    el.style.opacity = 1;
+    // removeClass(el, 'fadeIn');
+    callback();
+  } , 480)
+}
+
+window.__fadeIn__ = fadeIn;
+
+function fadeOut(el, callback = (()=>{})){
+  // el.style.opacity = 1;
+  removeClass(el, 'fadeIn');
+  removeClass(el, 'fadeOut');
+  addClass(el, 'fadeOut');
+  setTimeout(function(){
+    el.style.opacity = 0;
+    el.style.display = "none";
+    
+    
+    // removeClass(el, 'fadeOut');
+    callback();
+  } , 480)
+
+}
+
+window.__fadeOut__ = fadeOut;

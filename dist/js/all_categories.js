@@ -1,6 +1,7 @@
 viewAllCategories.addEventListener('click', ()=>{
-	allCategories.style.display = "block";
+	
 	allCategories.style.height = "100vh";
+	window.__fadeIn__(allCategories)
 })
 
 closeAllCategories.addEventListener('click', ()=>{
@@ -8,8 +9,10 @@ closeAllCategories.addEventListener('click', ()=>{
 })
 
 function close(){
-	allCategories.style.height = "0vh";
-	allCategories.style.display = "none";
+	
+	window.__fadeOut__(allCategories, function(){
+		allCategories.style.height = "0vh";	
+	});
 }
 
 Array.prototype.slice.call(allCategories.getElementsByClassName("display")[0].children).forEach(function(el, i){
