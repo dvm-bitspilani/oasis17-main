@@ -352,10 +352,10 @@
           <div class="event_item_img"></div>
           <div class="event_item_name" data="V">QUIZZING</div>
         </div>
-        <div class="event_item">
+        <!-- <div class="event_item">
           <div class="event_item_img"></div>
           <div class="event_item_name" data="Harry">FILMS</div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -374,7 +374,7 @@
     <script>
     var loadedData = [];
     // "wss://bits-oasis.org/2017maintest"
-    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    var exampleSocket = new WebSocket("ws://127.0.0.1:3000", "echo-protocol");
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
