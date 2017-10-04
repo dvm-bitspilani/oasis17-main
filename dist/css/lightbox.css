@@ -66,7 +66,8 @@
   position: fixed;
   z-index: 100;
   width: 100vw;
-  background: linear-gradient(#fafafa 50%, transparent); }
+  background: -webkit-linear-gradient(top, #fafafa 50%, rgba(255, 255, 255, 0.001));
+  background: linear-gradient(#fafafa 50%, rgba(255, 255, 255, 0.001)); }
   .crosscont .cross {
     border: 5px solid #373839;
     border-radius: 50%;
@@ -172,7 +173,8 @@
   left: 0;
   right: 0;
   margin-top: -2vh;
-  background: linear-gradient(transparent, #fafafa 42%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.001), #fafafa 42%);
+  background: linear-gradient(rgba(255, 255, 255, 0.001), #fafafa 42%);
   z-index: 100; }
 
 .evtcont_info {
