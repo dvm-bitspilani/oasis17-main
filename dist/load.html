@@ -241,13 +241,13 @@
                   <div id="details">
                     <div>
                       <div class="heading">Exposure</div>
-                      <!-- <div class="contact">
+                      <div class="contact">
                         <span>Contacts</span>
                           <div>
-                            <div><span>Name1</span><span>contact1</span></div>
-                            <div><span>Name2</span><span>contact2</span></div>
+                            <div><span class="contact_name">Name1</span><!-- <span class="contact_number">contact1</span> --></div>
+                            <!-- <div><span>Name2</span><span>contact2</span></div> -->
                           </div>
-                      </div> -->
+                      </div>
                     </div>
                     <div>
                       <div id="about_info"><div>ABOUT</div><div class="info_content open_info">Coming Soon</div></div>
@@ -609,6 +609,8 @@
 
       function loaded() {
         document.querySelector("title").innerHTML = "Oasis 2017";
+        console.clear();
+        console.log('made with love by DVM ...');
         setTimeout(function(){
           box.className = "logo";
           setTimeout(function(){
@@ -650,33 +652,49 @@
       back_to_landing.addEventListener("click",function(){
         item.className = "inactive";
         window.__fadeOut__(item)
-        console.log(ham.style.display);
+        // console.log(ham.style.display);
         if(ham.offsetParent!=null) ham.click();
       });
 
       
-      var request = new XMLHttpRequest();
-      request.addEventListener('load', r=>{
-        console.log(r);
+      var events_list_request = new XMLHttpRequest();
+      events_list_request.addEventListener('load', r=>{
+        
         if(r.currentTarget.readyState == 4 && r.currentTarget.status == 200){
-          window.events_data = eval(r.currentTarget.responseText);
+          var api_data = eval(r.currentTarget.responseText);
+          var table = {};
+          for(var i in api_data){  
+            var category = mapName(api_data[i].category_name)
+            if(table[category] == undefined)
+              table[category] = {}
+            table[category][mapName(api_data[i].name)] = { event_id : api_data[i].id};
+          }
+          window.events_data = table;
+          changeChar(0)
         }
-        console.log("events data", window.events_data);
+        // console.log("events data", window.events_data);
       });
-      request.addEventListener('error', e=>{
+      events_list_request.addEventListener('error', e=>{
         console.log(e);
       });
-      request.addEventListener('progress', p=>{
-        console.log(p)
+      events_list_request.addEventListener('progress', p=>{
+        // console.log(p)
       })
       
       try{
-        request.open('GET', 'https://bits-oasis.org/2017/api/events')
-        request.send()
+        events_list_request.open('GET', 'https://bits-oasis.org/2017/api/events')
+        events_list_request.send()
       }catch(e){
         console.log(e);
       }
 
+      function mapName(name){
+        if(name == "misc"){
+          return "miscellaneous"
+        }
+        return name.toLowerCase().split(" ").join("_");
+      }
+      window.__mapName__ = mapName;
       
     </script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->

@@ -1,5 +1,5 @@
 // Styling
-
+var current_category = "";
 var accordian_open = false;
 function handleResize(){
   document.body.style.height = window.innerHeight+"px";
@@ -21,19 +21,19 @@ var characters = [
   "Dexter","V","Harry"
 ];
 window.characters = characters;
-var event_names = {
-  "Johnny":["Choreo", "Dessert Duel" ,"Razzmataaz", "Street Dance", "Tandav"],
-  "Deadpool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
-  "Batman": ["Beg Borrow Steal", "Mr. and Mrs. Oasis", "Protest Out of Waste", "Treasure Hunt", "Triathlon"],
-  "Ezio": ["Fashion Parade"],
-  "Goku": ["Exposure", "Oasis through my Eyes"],
-  "Rick": ["Andholika", "Axetacy", "Drums Duel", "Free Jam", "Pitch Perfect", "Rap Wars", "Rocktaves", "Swaranjali", "Tarang"],
-  "Minion": ["Mime", "Stage Play","Street Play"],
-  "Pikachu": ["Canvas Street","Contrasto", "Splash"],
-  "Dexter": ["Exposure","Online Quiz","Word Wars"],
-  "V": ["Antakshari", "Blab", "Online Quiz", "Entertainment Quiz", "Filmy Muqabla", "Music Quiz", "Oasis Quiz","Scifi Quiz", "Theme Quiz"],
-  "Harry": ["Ad/Poster Making", "Apt to Act", "Metamorphosis", "Story Completion", "Trailer Making"]
-}
+// var event_names = {
+//   "Johnny":["Choreo", "Dessert Duel" ,"Razzmataaz", "Street Dance", "Tandav"],
+//   "Deadpool": ["Bluff Master", "Cocktail", "Competitive Contact", "Mock Parliment", "Poetry Slam", "Pun Wars", "Standup Soapbox", "Taboo", "Wit in a Minute"],
+//   "Batman": ["Beg Borrow Steal", "Mr. and Mrs. Oasis", "Protest Out of Waste", "Treasure Hunt", "Triathlon"],
+//   "Ezio": ["Fashion Parade"],
+//   "Goku": ["Exposure", "Oasis through my Eyes"],
+//   "Rick": ["Andholika", "Axetacy", "Drums Duel", "Free Jam", "Pitch Perfect", "Rap Wars", "Rocktaves", "Swaranjali", "Tarang"],
+//   "Minion": ["Mime", "Stage Play","Street Play"],
+//   "Pikachu": ["Canvas Street","Contrasto", "Splash"],
+//   "Dexter": ["Exposure","Online Quiz","Word Wars"],
+//   "V": ["Antakshari", "Blab", "Online Quiz", "Entertainment Quiz", "Filmy Muqabla", "Music Quiz", "Oasis Quiz","Scifi Quiz", "Theme Quiz"],
+//   "Harry": ["Ad/Poster Making", "Apt to Act", "Metamorphosis", "Story Completion", "Trailer Making"]
+// }
     // , ,[""]
 function get(dir) {
   var curr = Box.className;
@@ -49,7 +49,7 @@ function get(dir) {
 function changeChar(dir){
   // console.log("called");
   var direction = (dir==-1)?"rtl":"ltr";
-  console.log(direction)
+  // console.log(direction)
   var character = characters[get(dir)];
   var props = charprops[character];
   document.body.className = direction;
@@ -60,14 +60,26 @@ function changeChar(dir){
     tagline.innerHTML += "<span>"+props.tagline[tag]+"</span>";
   }
   eventname.innerHTML = "<span>"+props.eventname+"</span>";
+  
+  
+  eventnames__.innerHTML = event_list_html(props.eventname);
+  
+  
+  
+}
+
+function event_list_html(category){
   var string = "";
-  // console.log(character, event_names[character], event_names)
-  for(var i = 0; i< event_names[character].length; i++){
-    string += "<li  class='evt'><h1 class='name dust'>"+event_names[character][i]+"</h1></li>";
-    // console.log(string);
+  if(window.events_data){
+    var name = window.__mapName__(category);
+
+    current_category = window.events_data[name];
+    
+    for(var k in current_category){
+      string += "<li  class='evt'><h1 class='name dust'>"+k.split("_").join(" ")+"</h1></li>";
+    }
   }
-  // console.log(eventnames__ , string )
-  eventnames__.innerHTML = string;
+  return string;
 }
 window.changeChar = changeChar;
 document.body.onkeydown = function(e) {
@@ -158,8 +170,43 @@ eventnames__.addEventListener('click', function(e){
   var select = (e.target.className == "name dust");
   if(select){
     var name_of_event = (e.target.innerText);
+    var url = 'https://bits-oasis.org/2017/api/events/' + current_category[window.__mapName__(name_of_event)].event_id;
+    var event_info_request = new XMLHttpRequest();
+    event_info_request.open("GET", url);
+    event_info_request.addEventListener("load", a => {
+      // console.log(a);
+      if(a.currentTarget.readyState == 4 && a.currentTarget.status == 200){
+          let text = a.currentTarget.responseText;
+          var re_about = /"content":"(.*)","rules"/ig;
+          html_about = re_about.exec(text)[1];
+          
+          html_rules = /"rules":"(.*)","category_name"/ig.exec(text)[1];
+          
+          contact_info = /"contact":"(.*)"/ig.exec(text)[1]
+          // console.log(html_about, html_rules, contact_info)
+          html_about = html_about.replace(/\\r\\n/ig, "<br>");
+          about_info.getElementsByClassName('info_content')[0].innerHTML = html_about;
+          rules_info.getElementsByClassName('info_content')[0].innerHTML = html_rules;
+          var contact_name = "";
+          var contact_number = "";
+          [contact_name, contact_number] = contact_info.split("-");
+          details.getElementsByClassName('contact_name')[0].innerText = contact_info;
+          // details.getElementsByClassName('contact_number')[0].innerText = contact_number;
+          // console.log(eval(a.currentTarget.responseText.replace(html_text, "''")));
+
+      }
+    })
+    event_info_request.addEventListener("progress", a => {
+      // console.log(a);
+    })
+    event_info_request.addEventListener("error", a => {
+      console.log(a);
+    })
+    event_info_request.send();
+    about_info.getElementsByClassName('info_content')[0].innerHTML = "Loading";
+    rules_info.getElementsByClassName('info_content')[0].innerHTML = "Loading";
+    details.getElementsByClassName('contact_name')[0].innerText = "Loading";
     showAccordion(name_of_event);
-    console.log(name_of_event)
   }
 
 })
@@ -182,19 +229,29 @@ function closeAccordian(){
   // document.getElementsByClassName('dummy')[0].style.display = "block";
 }
 
-var headers = [about_info, rules_info];
 
-headers.forEach(function(ele){
-  ele.addEventListener('click', function(e){
+
+[about_info, rules_info].forEach(function(ele){
+
+  ele.addEventListener('click', function(){handleClick(ele)})
+})
+
+function handleClick(ele){
+  // console.log('clicked')
     var open = document.getElementsByClassName('open_info')[0];
     var old = open.className;
     open.className = old.replace('open_info', " ")
     // console.log( ele.getElementsByClassName('info_content')[0])
     var neww = ele.getElementsByClassName('info_content')[0].className;
     ele.getElementsByClassName('info_content')[0].className = neww + ' open_info'
-  })
-})
+}
+[about_info.getElementsByTagName('div')[0], rules_info.getElementsByTagName('div')[0]].forEach(ele=>{
+  ele.style.cursor= "pointer";
+  ele.addEventListener('click', ()=>{
 
+    // console.log(ele.parentElement)
+    handleClick(ele.parentElement)
+})})
 
 function addClass(el, name){
   el.className += " "+name;

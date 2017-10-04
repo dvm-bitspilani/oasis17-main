@@ -185,7 +185,7 @@
 #details {
   display: none;
   margin: 8vh 0;
-  min-width: 80vw;
+  width: 80vw;
   height: fit-content;
   position: absolute; }
   #details .heading {
@@ -218,5 +218,11 @@
   #details .open_info {
     padding: 20px;
     height: fit-content; }
+
+@keyframes reduce_height {
+  from {
+    height: fit-content; }
+  to {
+    height: 0; } }
 
 /*# sourceMappingURL=lightbox.css.map */

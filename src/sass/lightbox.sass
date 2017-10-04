@@ -186,7 +186,7 @@
 #details
 	display: none
 	margin: 8vh 0
-	min-width: 80vw
+	width: 80vw
 	height: fit-content
 	position: absolute
 	.heading
@@ -216,6 +216,7 @@
 			border-radius: 3px
 			
 	.info_content
+		// animation: reduce_height 1s linear
 		height: 0
 		padding: 0 20px
 		overflow: hidden
@@ -225,3 +226,10 @@
 	.open_info
 		padding: 20px
 		height: fit-content
+		
+@keyframes reduce_height
+	from
+		height: fit-content
+	
+	to
+		height: 0
