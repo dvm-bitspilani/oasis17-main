@@ -669,6 +669,7 @@
               table[category] = {}
             table[category][mapName(api_data[i].name)] = { event_id : api_data[i].id};
           }
+          // console.log(table)
           window.events_data = table;
           changeChar(0)
         }
@@ -689,9 +690,10 @@
       }
 
       function mapName(name){
-        if(name == "misc"){
+        if(name == "MISC"){
           return "miscellaneous"
         }
+        // console.log(name)
         return name.toLowerCase().split(" ").join("_");
       }
       window.__mapName__ = mapName;

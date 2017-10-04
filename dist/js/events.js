@@ -100,6 +100,7 @@ document.body.addEventListener('touchstart', function(e){
 });
 document.body.addEventListener('touchmove', function(e){
   // alert(e.target.id);
+  if(lightbox_open_status)return;
   if(found==1) return;
   var pageX = parseInt(e.changedTouches[0].pageX)
   delta = pageX - startX;
@@ -234,6 +235,8 @@ function closeAccordian(){
 [about_info, rules_info].forEach(function(ele){
 
   ele.addEventListener('click', function(){handleClick(ele)})
+  ele.addEventListener('pointerdown', function(){handleClick(ele)})
+  ele.addEventListener('touchstart', function(){handleClick(ele)})
 })
 
 function handleClick(ele){
@@ -251,7 +254,18 @@ function handleClick(ele){
 
     // console.log(ele.parentElement)
     handleClick(ele.parentElement)
-})})
+  })
+  ele.addEventListener('pointerdown', ()=>{
+
+    // console.log(ele.parentElement)
+    handleClick(ele.parentElement)
+  })
+  ele.addEventListener('touchstart', ()=>{
+
+    // console.log(ele.parentElement)
+    handleClick(ele.parentElement)
+  })
+})
 
 function addClass(el, name){
   el.className += " "+name;
