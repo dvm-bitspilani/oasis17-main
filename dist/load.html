@@ -658,6 +658,10 @@
       var request = new XMLHttpRequest();
       request.addEventListener('load', r=>{
         console.log(r);
+        if(r.currentTarget.readyState == 4 && r.currentTarget.status == 200){
+          window.events_data = eval(r.currentTarget.responseText);
+        }
+        console.log("events data", window.events_data);
       });
       request.addEventListener('error', e=>{
         console.log(e);
