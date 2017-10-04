@@ -654,6 +654,26 @@
         if(ham.offsetParent!=null) ham.click();
       });
 
+      
+      var request = new XMLHttpRequest();
+      request.addEventListener('load', r=>{
+        console.log(r);
+      });
+      request.addEventListener('error', e=>{
+        console.log(e);
+      });
+      request.addEventListener('progress', p=>{
+        console.log(p)
+      })
+      
+      try{
+        request.open('GET', 'https://bits-oasis.org/2017/api/events')
+        request.send()
+      }catch(e){
+        console.log(e);
+      }
+
+      
     </script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106908218-1"></script>
