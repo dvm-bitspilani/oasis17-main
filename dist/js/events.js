@@ -178,16 +178,21 @@ eventnames__.addEventListener('click', function(e){
       // console.log(a);
       if(a.currentTarget.readyState == 4 && a.currentTarget.status == 200){
           let text = a.currentTarget.responseText;
+          console.log(text);
           var re_about = /"content":"(.*)","rules"/ig;
           html_about = re_about.exec(text)[1];
           
           html_rules = /"rules":"(.*)","category_name"/ig.exec(text)[1];
+          html_rules_more = /"detail_rules":"(.*)","contact"/ig.exec(text)[1];
           
           contact_info = /"contact":"(.*)"/ig.exec(text)[1]
           // console.log(html_about, html_rules, contact_info)
-          html_about = html_about.replace(/\\r\\n/ig, "<br>");
+          html_about = html_about.replace(/\\r\\n/ig, "<br>").replace(/\\t/ig, "<br>");
+          html_rules = html_rules.replace(/\\r\\n/ig, "<br>").replace(/\\t/ig, "<br>");
+          html_rules_more = html_rules_more.replace(/\\r\\n/ig, "<br>").replace(/\\t/ig, "<br>");
+
           about_info.getElementsByClassName('info_content')[0].innerHTML = html_about;
-          rules_info.getElementsByClassName('info_content')[0].innerHTML = html_rules;
+          rules_info.getElementsByClassName('info_content')[0].innerHTML = html_rules + "<br>" + html_rules_more;
           var contact_name = "";
           var contact_number = "";
           [contact_name, contact_number] = contact_info.split("-");
