@@ -190,7 +190,9 @@
   padding-bottom: 20vh;
   width: 80vw;
   height: fit-content;
-  position: absolute; }
+  position: absolute;
+  font-size: 1.2em;
+  letter-spacing: 0.1em; }
   #details .heading {
     font-size: 3em;
     padding: 30px; }
