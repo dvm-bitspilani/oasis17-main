@@ -2,6 +2,9 @@
   text-decoration: none;
   color: #fff; }
 
+.mob {
+  color: #000; }
+
 #events_wrapper {
   width: 100vw;
   height: 100vh;
