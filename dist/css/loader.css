@@ -524,6 +524,10 @@ body #box div:nth-child(70) {
 body #box div:nth-child(71) {
   transition: all 3.14s 1.62s cubic-bezier(0.7, 0.3, 0, 1), background-color 3.14s 1.42s; }
 
+.nav_link {
+  text-decoration: none;
+  color: #fff; }
+
 #dotanim {
   position: absolute;
   top: 5%;
@@ -962,9 +966,7 @@ li#ViewEvent {
 
 div.change.prev:hover, div.change.next:hover {
   cursor: pointer; }
-#events_wrapper section #Polys{
-  cursor: default;
-}
+
 /*# sourceMappingURL=loader.css.map */
 
 /*# sourceMappingURL=loader.css.map */
