@@ -1,3 +1,7 @@
+.nav_link {
+  text-decoration: none;
+  color: #fff; }
+
 #events_wrapper {
   width: 100vw;
   height: 100vh;
@@ -9,14 +13,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; }
-     
   #events_wrapper .change {
     width: 75px;
     height: 75px;
     border-radius: 100%;
     background: url(img/arrow1.png) no-repeat center;
-    background-size: cover;
-    cursor: :pointer;}
+    background-size: cover; }
   #events_wrapper .change.prev {
     transform: rotate(180deg); }
   #events_wrapper header {
