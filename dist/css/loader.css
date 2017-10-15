@@ -954,10 +954,10 @@ body #box2 {
 @media all and (max-height: 200px) {
   #dotanim {
     display: none; } }
-li#ViewEvent {
+li#ViewEvent, li#viewAllCategories {
   opacity: 0.75;
   transition: all 1s linear; }
-  li#ViewEvent:hover {
+  li#ViewEvent:hover, li#viewAllCategories:hover {
     cursor: pointer;
     opacity: 1; }
 

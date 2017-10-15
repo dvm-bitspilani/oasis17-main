@@ -185,7 +185,8 @@ a.crosslink:hover #clk {
   color: #373839;
   width: fit-content;
   margin: 0 auto !important;
-  border-bottom: 1px solid #777; }
+  border-bottom: 1px solid #777;
+  cursor: pointer; }
 
 @media only screen and (max-width: 750px) {
   .evt .name {

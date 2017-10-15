@@ -4,9 +4,9 @@ var stuccans = [
 	  post: "Registration &amp; Other Enquiries",
 	  email: "pcr@bits-oasis.org",
 	  phone: "Click for Phone Numbers",
-		photo: "img/asim.jpg",
-		id: "expand",
-		expandData: [
+	  photo: "img/asim.jpg",
+	  id: "expand",
+	  expandData: [
 			"+91 82091 82501",
 			"+91 70731 80405",
 			"+91 70236 11971",
@@ -80,15 +80,21 @@ for (var s in stuccans) {
 				<span>'+stuccans[s].name+'</span>\
 				<span>'+stuccans[s].post+'</span>\
 			</div>\
-			<div class = "person-mail">'+stuccans[s].email+'</div>\
-			<div class = "person-number" id="'+stuccans[s].id+'" onclick="expandPCR(this)">'+stuccans[s].phone+'</div>';
+			<div class = "person-mail">'+stuccans[s].email+'</div>'; 
+
 	if(stuccans[s].id == "expand") {
+	xy+= '\
+			<div class = "person-number" id="'+stuccans[s].id+'" onclick="expandPCR(this)">'+stuccans[s].phone+'</div>';
 	xy += '\
 			<div id = "pcrExpandData" class="pcrhidden">\
 	';
 	for (var ij = 0; ij < stuccans[s].expandData.length; ij++)
 	xy += '<span>'+stuccans[s].expandData[ij]+'</span>';
 	xy += '</div>';
+	}
+	else{
+		xy+= '\
+			<div class = "person-number">'+stuccans[s].phone+'</div>';
 	}
 	xy += '\
 		</center>\

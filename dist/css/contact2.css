@@ -58,6 +58,9 @@ body {
 .person-pic span {
   padding: 3px 5px;
 }
+#expand{
+  cursor: pointer;
+}
 .person-mail, .person-number, #pcrExpandData {
   padding: 3px 12px;
 }
