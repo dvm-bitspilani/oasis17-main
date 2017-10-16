@@ -279,31 +279,45 @@ function removeClass(el, name){
   el.className = el.className.replace(" " + name,'');
 }
 
-function fadeIn(el, callback = (()=>{})){
+function fadeIn(el, callback = (()=>{}), display="block"){
   // el.style.opacity = 0;
   removeClass(el, 'fadeOut');
   removeClass(el, 'fadeIn');
-  el.style.display = "block";
+  var initialpos = el.style.position;
+  el.style.position = "absolute";
+
+  el.style.display = display;
+ 
   addClass(el, 'fadeIn');
   setTimeout(function(){
     el.style.opacity = 1;
     // removeClass(el, 'fadeIn');
+    el.style.top = "0";
+    el.style.position = initialpos;
+   
     callback();
   } , 480)
 }
 
 window.__fadeIn__ = fadeIn;
 
-function fadeOut(el, callback = (()=>{})){
+function fadeOut(el, callback = (()=>{}), display = "block"){
   // el.style.opacity = 1;
   removeClass(el, 'fadeIn');
   removeClass(el, 'fadeOut');
+  var initialpos = el.style.position;
+  el.style.position = "absolute";
+  el.style.top = "0";
+  el.style.display = display;
   addClass(el, 'fadeOut');
+
+  
   setTimeout(function(){
     el.style.opacity = 0;
+    
+    el.style.top = "100%";
+    el.style.position = initialpos;
     el.style.display = "none";
-    
-    
     // removeClass(el, 'fadeOut');
     callback();
   } , 480)
