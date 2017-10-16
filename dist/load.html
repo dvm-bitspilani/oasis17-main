@@ -589,7 +589,9 @@
       
       Events.addEventListener('click', function(){
         events.className = "";
+        
         window.__fadeIn__(events);
+
       });
 
       close_events.addEventListener('click',function(){
@@ -673,7 +675,8 @@
           }
           // console.log(table)
           window.events_data = table;
-          changeChar(0)
+          if(changeChar)
+            changeChar(0);
         }
         // console.log("events data", window.events_data);
       });

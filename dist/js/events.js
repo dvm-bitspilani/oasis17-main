@@ -150,6 +150,7 @@ ViewEvent.addEventListener("click",function(){
   close_event.style.display = "block";
   close_event.style.opacity = 1;
   fadeIn(document.getElementsByClassName('lightbox')[0]);
+  fadeIn(close_event, null, "flex");
   lightbox_open_status = true;
   setTimeout(()=>{close_event.style.display = "flex";}, 10);
 });
@@ -161,7 +162,7 @@ close_event.addEventListener("click",function(){
       document.querySelector(".lightbox").style.top = "100%";
     })
     lightbox_open_status = false;
-    fadeOut(close_event);
+    fadeOut(close_event, null,"flex" );
   }else{
     closeAccordian();
   }
@@ -280,6 +281,7 @@ function removeClass(el, name){
 }
 
 function fadeIn(el, callback = (()=>{}), display="block"){
+  console.log("fadeIn", el, callback, display);
   // el.style.opacity = 0;
   removeClass(el, 'fadeOut');
   removeClass(el, 'fadeIn');
@@ -294,14 +296,15 @@ function fadeIn(el, callback = (()=>{}), display="block"){
     // removeClass(el, 'fadeIn');
     el.style.top = "0";
     el.style.position = initialpos;
-   
-    callback();
+    if(callback)
+      callback();
   } , 480)
 }
 
 window.__fadeIn__ = fadeIn;
 
 function fadeOut(el, callback = (()=>{}), display = "block"){
+  console.log("fadeOut", el, callback, display);
   // el.style.opacity = 1;
   removeClass(el, 'fadeIn');
   removeClass(el, 'fadeOut');
@@ -319,7 +322,8 @@ function fadeOut(el, callback = (()=>{}), display = "block"){
     el.style.position = initialpos;
     el.style.display = "none";
     // removeClass(el, 'fadeOut');
-    callback();
+    if(callback)
+      callback();
   } , 480)
 
 }
