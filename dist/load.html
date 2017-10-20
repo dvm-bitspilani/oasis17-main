@@ -73,27 +73,27 @@
         </div>
       </div>
       <div id="tilt" class="inactive">
-          
+
       </div>
     </section>
     <section id="Landing" class="inactive">
       <div id="dotanim">
-        
+
       </div>
       <div id="dotanim2">
-        
+
       </div>
       <div id="lineani1">
-        
+
       </div>
       <div id="lineani2">
-          
+
       </div>
       <div id="triani3">
-          
+
       </div>
       <div id="triani4">
-          
+
       </div>
       <span id="Events"><label>VIEW EVENTS</label></span>
       <header>
@@ -238,7 +238,7 @@
               </div>
               <div class="evtcont">
                   <ul class="evtname" id="eventnames__">
-                      
+
                   </ul>
                   <div id="details">
                     <div>
@@ -298,14 +298,14 @@
       <div id="abouttext">
           Snatches of whatever your teacher’s been droning on about for the past hour,  would weave in and out of your fantasies, to be interrupted when she hurls her chalk at you.
           <br><br>
-          Hours made to stand outside the class and silly impositions would follow. 
+          Hours made to stand outside the class and silly impositions would follow.
           <br><br>
           Middle school was dumb. Your attention span hasn't really changed much here in college though, has it?
-          It’s only fair. Who wouldn’t be wrestling orcs at Amon Hen, or duelling the Dark Lord in the Battle of Hogwarts? Perhaps battle in the Lannisters’ army, in their fight to keep the Iron throne, all the while ignoring the lecturer as he tries to give you an actual future? Yeah, we thought so. 
+          It’s only fair. Who wouldn’t be wrestling orcs at Amon Hen, or duelling the Dark Lord in the Battle of Hogwarts? Perhaps battle in the Lannisters’ army, in their fight to keep the Iron throne, all the while ignoring the lecturer as he tries to give you an actual future? Yeah, we thought so.
           <br><br>
           Join us this Oasis ‘17, the 46th edition of BITS Pilani’s annual cultural festival from the 31st October to the 4th November, with some of the biggest music acts such as Parikrama and Amit Trivedi, and public figures such as Salman Khurshid and Kiran Bedi all a part of its proud history. From games, to mouth watering food stalls and exhilarating concerts, we promise them all.
           <br><br>
-          Join us, as we bring to life these Realms of Fiction, from Gotham and Winterfell to Avalon and Vice City. 
+          Join us, as we bring to life these Realms of Fiction, from Gotham and Winterfell to Avalon and Vice City.
           <br><br>
           Oasis ‘17. Bigger than ever.
       </div>
@@ -375,7 +375,7 @@
 
     <div id="dev">
       <div id = "dev_wrapper">
-  
+
       </div>
     </div>
 
@@ -458,11 +458,6 @@
         },
         {
           type: "static",
-          url: "js/devs.js",
-          ext: "js"
-        },
-        {
-          type: "static",
           url: "js/all_categories.js",
           ext: "js"
         }
@@ -484,7 +479,7 @@
         else if(res.ext == "js") {
          inject(res.data, "script",null, res.url);
         }else if(res.ext =="img"){
-          
+
           eval(res.ref).style.background = "url("+res.data+")";
           eval(res.ref).style.backgroundSize = "contain";
           // console.log(eval(res.ref).style.background, 'umms');
@@ -530,7 +525,7 @@
     }
 
     function inject(data, tag, ref, url){
-      
+
       if(tag != "null")
       {
         var ele = document.createElement(tag);
@@ -542,7 +537,7 @@
         if(ref){
           eval(ref).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
           eval(ref).style.backgroundSize = "contain";
-          
+
         }
       }
     }
@@ -586,10 +581,10 @@
       },time);
     }
 
-      
+
       Events.addEventListener('click', function(){
         events.className = "";
-        
+
         window.__fadeIn__(events);
 
       });
@@ -660,14 +655,14 @@
         if(ham.offsetParent!=null) ham.click();
       });
 
-      
+
       var events_list_request = new XMLHttpRequest();
       events_list_request.addEventListener('load', r=>{
-        
+
         if(r.currentTarget.readyState == 4 && r.currentTarget.status == 200){
           var api_data = eval(r.currentTarget.responseText);
           var table = {};
-          for(var i in api_data){  
+          for(var i in api_data){
             var category = mapName(api_data[i].category_name)
             if(table[category] == undefined)
               table[category] = {}
@@ -686,7 +681,7 @@
       events_list_request.addEventListener('progress', p=>{
         // console.log(p)
       })
-      
+
       try{
         events_list_request.open('GET', 'https://bits-oasis.org/2017/api/events')
         events_list_request.send()
@@ -702,7 +697,7 @@
         return name.toLowerCase().split(" ").join("_");
       }
       window.__mapName__ = mapName;
-      
+
     </script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106908218-1"></script>
@@ -713,6 +708,6 @@
 
   gtag('config', 'UA-106908218-1');
 </script>
-
+<script src="js/devs.js" charset="utf-8"></script>
   </body>
 </html>
