@@ -52,7 +52,11 @@ body {
 #dev_wrapper .person-mail:nth-of-type(2n-1) {
     background: #00f5b2;
 }
-  
+
 #dev_wrapper .person-number:nth-of-type(2n-1) {
     background: #00f5b2;
+}
+
+div[style="background-image:url(img/abhijit.jpg)"] {
+    background-position: top;
 }
