@@ -44,7 +44,7 @@ var devs = [
         photo: "img/tushar.jpg"
     },
     {
-        name: "Neethu Maria Joy",
+        name: "Neethu Mariya Joy",
         team: "Frontend Developer",
         link1: "https://github.com/roboneet",
         image1: "img/github.svg",
@@ -153,3 +153,6 @@ for(i=0;i<8;i++){
 		document.getElementsByClassName("person-number")[i].style.background = "#00f5b2";
 	}
 }
+
+dev_wrapper.innerHTML += '<p class="inspiration">Inspired by <a href="http://www.species-in-pieces.com/#"">species-in-peices</a> &#9829;</p>';
+

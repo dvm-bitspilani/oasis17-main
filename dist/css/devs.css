@@ -60,3 +60,16 @@ body {
 div[style="background-image:url(img/abhijit.jpg)"] {
     background-position: top;
 }
+
+.inspiration{
+  width: 100vw;
+  text-align: center;
+  color: #fafafa;
+  font-family: arial, verdana;
+  
+}
+
+.inspiration a{
+  color: inherit;
+  text-decoration: none;
+}
