@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/oasis.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/contact2.css">
+    <link rel="shortcut icon" href="https://bits-oasis.org/2017/static/pcradmin/images/Oasis-Logo.png">
+
+		<meta property="og:type" content="business.business">
+		<meta property="og:title" content="Oasis 2017 | Realms of Fiction | BITS Pilani">
+		<meta property="og:url" content="https://bits-oasis.org">
+		<meta property="og:image" content="https://bits-oasis.org/img/oasis.jpg">
+		<meta property="og:description" content="The official website of the awesome cultural festival of BITS Pilani, Pilani Campus - 2017 Edition">
+		<meta property="business:contact_data:street_address" content="BITS Pilani">
+		<meta property="business:contact_data:locality" content="Pilani">
+		<meta property="business:contact_data:region" content="Rajasthan">
+		<meta property="business:contact_data:postal_code" content="333031">
+		<meta property="business:contact_data:country_name" content="India">
+
   </head>
   <body>
     <section id="loader">
@@ -58,24 +68,47 @@
           <aside id="logotext">
             <span id="o17"></span>
             <span id="realmsOfFiction"></span>
+            <span id="date">31 OCTOBER &mdash; 4 NOVEMBER</span>
           </aside>
         </div>
       </div>
+      <div id="tilt" class="inactive">
+
+      </div>
     </section>
     <section id="Landing" class="inactive">
+      <div id="dotanim">
+
+      </div>
+      <div id="dotanim2">
+
+      </div>
+      <div id="lineani1">
+
+      </div>
+      <div id="lineani2">
+
+      </div>
+      <div id="triani3">
+
+      </div>
+      <div id="triani4">
+
+      </div>
       <span id="Events"><label>VIEW EVENTS</label></span>
       <header>
         <nav>
           <ul>
-            <li>ABOUT</li>
-            <li>PROF SHOW</li>
+            <li onclick="openItem('about')">ABOUT</li>
+            <li style="display: none">PROF SHOW</li>
             <li style="display: none">SPONSORS</li>
-            <li id="contact">CONTACT</li>
+            <li id="contact" onclick="openItem('contacts')">CONTACTS</li>
+            <!--<li><a href="https://bits-oasis.org/2017/tarang" class="nav_link">TARANG</a></li>-->
           </ul>
           <div id="ham">
 
           </div>
-          <span id="Register"><label>REGISTER</label></span>
+          <span id="Register" onclick="window.open('https://bits-oasis.org/2017/register/')"><label>REGISTER</label></span>
         </nav>
         <aside class="micro">
 
@@ -84,20 +117,20 @@
       <footer>
         <nav>
           <ul>
-            <li>SCHEDULE</li>
-            <li>DEVELOPERS</li>
-            <li>AFTERMOVIE 2016</li>
+            <li style="display: none">SCHEDULE</li>
+            <li onclick="openItem('dev')">DEVELOPERS</li>
+            <li onclick="window.open('https://www.youtube.com/watch?v=rh7WkyNXNRE')">AFTERMOVIE 2016</li>
             <li style="display: none">OASIS PRESS</li>
             <li style="display: none">JOY OF GIVING WEEK</li>
             <li style="display: none">STORE</li>
           </ul>
-          <span id="Aftermovie">31 OCT - 4 NOV</span>
+          <span id="Aftermovie">31 OCTOBER &mdash; 4 NOVEMBER</span>
         </nav>
         <ul>
-          <li class="facebook"></li>
-          <li class="twitter"></li>
-          <li class="youtube"></li>
-          <li class="instagram"></li>
+          <li class="facebook" onclick="window.open('https://www.facebook.com/oasis.bitspilani/')"></li>
+          <li class="twitter" onclick="window.open('https://twitter.com/bitsoasis')"></li>
+          <li class="youtube" onclick="window.open('https://www.youtube.com/channel/UCf40GISJivaYZK2pPOyt1kw')"></li>
+          <li class="instagram" onclick="window.open('https://instagram.com/bitsoasis')"></li>
         </ul>
       </footer>
     </section>
@@ -108,21 +141,19 @@
       </aside>
       <aside class="nav">
         <div>
-          <span>ABOUT</span>
+          <span onclick="openItem('about')">ABOUT</span>
           <span style="display: none">PROF SHOW</span>
           <span style="display: none">SPONSORS</span>
-          <span>CONTACT</span>
+          <span onclick="openItem('contacts')">CONTACTS</span>
+          <!--<span><a href="https://bits-oasis.org/2017/tarang" class="nav_link mob">TARANG</a></span>-->
         </div>
         <div>
           <span>SCHEDULE</span>
-          <span>AFTERMOVIE 2016</span>
+          <span onclick="window.open('https://www.youtube.com/watch?v=rh7WkyNXNRE')">AFTERMOVIE 2016</span>
           <span style="display: none">BUS SERVICE</span>
           <span style="display: none">OASIS PRESS</span>
           <span style="display: none">JOY OF GIVING WEEK</span>
-          <span>DEVELOPERS</span>
-        </div>
-        <div>
-          <span>31 OCT - 4 NOV</span>
+          <span onclick="openItem('dev')">DEVELOPERS</span>
         </div>
       </aside>
     </section>
@@ -130,131 +161,476 @@
 
     </div>
     <div id="item" class="inactive">
-      <div class="header"></div>
+      <div class="header">
+        <div id="back_to_landing"></div>
+        <div id="item_title"><span>TITLE</span></div>
+      </div>
       <div id="item_content">
 
       </div>
     </div>
-    <div id="contacts">
-      <div id = "wrapper">
-        </div>
-        <script type="text/javascript">
-            var stuccans = [
-                {
-                  name: "Bharatha Ratna Puli",
-                  post: "President, Students Union",
-                  email: "president@pilani.bits-pilani.ac.in",
-                  phone: "123123123123"
-                },
-                {
-                  name: "Shivam Jindal",
-                  post: "General Secretary, Students Union",
-                  email: "hello@gmail.com",
-                  phone: "123123123123"
-                },
-                {
-                  name: "Asim Shah",
-                  post: "Registration &amp; Other Enquiries",
-                  email: "pcr@bits-oasis.org",
-                  phone: "+91 70236 11971"
-                },
-                {
-                  name: "Arnav Kundra",
-                  post: "Reception and Accomodation",
-                  email: "recnacc@bits-oasis.org",
-                  phone: "+91 99280 6633"
-                },
-                {
-                  name: "Nisanth Verma",
-                  post: "Controls",
-                  email: "controls@bits-oasis.org",
-                  phone: "+91 80588 77118"
-                },
-                {
-                  name: "Arjun Tyagi",
-                  post: "Website, App &amp; Online Payments",
-                  email: "webmaster@bits-oasis.org",
-                  phone: "+91 88750 52545"
-                },
-                {
-                  name: "Gowtam Chandrahasa",
-                  post: "Art, Design &amp; Publicity",
-                  email: "adp@bits-oasis.org",
-                  phone: "+91 99820 84940"
-                },
-                {
-                  name: "Siddhant Narula",
-                  post: "Sponsorship and Marketing",
-                  email: "sponsorship@bits-oasis.org",
-                  phone: "+91 99822 00768"
-                }
-            ];
-            for (var s in stuccans) {
-                wrapper.innerHTML +=
-                '<div class = "person">\
-                    <center>\
-                        <div class = "person-pic">\
-                            <div class = "pic"></div>\
-                            <span>'+stuccans[s].name+'</span>\
-                            <span>'+stuccans[s].post+'</span>\
-                        </div>\
-                        <div class = "person-mail">'+stuccans[s].email+'</div>\
-                        <div class = "person-number">'+stuccans[s].phone+'</div>\
-                    </center>\
-                </div>';
-            }
-        for(i=0;i<8;i++){
-            if(i%2 == 0){
-                document.getElementsByClassName("person-mail")[i].style.background = "#ffe14a";
-                document.getElementsByClassName("person-number")[i].style.background = "#ffe14a";
-            }
-            else{
-                document.getElementsByClassName("person-mail")[i].style.background = "#00f5b2";
-                document.getElementsByClassName("person-number")[i].style.background = "#00f5b2";
-            }
-        }
-        </script>
+    <div id="events" class="inactive">
+        <div id="events_wrapper" class="ltr">
+            <div id="close_events" class="logo"></div>
+          <header>
+            <div id="Arrows">
+              <div class="change prev"></div>
+              <div class="change next"></div>
+            </div>
+          </header>
+          <section>
+            <div id="Main">
+              <div id="Polys">
+                <div class="change prev"></div>
+                <div id="Box" class="Johnny">
+                  <div id="a1"></div>
+                  <div id="a2"></div>
+                  <div id="a3"></div>
+                  <div id="a4"></div>
+                  <div id="a5"></div>
+                  <div id="a6"></div>
+                  <div id="a7"></div>
+                  <div id="a8"></div>
+                  <div id="a9"></div>
+                  <div id="a10"></div>
+                  <div id="a11"></div>
+                  <div id="a12"></div>
+                  <div id="a13"></div>
+                  <div id="a14"></div>
+                  <div id="a15"></div>
+                  <div id="a16"></div>
+                  <div id="a17"></div>
+                  <div id="a18"></div>
+                  <div id="a19"></div>
+                  <div id="a20"></div>
+                  <div id="a21"></div>
+                  <div id="a22"></div>
+                  <div id="a23"></div>
+                  <div id="a24"></div>
+                </div>
+                <div class="change next"></div>
+              </div>
+              <div id="EventName">
+                <span>Random Name</span>
+              </div>
+              <div id="TagLine">
+                <span></span>
+              </div>
+            </div>
+            <nav>
+              <ul>
+                <li id="ViewEvent">VIEW EVENTS</li>
+                <li id="viewAllCategories" style="cursor: pointer;">ALL CATEGORIES</li>
+              </ul>
+              <div></div>
+            </nav>
+          </section>
+          <div class="parent lightbox">
+              <div class="backrotate">
+              </div>
+              <div class='crosscont'>
+                  <div class="cross">
+                      <a class="crosslink" id="close_event">
+                          <p class="crossbar" id="anticlk"></p>
+                          <p class="crossbar" id="clk"></p>
+                      </a>
+                  </div>
+              </div>
+              <div class="evtcont">
+                  <ul class="evtname" id="eventnames__">
+
+                  </ul>
+                  <div id="details">
+                    <div>
+                      <div class="heading">Exposure</div>
+                      <div class="contact">
+                        <span>Contacts</span>
+                          <div>
+                            <div><span class="contact_name">Name1</span><!-- <span class="contact_number">contact1</span> --></div>
+                            <!-- <div><span>Name2</span><span>contact2</span></div> -->
+                          </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div id="about_info"><div>ABOUT</div><div class="info_content open_info">Coming Soon</div></div>
+                      <div id="rules_info"><div>RULES</div><div class="info_content">Coming Soon</div></div>
+                    </div>
+                  </div>
+              </div>
+              <div class="dummy"></div>
+          </div>
+          <div class="info_wrapper">
+              <div class="backrotate">
+              </div>
+              <div class="info">
+                  <div class="crosscont_1">
+                      <div class="cross" id="cross_info">
+                          <a class="crosslink" href="#">
+                              <p class="crossbar" id="anticlk"></p>
+                              <p class="crossbar" id="clk"></p>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="evtcont_info">
+                      <ul class="evtname">
+                          <li id="f" class="evt">
+                              <h1 class=" name dust">EVENT NAME</h1>
+                              <p>brief</p>
+                              <p id="bottom"></p>
+                              <div class="content">
+                                  <p>There is no Internet connection
+                                      <br> Try:
+                                      <br> Checking the network cables, modem and router
+                                      <br> Reconnecting to Wi-Fi
+                                      <br> DNS_PROBE_FINISHED_NO_INTERNET
+                                  </p>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="dummy"></div>
+              </div>
+          </div>
     </div>
-    <script type="text/javascript">
+    </div>
+
+    <div id="about">
+      <div id="abouttext">
+          Snatches of whatever your teacher’s been droning on about for the past hour,  would weave in and out of your fantasies, to be interrupted when she hurls her chalk at you.
+          <br><br>
+          Hours made to stand outside the class and silly impositions would follow.
+          <br><br>
+          Middle school was dumb. Your attention span hasn't really changed much here in college though, has it?
+          It’s only fair. Who wouldn’t be wrestling orcs at Amon Hen, or duelling the Dark Lord in the Battle of Hogwarts? Perhaps battle in the Lannisters’ army, in their fight to keep the Iron throne, all the while ignoring the lecturer as he tries to give you an actual future? Yeah, we thought so.
+          <br><br>
+          Join us this Oasis ‘17, the 46th edition of BITS Pilani’s annual cultural festival from the 31st October to the 4th November, with some of the biggest music acts such as Parikrama and Amit Trivedi, and public figures such as Salman Khurshid and Kiran Bedi all a part of its proud history. From games, to mouth watering food stalls and exhilarating concerts, we promise them all.
+          <br><br>
+          Join us, as we bring to life these Realms of Fiction, from Gotham and Winterfell to Avalon and Vice City.
+          <br><br>
+          Oasis ‘17. Bigger than ever.
+      </div>
+    </div>
+    <div id="allCategories">
+      <div class="close" id="closeAllCategories">
+          <div class="cross">
+                      <a class="crosslink">
+                          <p class="crossbar" id="anticlk"></p>
+                          <p class="crossbar" id="clk"></p>
+                      </a>
+            </div>
+      </div>
+      <div class="display">
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Johnny">DANCE</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Deadpool">ORATORY</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Batman">MISC</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Ezio">FASHION</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Goku">PHOTOGRAPHY</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Rick">MUSIC</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Minion">DRAMA</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Pikachu">FINE ART</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Dexter">ONLINE</div>
+        </div>
+        <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="V">QUIZZING</div>
+        </div>
+        <!-- <div class="event_item">
+          <div class="event_item_img"></div>
+          <div class="event_item_name" data="Harry">FILMS</div>
+        </div> -->
+      </div>
+    </div>
+
+    <div id="contacts">
+      <div id = "contact_wrapper">
+
+      </div>
+    </div>
+
+    <div id="dev">
+      <div id = "dev_wrapper">
+
+      </div>
+    </div>
+
+    <script>
+    var loadedData = [];
+    // "wss://bits-oasis.org/2017maintest"
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    exampleSocket.onopen = function (event) {
+      console.log("WS Opened Successfully");
+      var data = [
+        {
+          type: "static",
+          url: "css/fonts2.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/oasis.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/events.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/characters.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/transitions.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/events_lightbox.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/lightbox.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/characters.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/events.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "css/contact2.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/all_categories.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "css/animations.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/contact.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "css/devs.css",
+          ext: "css"
+        },
+        {
+          type: "static",
+          url: "js/devs.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/all_categories.js",
+          ext: "js"
+        }
+      ];
+
+      for (var i in data) {
+          data[i].last = retrive_last(data[i].url);
+          // console.log(data[i] .last);
+          exampleSocket.send(JSON.stringify(data[i]));
+      }
+    };
+    exampleSocket.onmessage = function(event) {
+      var res = JSON.parse(event.data);
+      // console.log(res);
+      if(res.load){
+        if(res.ext == "css") {
+          inject(res.data, "style",null, res.url);
+        }
+        else if(res.ext == "js") {
+         inject(res.data, "script",null, res.url);
+        }else if(res.ext =="img"){
+
+          eval(res.ref).style.background = "url("+res.data+")";
+          eval(res.ref).style.backgroundSize = "contain";
+          // console.log(eval(res.ref).style.background, 'umms');
+        }
+        save(res);
+        loadedData.push(res.url);
+        handleLoad(res.url);
+      }
+      else {
+        if(Object.keys(res).indexOf("ref"))
+        {inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"),res.ref, res.url)}
+        else{
+          inject(window.localStorage.getItem(res.url+"_data"), window.localStorage.getItem(res.url+"_tag"), null, res.url)
+        }
+        loadedData.push(res.url);
+        handleLoad(res.url);
+      }
+    }
+
+    function save(res){
+      try {
+        window.localStorage.setItem(res.url, "true");
+        window.localStorage.setItem(res.url + "_data",res.data);
+        window.localStorage.setItem(res.url + "_last",res.last);
+        window.localStorage.setItem(res.url + "_ext",res.ext);
+        if(res.ext =="css"){
+          window.localStorage.setItem(res.url + "_tag","style");
+        }
+        else if(res.ext =="js"){
+        window.localStorage.setItem(res.url + "_tag","script");
+        }
+        else{
+        window.localStorage.setItem(res.url + "_tag","null");
+        }
+      }
+      catch(err) {
+        console.warn("Can't Access Local Storage; Site will load slower on repeated visits");
+      }
+    }
+
+    function retrive_last(url){
+      return window.localStorage.getItem(url + "_last");
+    }
+
+    function inject(data, tag, ref, url){
+
+      if(tag != "null")
+      {
+        var ele = document.createElement(tag);
+        ele.setAttribute('data-url',url)
+        document.head.appendChild(ele);
+        ele.innerHTML = data;
+      }else{
+        // console.log(tag);
+        if(ref){
+          eval(ref).style.background = "url("+window.localStorage.getItem(url + "_data")+")";
+          eval(ref).style.backgroundSize = "contain";
+
+        }
+      }
+    }
+
+    var firstdone = 0;
+
+    function handleLoad(url) {
+      if(url=="css/fonts2.css"||url=="css/oasis.css") {
+        console.log(url);
+        if(firstdone == 0) {
+          firstdone = 1;
+          var first = document.querySelectorAll("svg .first");
+          for (var i = 0; i < first.length; i++) first[i].style.strokeDashoffset = "0px";
+        }
+        else {
+          var second = document.querySelectorAll("svg .second");
+          for (var i = 0; i < second.length; i++) second[i].style.strokeDashoffset = "0px";
+          loaded();
+        }
+      }
+    }
+
+
     var item = document.querySelector('#item');
     var ham_menu = document.querySelector('#ham_menu');
-      function open(ref) {
-        console.log(3);
-        item.className="";
-        item.innerHTML=eval(ref).innerHTML;
+
+
+    function openItem(ref) {
+      var time = 0;
+      if(ham_menu.className!="inactive") {
+        time = 500;
       }
-      contact.addEventListener("click",function(){
-        open('contacts');
+      // ham_menu.className = "inactive";
+      setTimeout(function(){
+        item.className="";
+        window.__fadeIn__(item, function(){
+          item.style.display = "flex";
+        });
+        item_content.innerHTML=document.querySelector("#"+ref).innerHTML;
+        item_title.innerHTML = ref;
+      },time);
+    }
+
+
+      Events.addEventListener('click', function(){
+        events.className = "";
+
+        window.__fadeIn__(events);
+
       });
+
+      close_events.addEventListener('click',function(){
+        // events.className = "inactive";
+        window.__fadeOut__(events);
+      });
+
       function handleResize(){
         document.body.style.height = window.innerHeight+"px";
       }
       window.addEventListener("load",handleResize);
       window.addEventListener("orientationchange",handleResize);
-      window.addEventListener("resize",handleResize)
+      window.addEventListener("resize",handleResize);
 
-      window.addEventListener('load',function(){
+      for(var i = 1; i <= 70; i++){
+        box.innerHTML += '<div id="b'+i+'"></div>';
+      }
+      box.className = "transparent";
+
+      function loaded() {
+        document.querySelector("title").innerHTML = "Oasis 2017";
+        console.clear();
+        console.log('made with love by DVM ...');
         setTimeout(function(){
-          for(var i = 1; i <= 70; i++){
-            box.innerHTML += '<div id="a'+i+'"></div>';
-          }
-          box.className = "transparent"
+          box.className = "logo";
           setTimeout(function(){
-            box.className = "logo";
+            document.querySelector('svg').remove();
+            box.className = "text";
             setTimeout(function(){
-              document.querySelector('svg').remove();
-              box.className = "text";
+              loader.className = "loaded";
               setTimeout(function(){
-                loader.className = "loaded";
-                setTimeout(function(){
-                  logotext.style.opacity = 1;
-                  Landing.style.opacity = 1;
-                },750);
-              },3000);
+                logotext.style.opacity = 1;
+                Landing.style.opacity = 1;
+                tilt.className = "";
+              },750);
             },3000);
-          },2000);
-        },2000);
-      });
+          },3000);
+        },3000);
+      }
 
       ham.addEventListener('click',function(){
         if(ham_menu.className=="inactive"){
@@ -277,6 +653,66 @@
         ham.click();
       });
 
+      back_to_landing.addEventListener("click",function(){
+        item.className = "inactive";
+        window.__fadeOut__(item)
+        // console.log(ham.style.display);
+        if(ham.offsetParent!=null) ham.click();
+      });
+
+
+      var events_list_request = new XMLHttpRequest();
+      events_list_request.addEventListener('load', r=>{
+
+        if(r.currentTarget.readyState == 4 && r.currentTarget.status == 200){
+          var api_data = eval(r.currentTarget.responseText);
+          var table = {};
+          for(var i in api_data){
+            var category = mapName(api_data[i].category_name)
+            if(table[category] == undefined)
+              table[category] = {}
+            table[category][mapName(api_data[i].name)] = { event_id : api_data[i].id};
+          }
+          // console.log(table)
+          window.events_data = table;
+          if(changeChar)
+            changeChar(0);
+        }
+        // console.log("events data", window.events_data);
+      });
+      events_list_request.addEventListener('error', e=>{
+        console.log(e);
+      });
+      events_list_request.addEventListener('progress', p=>{
+        // console.log(p)
+      })
+
+      try{
+        events_list_request.open('GET', 'https://bits-oasis.org/2017/api/events')
+        events_list_request.send()
+      }catch(e){
+        console.log(e);
+      }
+
+      function mapName(name){
+        if(name == "MISC"){
+          return "miscellaneous"
+        }
+        // console.log(name)
+        return name.toLowerCase().split(" ").join("_");
+      }
+      window.__mapName__ = mapName;
+
     </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106908218-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106908218-1');
+</script>
+
   </body>
 </html>
