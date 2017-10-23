@@ -50,7 +50,7 @@ var stuccans = [
 	  name: "Arnav Kundra",
 	  post: "Reception and Accomodation",
 	  email: "recnacc@bits-oasis.org",
-	  phone: "+91 99280 6633",
+	  phone: "+91 99280 26633",
 	  photo: "img/recnacc.jpg"
 	},
 	{
