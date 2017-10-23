@@ -101,7 +101,7 @@
           <ul>
             <li onclick="openItem('about')">ABOUT</li>
             <li style="display: none">PROF SHOW</li>
-            <li style="display: none">SPONSORS</li>
+            <li onclick="openItem('sponsors')">SPONSORS</li>
             <li id="contact" onclick="openItem('contacts')">CONTACTS</li>
             <!--<li><a href="https://bits-oasis.org/2017/tarang" class="nav_link">TARANG</a></li>-->
           </ul>
@@ -143,7 +143,7 @@
         <div>
           <span onclick="openItem('about')">ABOUT</span>
           <span style="display: none">PROF SHOW</span>
-          <span style="display: none">SPONSORS</span>
+          <span onclick="openItem('sponsors')">SPONSORS</span>
           <span onclick="openItem('contacts')">CONTACTS</span>
           <!--<span><a href="https://bits-oasis.org/2017/tarang" class="nav_link mob">TARANG</a></span>-->
         </div>
@@ -379,10 +379,16 @@
       </div>
     </div>
 
+    <div id="sponsors">
+      <div id = "sponsors_wrapper">
+
+      </div>
+    </div>
+
     <script>
     var loadedData = [];
-    // "wss://bits-oasis.org/2017maintest"
-    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol");
+    var exampleSocket = new WebSocket("wss://bits-oasis.org/2017maintest", "echo-protocol"); // Production
+    // var exampleSocket = new WebSocket("ws://localhost:3000/", "echo-protocol"); // Testing
     exampleSocket.onopen = function (event) {
       console.log("WS Opened Successfully");
       var data = [
@@ -459,6 +465,11 @@
         {
           type: "static",
           url: "js/devs.js",
+          ext: "js"
+        },
+        {
+          type: "static",
+          url: "js/spons.js",
           ext: "js"
         },
         {
