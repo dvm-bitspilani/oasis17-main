@@ -90,25 +90,29 @@ document.body.onkeydown = function(e) {
     changeChar(1);
 }
 
-var startX = 0;
-var delta;
+var startX = 0, startY;
+var deltaX, deltaY;
 var found = 0;
 
 document.body.addEventListener('touchstart', function(e){
   found = 0;
   startX = parseInt(e.changedTouches[0].pageX);
+  startY = parseInt(e.changedTouches[0].pageY);
 });
 document.body.addEventListener('touchmove', function(e){
   // alert(e.target.id);
   if(lightbox_open_status)return;
   if(found==1) return;
   var pageX = parseInt(e.changedTouches[0].pageX)
-  delta = pageX - startX;
-  if (delta > 0) {
+  var pageY = parseInt(e.changedTouches[0].pageY)
+  deltaX = pageX - startX;
+  deltaY = pageY - startY;
+  if(Math.abs(deltaX)< Math.abs(deltaY))return;
+  if (deltaX > 0) {
     found = 1;
     changeChar(-1);
   }
-  else if(delta < 0) {
+  else if(deltaX < 0) {
     found = 1;
     changeChar(1);
   }
@@ -116,10 +120,12 @@ document.body.addEventListener('touchmove', function(e){
 document.body.addEventListener('click',function(e){
   var className = e.target.className;
   // console.log(className);
+  // console.log('click')
   if(className == "change next")
     changeChar(1);
   else if(className == "change prev")
     changeChar(-1);
+  
 });
 
 changeChar(0);
@@ -144,8 +150,12 @@ function hide()
     },200);
 }
 
+
+ViewEvent.addEventListener("click",showEvent);
+Box.addEventListener("click",showEvent);
+
 // function show eventsvar disable_cross = false;
-ViewEvent.addEventListener("click",function(){
+function showEvent(){
   document.querySelector(".lightbox").style.top = "0%";
   close_event.style.display = "block";
   close_event.style.opacity = 1;
@@ -153,7 +163,8 @@ ViewEvent.addEventListener("click",function(){
   fadeIn(close_event, null, "flex");
   lightbox_open_status = true;
   setTimeout(()=>{close_event.style.display = "flex";}, 10);
-});
+}
+
 close_event.addEventListener("click",function(){
   if(!accordian_open){
     // document.querySelector(".lightbox").style.top = "100%";
@@ -179,7 +190,7 @@ eventnames__.addEventListener('click', function(e){
       // console.log(a);
       if(a.currentTarget.readyState == 4 && a.currentTarget.status == 200){
           let text = a.currentTarget.responseText;
-          console.log(text);
+          // console.log(text);
           var re_about = /"content":"(.*)","rules"/ig;
           html_about = re_about.exec(text)[1];
           
@@ -281,7 +292,7 @@ function removeClass(el, name){
 }
 
 function fadeIn(el, callback = (()=>{}), display="block"){
-  console.log("fadeIn", el, callback, display);
+  // console.log("fadeIn", el, callback, display);
   // el.style.opacity = 0;
   removeClass(el, 'fadeOut');
   removeClass(el, 'fadeIn');
@@ -304,7 +315,7 @@ function fadeIn(el, callback = (()=>{}), display="block"){
 window.__fadeIn__ = fadeIn;
 
 function fadeOut(el, callback = (()=>{}), display = "block"){
-  console.log("fadeOut", el, callback, display);
+  // console.log("fadeOut", el, callback, display);
   // el.style.opacity = 1;
   removeClass(el, 'fadeIn');
   removeClass(el, 'fadeOut');

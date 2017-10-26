@@ -686,8 +686,11 @@
           }
           // console.log(table)
           window.events_data = table;
-          if(changeChar)
+          try{
             changeChar(0);
+          }catch(e){
+            //
+          }
         }
         // console.log("events data", window.events_data);
       });
