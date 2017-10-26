@@ -66,10 +66,147 @@ div[style="background-image:url(img/abhijit.jpg)"] {
   text-align: center;
   color: #fafafa;
   font-family: arial, verdana;
-  
+
 }
 
 .inspiration a{
   color: inherit;
   text-decoration: none;
+}
+
+#sponsors_wrapper .person:nth-of-type(1) {
+  min-width: 100%;
+  padding: 0 25%;
+}
+
+#sponsors_wrapper .person:nth-of-type(5),
+#sponsors_wrapper .person:nth-of-type(6),
+#sponsors_wrapper .person:nth-of-type(7),
+#sponsors_wrapper .person:nth-of-type(8) {
+  max-width: calc(25% - 30px);
+}
+
+#sponsors_wrapper .person:nth-of-type(9),
+#sponsors_wrapper .person:nth-of-type(10),
+#sponsors_wrapper .person:nth-of-type(11),
+#sponsors_wrapper .person:nth-of-type(12) {
+  max-width: calc(25% - 30px);
+}
+
+#sponsors_wrapper .person:nth-of-type(13),
+#sponsors_wrapper .person:nth-of-type(14),
+#sponsors_wrapper .person:nth-of-type(15),
+#sponsors_wrapper .person:nth-of-type(16) {
+  max-width: calc(25% - 30px);
+}
+
+#sponsors_wrapper .person:nth-of-type(17),
+#sponsors_wrapper .person:nth-of-type(18),
+#sponsors_wrapper .person:nth-of-type(19),
+#sponsors_wrapper .person:nth-of-type(20) {
+  max-width: calc(25% - 30px);
+}
+
+#media {
+  min-width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 20px;
+}
+
+#media .m {
+  width: calc(25% - 30px);
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 15px
+}
+
+@media all and (max-width: 700px) {
+  #sponsors_wrapper .person:nth-of-type(1) {
+    min-width: 100%;
+    padding: 0;
+  }
+  #sponsors_wrapper .person:nth-of-type(4),
+  #sponsors_wrapper .person:nth-of-type(5),
+  #sponsors_wrapper .person:nth-of-type(6),
+  #sponsors_wrapper .person:nth-of-type(7),
+  #sponsors_wrapper .person:nth-of-type(8),
+  #sponsors_wrapper .person:nth-of-type(9) {
+    max-width: calc(50% - 30px);
+  }
+  #sponsors_wrapper .person:nth-of-type(10),
+  #sponsors_wrapper .person:nth-of-type(11),
+  #sponsors_wrapper .person:nth-of-type(12),
+  #sponsors_wrapper .person:nth-of-type(13),
+  #sponsors_wrapper .person:nth-of-type(14),
+  #sponsors_wrapper .person:nth-of-type(15),
+  #sponsors_wrapper .person:nth-of-type(16),
+  #sponsors_wrapper .person:nth-of-type(17),
+  #sponsors_wrapper .person:nth-of-type(18),
+  #sponsors_wrapper .person:nth-of-type(19),
+  #sponsors_wrapper .person:nth-of-type(20) {
+    max-width: calc(33% - 30px);
+  }
+  #media .m {
+    width: calc(33% - 30px)
+  }
+}
+
+@media all and (max-width: 550px) {
+  #sponsors_wrapper .person:nth-of-type(2),
+  #sponsors_wrapper .person:nth-of-type(3),
+  #sponsors_wrapper .person:nth-of-type(4),
+  #sponsors_wrapper .person:nth-of-type(5),
+  #sponsors_wrapper .person:nth-of-type(6),
+  #sponsors_wrapper .person:nth-of-type(7),
+  #sponsors_wrapper .person:nth-of-type(8),
+  #sponsors_wrapper .person:nth-of-type(9) {
+    min-width: calc(100% - 30px);
+  }
+  #sponsors_wrapper .person:nth-of-type(10),
+  #sponsors_wrapper .person:nth-of-type(11),
+  #sponsors_wrapper .person:nth-of-type(12),
+  #sponsors_wrapper .person:nth-of-type(13),
+  #sponsors_wrapper .person:nth-of-type(14),
+  #sponsors_wrapper .person:nth-of-type(15),
+  #sponsors_wrapper .person:nth-of-type(16),
+  #sponsors_wrapper .person:nth-of-type(17),
+  #sponsors_wrapper .person:nth-of-type(18),
+  #sponsors_wrapper .person:nth-of-type(19),
+  #sponsors_wrapper .person:nth-of-type(20) {
+    max-width: calc(50% - 30px);
+  }
+  #media .m {
+    width: calc(50% - 30px)
+  }
+}
+
+@media all and (max-width: 450px) {
+  #sponsors_wrapper .person:nth-of-type(10),
+  #sponsors_wrapper .person:nth-of-type(11),
+  #sponsors_wrapper .person:nth-of-type(12),
+  #sponsors_wrapper .person:nth-of-type(13),
+  #sponsors_wrapper .person:nth-of-type(14),
+  #sponsors_wrapper .person:nth-of-type(15),
+  #sponsors_wrapper .person:nth-of-type(16),
+  #sponsors_wrapper .person:nth-of-type(17),
+  #sponsors_wrapper .person:nth-of-type(18),
+  #sponsors_wrapper .person:nth-of-type(19),
+  #sponsors_wrapper .person:nth-of-type(20) {
+    min-width: calc(100% - 30px);
+  }
+  #media .m {
+    width: calc(100% - 30px);
+    height: 135px
+  }
+}
+
+.med.person-mail {
+  background: #ffe14a !important;
+  font-family: "Azo Sans Medium";
 }
