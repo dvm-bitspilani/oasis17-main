@@ -33,6 +33,12 @@ body {
   height: 375px;
   flex-basis: 30%;
 }
+#archive_wrapper .person {
+  height: 400px !important;
+}
+#archive_wrapper .person:hover {
+  cursor: pointer;
+}
 .person-data {
   background: #fff
 }
