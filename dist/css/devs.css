@@ -210,3 +210,12 @@ div[style="background-image:url(img/abhijit.jpg)"] {
   background: #ffe14a !important;
   font-family: "Azo Sans Medium";
 }
+
+.spons-title {
+  font-size: 2.25em;
+  min-width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Azo Sans Medium";
+  color: #fff;
+}

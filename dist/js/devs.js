@@ -30,7 +30,7 @@ var devs = [
         image2: "img/email.svg",
         link3: "https://www.linkedin.com/in/megh-thakkar-b0531295/",
         image3: "img/linkedin.svg",
-        photo: "img/gujju.png"
+        photo: "img/gujju.jpg"
     },
     {
         name: "Tushar Goel",
@@ -155,4 +155,3 @@ for(i=0;i<8;i++){
 }
 
 dev_wrapper.innerHTML += '<p class="inspiration">Inspired by <a href="http://www.species-in-pieces.com/#"">species-in-peices</a> &#9829;</p>';
-
