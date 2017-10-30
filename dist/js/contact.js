@@ -20,7 +20,7 @@ var stuccans = [
 	},
 	{
 	  name: "Nisanth Varma",
-	  post: "Events, Competitions and operations",
+	  post: "Events, Competitions and Operations",
 	  email: "controls@bits-oasis.org",
 	  phone: "+91 80588 77118",
 	  photo: "img/controlz.jpg"
@@ -48,7 +48,7 @@ var stuccans = [
 	},
 	{
 	  name: "Arnav Kundra",
-	  post: "Reception and Accomodation",
+	  post: "Reception and Accommodation",
 	  email: "recnacc@bits-oasis.org",
 	  phone: "+91 99280 26633",
 	  photo: "img/recnacc.jpg"
@@ -80,7 +80,7 @@ for (var s in stuccans) {
 				<span>'+stuccans[s].name+'</span>\
 				<span>'+stuccans[s].post+'</span>\
 			</div>\
-			<div class = "person-mail">'+stuccans[s].email+'</div>'; 
+			<div class = "person-mail">'+stuccans[s].email+'</div>';
 
 	if(stuccans[s].id == "expand") {
 	xy+= '\
