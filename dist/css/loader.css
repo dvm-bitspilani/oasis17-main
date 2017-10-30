@@ -211,7 +211,7 @@ section#loader {
       #Landing header nav ul {
         font-family: "Azo Sans Regular";
         display: flex;
-        width: 30%;
+        width: 70%;
         color: #fff;
         justify-content: space-around;
         padding-left: 20px; }
