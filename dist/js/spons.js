@@ -228,9 +228,14 @@ var medias = [
       logo: "img/spons/aapkatimes.jpg"
   },
   {
-      name: "Youth Ki Awaz",
+      name: "FestPav",
       title: "Media Partner",
-      logo: "img/spons/youthkiawaz.jpg"
+      logo: "img/spons/festpav.jpg"
+  },
+  {
+      name: "Hee",
+      title: "Media Partner",
+      logo: "img/spons/hee.jpg"
   },
   {
       name: "Abraxas Media",
