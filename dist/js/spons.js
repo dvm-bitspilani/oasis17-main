@@ -2,7 +2,7 @@ var spons = [
     {
         name: "OnePlus",
         title: "Title Sponsor",
-        logo: "img/spons/oneplus.svg"
+        logo: "img/spons/oneplus.jpg"
     },
     {
         name: "Comedy Central",
@@ -109,7 +109,7 @@ var rocktaves = [
   {
     name: "OnePlus",
     title: "Associate Title Sponsor",
-    logo: "img/spons/oneplus.svg"
+    logo: "img/spons/oneplus.jpg"
   },
   {
     name: "Cult Yard",
