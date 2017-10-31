@@ -364,7 +364,8 @@ section#ham_menu {
     section#ham_menu aside.nav div {
       margin: 15px 0;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      min-height: 240px; }
       section#ham_menu aside.nav div span {
         padding: 8px 30px; }
   section#ham_menu.inactive {
