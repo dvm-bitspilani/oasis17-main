@@ -96,7 +96,7 @@ var spons = [
     },
     {
         name: "NGT India",
-        title: "Oasis To My Eye Partner",
+        title: "Oasis Through My Eye Partner",
         logo: "img/spons/ngtindia.jpeg"
     }
   ];
