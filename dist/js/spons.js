@@ -77,7 +77,7 @@ var spons = [
     {
         name: "WooHoo",
         title: "Standup Soapbox Partner",
-        logo: "img/spons/woohoo.svg"
+        logo: "img/spons/woohoo.jpg"
     },
     {
         name: "India's Next Top Model",
@@ -93,7 +93,13 @@ var spons = [
         name: "Saavn",
         title: "Streaming Partner",
         logo: "img/spons/saavn.jpg"
-    }];
+    },
+    {
+        name: "NGT India",
+        title: "Oasis To My Eye Partner",
+        logo: "img/spons/ngtindia.jpeg"
+    }
+  ];
 
 var rocktaves = [
   {
