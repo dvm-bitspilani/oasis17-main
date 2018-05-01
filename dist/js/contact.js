@@ -1,57 +1,49 @@
 var stuccans = [
 	{
-	  name: "Asim Shah",
+	  name: "Aditi Pandey",
 	  post: "Registration &amp; Other Enquiries",
 	  email: "pcr@bits-oasis.org",
 	  phone: "Click for Phone Numbers",
-	  photo: "img/asim.jpg",
+	  photo: "img/aditi.jpg",
 	  id: "expand",
 	  expandData: [
-			"+91 82091 82501",
-			"+91 70731 80405",
-			"+91 70236 11971",
-			"+91 91669 47424",
-			"+91 91192 25593",
-			"+91 91192 25134",
-			"+91 91192 25189",
-			"+91 91192 25102",
-			"+91 91192 25645",
+	  		"+91 80033 05723",
 		]
 	},
 	{
-	  name: "Nisanth Varma",
+	  name: "Yash Devnani",
 	  post: "Events, Competitions and Operations",
 	  email: "controls@bits-oasis.org",
-	  phone: "+91 80588 77118",
-	  photo: "img/controlz.jpg"
+	  phone: "+91 75979 61803",
+	  photo: "img/yash.jpg"
 	},
 	{
-	  name: "Siddhant Narula",
+	  name: "Punit Batra",
 	  post: "Sponsorship and Marketing",
 	  email: "sponsorship@bits-oasis.org",
-	  phone: "+91 99822 00768",
-	  photo: "img/spons.jpg"
+	  phone: "+91 80033 35712",
+	  photo: "img/punit.jpg"
 	},
 	{
-	  name: "Arjun Tyagi",
+	  name: "Amritanshu Jain",
 	  post: "Website, App &amp; Online Payments",
 	  email: "webmaster@bits-oasis.org",
-	  phone: "+91 88750 52545",
-	  photo: "img/tyagi.jpg"
+	  phone: "+91 99531 08361",
+	  photo: "img/amritanshu.jpg"
 	},
 	{
-	  name: "Gowtam Chandrahasa",
+	  name: "Chirag Parikh",
 	  post: "Art, Design &amp; Publicity",
 	  email: "adp@bits-oasis.org",
-	  phone: "+91 99820 84940",
-	  photo: "img/adp.jpg"
+	  phone: "+91 80031 70752",
+	  photo: "img/chirag.jpg"
 	},
 	{
-	  name: "Arnav Kundra",
+	  name: "Rahul Unnithan",
 	  post: "Reception and Accommodation",
 	  email: "recnacc@bits-oasis.org",
-	  phone: "+91 99280 26633",
-	  photo: "img/recnacc.jpg"
+	  phone: "+91 77372 62761",
+	  photo: "img/rahul.jpg"
 	},
 	{
 	  name: "Bharatha Ratna Puli",
