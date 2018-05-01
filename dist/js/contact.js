@@ -45,20 +45,6 @@ var stuccans = [
 	  phone: "+91 77372 62761",
 	  photo: "img/rahul.jpg"
 	},
-	{
-	  name: "Bharatha Ratna Puli",
-	  post: "President, Students Union",
-	  email: "president@pilani.bits-pilani.ac.in",
-	  phone: "+91 82970 39977",
-	  photo: "img/puli.jpg"
-	},
-	{
-	  name: "Shivam Jindal",
-	  post: "General Secretary, Students Union",
-	  email: "gensec@pilani.bits-pilani.ac.in",
-	  phone: "+91 97170 24281",
-	  photo: "img/jindal.jpg"
-	}
 ];
 
 for (var s in stuccans) {
